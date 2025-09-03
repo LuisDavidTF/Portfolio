@@ -18,10 +18,16 @@
     <h1 class="display-4 fw-bold">Luis David Trejo Fuentes</h1>
     <p class="lead">Full Stack Developer in Training</p>
     <p class="tagline">Building scalable web solutions with modern technologies.</p>
+
+    <div class="hero-buttons mt-4">
+      <a href="#projects" class="btn-hero">Projects</a>
+      <a href="#contact" class="btn-hero">Contact</a>
+      <a href="#skills" class="btn-hero">Skills</a>
+    </div>
   </header>
 
   <!-- About -->
-  <section class="container my-5 text-center">
+  <section class="container my-5 text-center" id="about">
     <h2 class="mb-4 section-title">About Me</h2>
     <p class="about-text mx-auto">
       Full Stack developer in training with experience in Angular, Node.js, Express, Stripe, and MySQL. 
@@ -30,7 +36,7 @@
   </section>
 
   <!-- Skills -->
-  <section class="container my-5">
+  <section class="container my-5" id="skills">
     <h2 class="text-center mb-4 section-title">Skills</h2>
     <div class="row g-4 justify-content-center">
 
@@ -39,14 +45,14 @@
         <div class="tech-card">
           <h5>Languages</h5>
           <div class="skills-icons">
-            <i class="fab fa-js fa-2x" title="JavaScript"></i>
-            <i class="fab fa-java fa-2x" title="Java"></i>
-            <i class="fab fa-python fa-2x" title="Python"></i>
-            <i class="fas fa-database fa-2x" title="SQL"></i>
-            <i class="fab fa-html5 fa-2x" title="HTML5"></i>
-            <i class="fab fa-css3-alt fa-2x" title="CSS3"></i>
-            <i class="fas fa-code fa-2x" title="C#"></i>
-            <i class="fas fa-code fa-2x" title="TypeScript"></i>
+            <div class="skill-item" title="JavaScript"><i class="fab fa-js"></i> <span>JavaScript</span></div>
+            <div class="skill-item" title="TypeScript"><i class="fas fa-code"></i> <span>TypeScript</span></div>
+            <div class="skill-item" title="HTML5"><i class="fab fa-html5"></i> <span>HTML5</span></div>
+            <div class="skill-item" title="CSS3"><i class="fab fa-css3-alt"></i> <span>CSS3</span></div>
+            <div class="skill-item" title="SQL"><i class="fas fa-database"></i> <span>SQL</span></div>
+            <div class="skill-item" title="C#"><i class="fas fa-code"></i> <span>C#</span></div>
+            <div class="skill-item" title="Java"><i class="fab fa-java"></i> <span>Java</span></div>
+            <div class="skill-item" title="Python"><i class="fab fa-python"></i> <span>Python</span></div>
           </div>
         </div>
       </div>
@@ -56,10 +62,10 @@
         <div class="tech-card">
           <h5>Frameworks & Libraries</h5>
           <div class="skills-icons">
-            <i class="fab fa-angular fa-2x" title="Angular"></i>
-            <i class="fab fa-node fa-2x" title="Node.js"></i>
-            <i class="fas fa-server fa-2x" title="Express"></i>
-            <i class="fab fa-bootstrap fa-2x" title="Bootstrap"></i>
+            <div class="skill-item" title="Angular"><i class="fab fa-angular"></i> <span>Angular</span></div>
+            <div class="skill-item" title="Node.js"><i class="fab fa-node"></i> <span>Node.js</span></div>
+            <div class="skill-item" title="Express"><i class="fas fa-server"></i> <span>Express</span></div>
+            <div class="skill-item" title="Bootstrap"><i class="fab fa-bootstrap"></i> <span>Bootstrap</span></div>
           </div>
         </div>
       </div>
@@ -69,8 +75,8 @@
         <div class="tech-card">
           <h5>Databases</h5>
           <div class="skills-icons">
-            <i class="fas fa-database fa-2x" title="MySQL"></i>
-            <i class="fas fa-database fa-2x" title="SQL Server"></i>
+            <div class="skill-item" title="MySQL"><i class="fas fa-database"></i> <span>MySQL</span></div>
+            <div class="skill-item" title="SQL Server"><i class="fas fa-database"></i> <span>SQL Server</span></div>
           </div>
         </div>
       </div>
@@ -80,11 +86,11 @@
         <div class="tech-card">
           <h5>Tools & Methodologies</h5>
           <div class="skills-icons">
-            <i class="fab fa-git-alt fa-2x" title="Git"></i>
-            <i class="fas fa-file-code fa-2x" title="MVC"></i>
-            <i class="fas fa-network-wired fa-2x" title="REST API"></i>
-            <i class="fas fa-project-diagram fa-2x" title="Scrum / Agile"></i>
-            <i class="fas fa-credit-card fa-2x" title="Stripe API"></i>
+            <div class="skill-item" title="Git"><i class="fab fa-git-alt"></i> <span>Git</span></div>
+            <div class="skill-item" title="MVC"><i class="fas fa-file-code"></i> <span>MVC</span></div>
+            <div class="skill-item" title="REST API"><i class="fas fa-network-wired"></i> <span>REST API</span></div>
+            <div class="skill-item" title="Scrum/Agile"><i class="fas fa-project-diagram"></i> <span>Scrum/Agile</span></div>
+            <div class="skill-item" title="Stripe API"><i class="fas fa-credit-card"></i> <span>Stripe API</span></div>
           </div>
         </div>
       </div>
@@ -93,7 +99,7 @@
   </section>
 
   <!-- Projects -->
-  <section class="container my-5">
+  <section class="container my-5" id="projects">
     <h2 class="text-center mb-4 section-title">Projects</h2>
     <div class="row justify-content-center">
       <div class="col-md-6">
@@ -105,17 +111,17 @@
               E-commerce platform with full inventory management, secure payments via Stripe, and responsive UI built with Angular.
             </p>
             <div class="velonia-skills">
-              <i class="fab fa-angular fa-2x" title="Angular"></i>
-              <i class="fab fa-node fa-2x" title="Node.js"></i>
-              <i class="fas fa-server fa-2x" title="Express"></i>
-              <i class="fas fa-database fa-2x" title="MySQL"></i>
-              <i class="fas fa-credit-card fa-2x" title="Stripe"></i>
-              <i class="fas fa-key fa-2x" title="JWT"></i>
-              <i class="fab fa-bootstrap fa-2x" title="Bootstrap"></i>
-              <i class="fab fa-css3-alt fa-2x" title="Tailwind"></i>
+              <div class="skill-item project-skill" title="Angular"><i class="fab fa-angular"></i> <span>Angular</span></div>
+              <div class="skill-item project-skill" title="Node.js"><i class="fab fa-node"></i> <span>Node.js</span></div>
+              <div class="skill-item project-skill" title="Express"><i class="fas fa-server"></i> <span>Express</span></div>
+              <div class="skill-item project-skill" title="MySQL"><i class="fas fa-database"></i> <span>MySQL</span></div>
+              <div class="skill-item project-skill" title="Stripe"><i class="fas fa-credit-card"></i> <span>Stripe</span></div>
+              <div class="skill-item project-skill" title="JWT"><i class="fas fa-key"></i> <span>JWT</span></div>
+              <div class="skill-item project-skill" title="Tailwind"><i class="fab fa-css3-alt"></i> <span>Tailwind</span></div>
+              <div class="skill-item project-skill" title="Bootstrap"><i class="fab fa-bootstrap"></i> <span>Bootstrap</span></div>
             </div>
-            <a href="https://TU-USUARIO.github.io/VeloniaAngular/" target="_blank" class="btn btn-primary me-2">Live Demo</a>
-            <a href="https://github.com/TU-USUARIO/VeloniaAngular" target="_blank" class="btn btn-outline-secondary">GitHub</a>
+            <a href="https://luisdavidtf.github.io/Velonia-Angular/" target="_blank" class="btn btn-primary me-2">Live Demo</a>
+            <a href="https://github.com/LuisDavidTF/Velonia-Angular" target="_blank" class="btn btn-outline-secondary">GitHub</a>
           </div>
         </div>
       </div>
@@ -123,16 +129,16 @@
   </section>
 
   <!-- Contact / Footer -->
-  <footer class="text-center py-4">
+  <footer class="text-center py-4" id="contact">
     <h4>Get in Touch</h4>
     <p>
       <a href="https://www.linkedin.com/in/luis-david-trejo-fuentes/" target="_blank" class="me-3">
         <i class="fab fa-linkedin fa-2x"></i>
       </a>
-      <a href="https://github.com/TU-USUARIO" target="_blank" class="me-3">
+      <a href="https://github.com/LuisDavidTF" target="_blank" class="me-3">
         <i class="fab fa-github fa-2x"></i>
       </a>
-      <a href="mailto:luisdavid@example.com">
+      <a href="mailto:luisdavidtrejofuentes@gmail.com">
         <i class="fas fa-envelope fa-2x"></i>
       </a>
     </p>
