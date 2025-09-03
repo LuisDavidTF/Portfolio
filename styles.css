@@ -5,6 +5,7 @@
   --light-color: #FAFAFA;
   --white: #fff;
   --text-color: #6c757d;
+  --hover-blue: #3399FF;
 }
 
 body {
@@ -28,6 +29,29 @@ body {
   padding: 0 20px;
 }
 
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn-hero {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-hero:hover {
+  background-color: var(--hover-blue);
+  color: #fff;
+}
+
+/* Section titles */
 .section-title {
   color: var(--primary-color);
   font-weight: bold;
@@ -44,46 +68,71 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-decoration: none;
-  color: var(--white);
   background-color: var(--primary-color);
-  padding: 30px;
+  color: var(--white);
+  padding: 20px;
   border-radius: 12px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .tech-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-8px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
 }
 
 .skills-icons {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
+  gap: 10px;
   opacity: 0;
   transition: opacity 0.3s ease;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 .tech-card:hover .skills-icons {
   opacity: 1;
 }
 
-.tech-card h5 {
+/* Individual skill items */
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--third-color);
+  color: var(--text-color);
+  padding: 10px;
+  border-radius: 8px;
+  min-width: 60px;
+  transition: transform 0.3s, background-color 0.3s;
+  cursor: default;
+}
+
+.skill-item i {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.skill-item span {
+  font-size: 0.8rem;
   text-align: center;
-  color: var(--white);
-  margin-bottom: 0;
+}
+
+.skill-item:hover {
+  background-color: var(--hover-blue);
+  color: #fff;
+  transform: translateY(-5px);
 }
 
 /* Projects */
 .project-card {
   background: var(--white);
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   overflow: hidden;
   transition: transform 0.3s ease;
+  margin-bottom: 30px;
 }
 
 .project-card:hover {
@@ -103,6 +152,36 @@ body {
   opacity: 1;
 }
 
+/* Individual project skills */
+.project-skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--third-color);
+  color: var(--text-color);
+  padding: 8px;
+  border-radius: 8px;
+  min-width: 60px;
+  transition: background-color 0.3s, transform 0.3s;
+  cursor: default;
+}
+
+.project-skill i {
+  font-size: 1.5rem;
+  margin-bottom: 3px;
+}
+
+.project-skill span {
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.project-skill:hover {
+  background-color: var(--hover-blue);
+  color: #fff;
+  transform: translateY(-3px);
+}
+
 /* Footer */
 footer i {
   color: var(--primary-color);
@@ -111,5 +190,5 @@ footer i {
 }
 
 footer i:hover {
-  color: var(--secondary-color);
+  color: var(--hover-blue);
 }
