@@ -5,70 +5,71 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Navbar con Blur</title>
 
-  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
 
   <style>
-  /* FONDO GLOBAL */
-  body {
-    background-color: #ffffff; /* Fondo base blanco */
-    margin: 0;
-    padding: 0;
-  }
+    .custom-navbar {
+      background-color: rgba(255, 255, 255, 0.25); 
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+      padding: 0.8rem 0;
+    }
 
-  /* === NAVBAR CON BLUR AISLADO === */
-  .custom-navbar {
-    background-color: rgba(255, 255, 255, 0.25); /* Transparente para blur */
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
-    padding: 0.8rem 0;
-    position: relative;
-    z-index: 9999;
-  }
+    .custom-navbar .navbar-brand {
+      font-weight: 600;
+      font-size: 1.2rem;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .page-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #ffffff;
+      z-index: -1;
+    }
 
-  .custom-navbar .navbar-brand {
-    font-weight: 600;
-    font-size: 1.2rem;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
+    .custom-btn-nav {
+      padding: 8px 18px;
+      border-radius: 12px;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background-color: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      transition: all 0.3s ease;
+    }
 
-  /* BOTÓN NAVBAR MEJORADO */
-  .custom-btn-nav {
-    padding: 8px 18px;
-    border-radius: 12px;
-    font-weight: 500;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    background-color: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    transition: all 0.3s ease;
-  }
+    .custom-btn-nav:hover {
+      background-color: rgba(255, 255, 255, 0.35);
+      transform: translateY(-2px);
+      filter: brightness(110%);
+    }
 
-  .custom-btn-nav:hover {
-    background-color: rgba(255, 255, 255, 0.35);
-    transform: translateY(-2px);
-    filter: brightness(110%);
-  }
+    .navbar-nav .nav-item {
+      margin-left: 10px;
+    }
 
-  /* NAV ITEMS */
-  .navbar-nav .nav-item {
-    margin-left: 10px;
-  }
-</style>
-
+    body {
+      height: 200vh;
+      background: linear-gradient(to bottom right, #999, #333);
+    }
+  </style>
 </head>
 <body>
-
+  <div class="page-background"></div>
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
     <div class="container">
@@ -103,7 +104,6 @@
     </div>
   </nav>
 
-  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
