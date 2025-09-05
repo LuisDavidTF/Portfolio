@@ -83,25 +83,35 @@ body {
 }
 
 .tech-card {
-  background: var(--primary-color);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
   color: var(--white);
   padding: 20px;
   border-radius: 12px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
   overflow: hidden;
 }
 
+/* Onda repetida */
 .tech-card::after {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -5px;
   left: 0;
   width: 100%;
-  height: 40px;
-  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20'><path fill='%23ff6600' d='M0 20 Q25 0 50 20 T100 20 V20 H0 Z'/></svg>") no-repeat bottom;
-  background-size: cover;
+  height: 30px;
+  background: url("data:image/svg+xml;utf8,
+    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 20'>
+      <path fill='%23ff6600' d='M0 20 Q 15 10 30 20 T 60 20 T 90 20 T 120 20 V20 H0 Z'/>
+    </svg>") repeat-x bottom;
+  background-size: 60px 30px;
+  z-index: 1;
 }
+
 
 
 
