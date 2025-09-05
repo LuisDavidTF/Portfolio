@@ -6,6 +6,9 @@
   --white: #fff;
   --text-color: #6c757d;
 }
+html {
+  scroll-padding-top: 80px;
+}
 
 body {
   font-family: 'Poppins', sans-serif;
