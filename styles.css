@@ -82,17 +82,18 @@ body {
   line-height: 1.6;
 }
 
+/* Tech Cards */
 .tech-card {
-  position: relative;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: var(--primary-color);
   color: var(--white);
   padding: 20px;
   border-radius: 12px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  clip-path: path("M0,0 H100 V85 C75,95 25,95 0,85 Z");
 }
-
 
 .tech-card:hover {
   transform: translateY(-8px);
