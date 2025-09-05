@@ -83,24 +83,17 @@ body {
 }
 
 /* Tech Cards con efecto de onda */
-.tech-card {
-  position: relative;
-  overflow: hidden;
-  background-color: var(--primary-color);
-  color: var(--white);
-  padding: 20px;
-  border-radius: 12px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  
-  /* Onda en la parte inferior */
-  clip-path: path("M0,0 H100 V85 Q75,100 50,85 Q25,70 0,85 Z");
+.tech-card::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: var(--primary-color);
+  border-radius: 50% 50% 0 0;
+  filter: blur(10px);
 }
-
-.tech-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
-}
-
 
 .tech-card:hover {
   transform: translateY(-8px);
