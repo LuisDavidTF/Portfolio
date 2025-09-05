@@ -84,45 +84,21 @@ body {
 
 /* Tech Cards */
 .tech-card {
-  position: relative;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: var(--primary-color);
   color: var(--white);
   padding: 20px;
   border-radius: 12px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, max-height 0.5s ease;
-  max-height: 70px; /* 👈 al inicio solo muestra el título */
-  text-align: center;
-  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Efecto de gotas en la parte inferior */
-.tech-card::after {
-  content: "";
-  position: absolute;
-  bottom: -15px;
-  left: 0;
-  width: 100%;
-  height: 40px;
-  background: var(--primary-color);
-  border-radius: 50% 50% 0 0;
-  filter: blur(10px);
-  opacity: 0; /* 👈 oculto hasta hover */
-  transition: opacity 0.5s ease;
-}
-
-/* Al pasar el mouse */
 .tech-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
-  max-height: 300px; /* 👈 se expande para mostrar skills */
 }
-
-/* Mostrar gotas al hacer hover */
-.tech-card:hover::after {
-  opacity: 1;
-}
-
 
 .skills-icons {
   display: flex;
@@ -130,16 +106,14 @@ body {
   justify-content: center;
   gap: 10px;
   opacity: 0;
-  transition: opacity 0.5s ease;
+  transition: opacity 0.3s ease;
   margin-top: 10px;
-  max-height: 0;
-  overflow: hidden;
 }
 
 .tech-card:hover .skills-icons {
   opacity: 1;
-  max-height: 500px; /* suficiente para expandirse */
 }
+
 /* Individual skill items */
 .skill-item {
   display: flex;
