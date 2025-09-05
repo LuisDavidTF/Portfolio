@@ -130,14 +130,16 @@ body {
   justify-content: center;
   gap: 10px;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.5s ease;
   margin-top: 10px;
+  max-height: 0;
+  overflow: hidden;
 }
 
 .tech-card:hover .skills-icons {
   opacity: 1;
+  max-height: 500px; /* suficiente para expandirse */
 }
-
 /* Individual skill items */
 .skill-item {
   display: flex;
