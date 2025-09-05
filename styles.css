@@ -94,6 +94,8 @@ body {
   padding: 20px;
   border-radius: 12px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  clip-path: path("M0,0 H100 V85 Q75,100 50,85 Q25,70 0,85 Z");
 }
 
 /* Efecto chorreante en la parte inferior de cada tarjeta */
