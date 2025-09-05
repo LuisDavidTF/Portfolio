@@ -13,6 +13,8 @@
 </head>
 <body>
 
+  <div id="navbar-placeholder"></div>
+
   <!-- Hero -->
   <header class="hero text-center">
   <h1 class="display-4 fw-bold">Luis David Trejo Fuentes</h1>
@@ -146,5 +148,11 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+<script>
+fetch("https://luisdavidtf.github.io/Portfolio/navbar-shared")
+  .then(res => res.text())
+  .then(data => document.getElementById("navbar-placeholder").innerHTML = data);
+</script>
 </body>
 </html>
