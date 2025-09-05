@@ -82,8 +82,8 @@ body {
   line-height: 1.6;
 }
 
+/* Tech Cards */
 .tech-card {
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -93,25 +93,6 @@ body {
   padding: 20px;
   border-radius: 12px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: visible; /* 👈 importante para que no se corte contenido */
-  z-index: 1; /* contenido encima de ::after */
-}
-
-/* Ondas pequeñas y repetidas, detrás del contenido */
-.tech-card::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 30px;
-  background: 
-    url("data:image/svg+xml;utf8,
-      <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 20' preserveAspectRatio='none'>
-        <path fill='%23F0DB4F' d='M0 20 Q 15 10 30 20 T 60 20 T 90 20 T 120 20 V20 H0 Z'/>
-      </svg>") repeat-x bottom;
-  background-size: 60px 30px;
-  z-index: 0; /* 👈 detrás del contenido */
 }
 
 .tech-card:hover {
