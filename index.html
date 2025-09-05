@@ -150,29 +150,28 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   
 <script>
-fetch("https://luisdavidtf.github.io/Portfolio/navbar-shared")
+fetch("https://luisdavidtf.github.io/Portfolio/navbar-shared/navbar.html")
   .then(res => res.text())
   .then(data => {
     document.getElementById("navbar-placeholder").innerHTML = data;
 
-    // Cambiar color del navbar según el hero
     const navbar = document.querySelector(".global-navbar");
-    const hero = document.querySelector(".hero"); // tu sección hero
+    const hero = document.querySelector(".hero");
 
     if(hero && navbar){
+      // Obtener el color real renderizado del hero
       const heroColor = window.getComputedStyle(hero).backgroundColor;
-      navbar.style.backgroundColor = heroColor; // aplica el color del hero
+      navbar.style.backgroundColor = heroColor;
     }
 
-    // Opcional: si quieres cambiar el color del logo o links
+    // Opcional: ajustar color de links o logo según contraste
     const logo = document.querySelector(".navbar-logo");
     if(logo){
-      // ejemplo: texto blanco si el hero es oscuro, negro si es claro
-      // puedes personalizar según tu criterio
-      logo.style.color = "#fff"; 
+      logo.style.color = "#fff"; // porque tu hero tiene texto blanco
     }
   });
 </script>
+
 
 </body>
 </html>
