@@ -3,7 +3,7 @@ import Navbar from "@/Components/Navbar.jsx";
 import Hero from "@/Components/Hero.jsx";
 import Skills from "@/Components/Skills.jsx";
 import Projects from "@/Components/Projects.jsx";
-import Footer from "@/Components/Footer.jsx";
+import Footer from "@/components/Footer.jsx";
 import "@/App.css";
 
 
