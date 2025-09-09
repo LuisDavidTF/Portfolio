@@ -4,7 +4,7 @@ import path from 'path'
 
 export default defineConfig({
   plugins: [react()],
-  base: "/Portfolio/",  // Para GitHub Pages
+  base: "/",  // Para GitHub Pages
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src')  // '@' apunta a la carpeta src
