@@ -1,10 +1,11 @@
 // src/App.jsx
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Skills from "./components/Skills";
-import Projects from "./components/Projects";
-import Footer from "./components/Footer";
-import "./App.css";
+import Navbar from "@/components/Navbar.jsx";
+import Hero from "@/components/Hero.jsx";
+import Skills from "@/components/Skills.jsx";
+import Projects from "@/components/Projects.jsx";
+import Footer from "@/components/Footer.jsx";
+import "@/App.css";
+
 
 function App() {
   return (
