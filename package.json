@@ -1,15 +1,5 @@
 {
   "devDependencies": {
-    "gh-pages": "^6.3.0",
-    "homepage": "https://LuisDavidTF.github.io/Portfolio"
-
-  },
-  "scripts": {
-  "dev": "vite",
-  "build": "vite build",
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d dist"
-}
-
-  
+    "gh-pages": "^6.3.0"
+  }
 }
