@@ -1,0 +1,413 @@
+:root {
+    --primary-color: #D4A373;
+    --secondary-color: #DDA15E;
+    --third-color: #FAEDCD;
+    --light-color: #FAFAFA;
+    --white: #fff;
+    --text-color: #6c757d;
+}
+
+html {
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light-color);
+    color: var(--text-color);
+    margin: 0;
+}
+
+/* Hero */
+.hero {
+    background-color: rgba(212, 163, 115, 0.7);
+    backdrop-filter: blur(6px);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn-hero {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: filter 0.3s ease;
+}
+
+.btn-hero:hover {
+    filter: brightness(110%);
+}
+
+/* Mini About Card */
+.hero-about-card {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    padding: 20px 25px;
+    border-radius: 12px;
+    max-width: 700px;
+    margin: 20px auto 0;
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.5;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-about-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Section titles */
+.section-title {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.about-text {
+    max-width: 700px;
+    font-size: 1.1rem;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Tech Cards */
+.tech-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 20px;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tech-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.skills-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    margin-top: 10px;
+}
+
+.tech-card:hover .skills-icons {
+    opacity: 1;
+}
+
+/* Individual skill items */
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 8px;
+    min-width: 60px;
+    transition: transform 0.3s, filter 0.3s;
+    cursor: default;
+}
+
+.skill-item i {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.skill-item span {
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+/* Colors by technology */
+.skill-item[title="JavaScript"] {
+    background-color: #F0DB4F;
+    color: #000;
+}
+
+.skill-item[title="TypeScript"] {
+    background-color: #007ACC;
+    color: #fff;
+}
+
+.skill-item[title="HTML5"] {
+    background-color: #E34F26;
+    color: #fff;
+}
+
+.skill-item[title="CSS3"] {
+    background-color: #264DE4;
+    color: #fff;
+}
+
+.skill-item[title="SQL"] {
+    background-color: #4479A1;
+    color: #fff;
+}
+
+.skill-item[title="C#"] {
+    background-color: #68217A;
+    color: #fff;
+}
+
+.skill-item[title="Java"] {
+    background-color: #f89820;
+    color: #fff;
+}
+
+.skill-item[title="Python"] {
+    background-color: #306998;
+    color: #fff;
+}
+
+.skill-item[title="Angular"] {
+    background-color: #DD0031;
+    color: #fff;
+}
+
+.skill-item[title="Node.js"] {
+    background-color: #339933;
+    color: #fff;
+}
+
+.skill-item[title="Express"] {
+    background-color: #000;
+    color: #fff;
+}
+
+.skill-item[title="Bootstrap"] {
+    background-color: #563d7c;
+    color: #fff;
+}
+
+.skill-item[title="MySQL"] {
+    background-color: #4479A1;
+    color: #fff;
+}
+
+.skill-item[title="SQL Server"] {
+    background-color: #CC2927;
+    color: #fff;
+}
+
+.skill-item[title="Git"] {
+    background-color: #F1502F;
+    color: #fff;
+}
+
+.skill-item[title="MVC"] {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.skill-item[title="REST API"] {
+    background-color: #00AEEF;
+    color: #fff;
+}
+
+.skill-item[title="Scrum/Agile"] {
+    background-color: #FFCA28;
+    color: #000;
+}
+
+.skill-item[title="Stripe API"] {
+    background-color: #6772E5;
+    color: #fff;
+}
+
+/* Hover effect */
+.skill-item:hover {
+    filter: brightness(110%);
+    transform: translateY(-3px);
+}
+
+/* Projects */
+.project-card {
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.project-card:hover {
+    transform: scale(1.02);
+}
+
+.velonia-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    margin-bottom: 15px;
+}
+
+.project-card:hover .velonia-skills {
+    opacity: 1;
+}
+
+.project-skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+    border-radius: 8px;
+    min-width: 60px;
+    transition: transform 0.3s, filter 0.3s;
+    cursor: default;
+}
+
+.project-skill i {
+    font-size: 1.5rem;
+    margin-bottom: 3px;
+}
+
+.project-skill span {
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+/* Colors by project skill */
+.project-skill[title="Angular"] {
+    background-color: #DD0031;
+    color: #fff;
+}
+
+.project-skill[title="Node.js"] {
+    background-color: #339933;
+    color: #fff;
+}
+
+.project-skill[title="Express"] {
+    background-color: #000;
+    color: #fff;
+}
+
+.project-skill[title="MySQL"] {
+    background-color: #4479A1;
+    color: #fff;
+}
+
+.project-skill[title="Stripe"] {
+    background-color: #6772E5;
+    color: #fff;
+}
+
+.project-skill[title="JWT"] {
+    background-color: #000;
+    color: #fff;
+}
+
+.project-skill[title="Tailwind"] {
+    background-color: #38B2AC;
+    color: #fff;
+}
+
+.project-skill[title="Bootstrap"] {
+    background-color: #563d7c;
+    color: #fff;
+}
+
+.project-skill:hover {
+    filter: brightness(110%);
+    transform: translateY(-3px);
+}
+
+/* Footer */
+footer i {
+    margin: 0 10px;
+    transition: opacity 0.3s ease;
+}
+
+footer i.fa-linkedin {
+    color: #0A66C2;
+}
+
+footer i.fa-github {
+    color: #171515;
+}
+
+footer i.fa-envelope {
+    color: #D44638;
+}
+
+footer i:hover {
+    opacity: 0.8;
+}
+
+.custom-navbar {
+    background-color: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+    padding: 0.8rem 0;
+}
+
+.custom-navbar .navbar-brand {
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.page-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    z-index: -1;
+}
+
+.custom-btn-nav {
+    padding: 8px 18px;
+    border-radius: 12px;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    transition: all 0.3s ease;
+}
+
+.custom-btn-nav:hover {
+    background-color: rgba(255, 255, 255, 0.35);
+    transform: translateY(-2px);
+    filter: brightness(110%);
+}
+
+.navbar-nav .nav-item {
+    margin-left: 10px;
+}
