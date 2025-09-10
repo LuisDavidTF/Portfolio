@@ -411,3 +411,7 @@ footer i:hover {
 .navbar-nav .nav-item {
     margin-left: 10px;
 }
+/* Cokkies */
+.cookie-banner {
+  transform: translateY(0) !important; 
+}

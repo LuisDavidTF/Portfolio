@@ -1,4 +1,3 @@
-// src/components/Skills.jsx
 export default function Skills() {
   return (
     <section className="container my-5" id="skills">

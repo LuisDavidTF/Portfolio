@@ -1,4 +1,3 @@
-// src/components/Hero.jsx
 export default function Hero() {
   return (
     <header className="hero text-center">

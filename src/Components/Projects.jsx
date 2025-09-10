@@ -1,4 +1,3 @@
-// src/components/Projects.jsx
 export default function Projects() {
   return (
     <section className="container my-5" id="projects">
