@@ -3,9 +3,9 @@ import { useState, useEffect } from "react";
 export default function CookieBanner() {
   const [visible, setVisible] = useState(false);
 
-  useEffect(() => {
+  /* useEffect(() => {
     const seen = localStorage.getItem("cookiesSeen");
-    /*if (!seen)*/ setVisible(true);
+    /*if (!seen) setVisible(true);
   }, []);
 
   const dismissBanner = () => {
@@ -14,7 +14,7 @@ export default function CookieBanner() {
   };
 
   if (!visible) return null;
-
+   */
   return (
     <div style={{
       position: "fixed",
