@@ -5,7 +5,7 @@ export default function CookieBanner() {
 
   useEffect(() => {
     const seen = localStorage.getItem("cookiesSeen");
-    if (!seen) setVisible(true);
+    /*if (!seen)*/ setVisible(true);
   }, []);
 
   const dismissBanner = () => {
