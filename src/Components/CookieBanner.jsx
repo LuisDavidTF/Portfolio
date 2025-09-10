@@ -21,44 +21,44 @@ export default function CookieBanner() {
     <div
       style={{
         position: "fixed",
-        bottom: 0,
-        left: 0,
-        right: 0,
-        backgroundColor: "#1e1e1e",
+        bottom: "20px",
+        right: "20px", // Cambiar a "left: 20px" si lo prefieres en la izquierda
+        backgroundColor: "rgba(30,30,30,0.9)", // Fondo semi-transparente
         color: "#f5f5f5",
-        padding: "16px 28px",
+        padding: "18px 22px",
         display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        fontSize: "1rem",
+        flexDirection: "column",
+        alignItems: "flex-start",
+        fontSize: "0.95rem",
         zIndex: 1000,
-        boxShadow: "0 -3px 10px rgba(0,0,0,0.4)",
-        borderTop: "3px solid #4CAF50",
-        transform: visible ? "translateY(0)" : "translateY(100%)",
-        transition: "transform 0.5s ease",
-        fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
+        boxShadow: "0 4px 12px rgba(0,0,0,0.4)",
+        borderRadius: "12px",
+        width: "280px",
+        maxWidth: "90%",
+        fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+        animation: "fadeIn 0.6s ease"
       }}
       className="cookie-banner"
     >
-      <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-        <span style={{ fontSize: "1.5rem" }}>🍪</span>
-        <span>
-          Este sitio usa <strong>Google Analytics</strong> para medir visitas y
-          mejorar la experiencia del usuario.
-        </span>
+      <div style={{ display: "flex", alignItems: "center", marginBottom: "10px" }}>
+        <span style={{ fontSize: "1.5rem", marginRight: "8px" }}>🍪</span>
+        <strong>Aviso de Cookies</strong>
       </div>
+      <p style={{ margin: "0 0 12px 0", lineHeight: "1.4" }}>
+        Este sitio usa <strong>Google Analytics</strong> para medir visitas y mejorar la experiencia del usuario.
+      </p>
       <button
         onClick={dismissBanner}
         style={{
-          marginLeft: "20px",
-          padding: "8px 18px",
+          alignSelf: "flex-end",
+          padding: "6px 14px",
           backgroundColor: "#4CAF50",
           color: "#fff",
           border: "none",
           borderRadius: "6px",
           cursor: "pointer",
           fontWeight: "600",
-          fontSize: "0.95rem",
+          fontSize: "0.9rem",
           transition: "background-color 0.3s ease"
         }}
         onMouseOver={(e) => (e.target.style.backgroundColor = "#45a049")}
