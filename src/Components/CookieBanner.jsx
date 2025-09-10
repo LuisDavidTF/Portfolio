@@ -1,70 +1,71 @@
 import { useState, useEffect } from "react";
+import { FaCookieBite } from "react-icons/fa";
 
 export default function CookieBanner() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     const seen = localStorage.getItem("cookiesSeen");
-    if (!seen) {
-      setVisible(true);
-    }
+    if (!seen) setVisible(true);
   }, []);
+
+  const enableAnalytics = () => {
+    // Insertar script de Google Analytics
+    const script = document.createElement("script");
+    script.async = true;
+    script.src = "https://www.googletagmanager.com/gtag/js?id=G-X50BSFS1NL";
+    document.head.appendChild(script);
+
+    script.onload = () => {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){window.dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-X50BSFS1NL');
+    };
+  };
 
   const dismissBanner = () => {
     localStorage.setItem("cookiesSeen", "true");
     setVisible(false);
+    enableAnalytics(); // Activar Analytics solo después de aceptar
   };
 
   if (!visible) return null;
 
   return (
-    <div
-      style={{
-        position: "fixed",
-        bottom: "20px",
-        right: "20px", // Cambiar a "left: 20px" si lo prefieres en la izquierda
-        backgroundColor: "rgba(30,30,30,0.9)", // Fondo semi-transparente
-        color: "#f5f5f5",
-        padding: "18px 22px",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "flex-start",
-        fontSize: "0.95rem",
-        zIndex: 1000,
-        boxShadow: "0 4px 12px rgba(0,0,0,0.4)",
-        borderRadius: "12px",
-        width: "280px",
-        maxWidth: "90%",
-        fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
-        animation: "fadeIn 0.6s ease"
-      }}
-      className="cookie-banner"
-    >
-      <div style={{ display: "flex", alignItems: "center", marginBottom: "10px" }}>
-        <span style={{ fontSize: "1.5rem", marginRight: "8px" }}>🍪</span>
-        <strong>Aviso de Cookies</strong>
-      </div>
-      <p style={{ margin: "0 0 12px 0", lineHeight: "1.4" }}>
-        Este sitio usa <strong>Google Analytics</strong> para medir visitas y mejorar la experiencia del usuario.
-      </p>
-      <button
-        onClick={dismissBanner}
+    <div style={{
+      position: "fixed",
+      bottom: "20px",
+      right: "20px",
+      backgroundColor: "rgba(0,0,0,0.85)",
+      color: "#fff",
+      padding: "15px 20px",
+      display: "flex",
+      alignItems: "center",
+      fontSize: "0.95rem",
+      zIndex: 1000,
+      boxShadow: "0 2px 10px rgba(0,0,0,0.4)",
+      borderRadius: "12px",
+      maxWidth: "320px"
+    }} className="cookie-banner">
+      <FaCookieBite style={{ marginRight: "10px", fontSize: "1.5rem", color: "#FFD700" }} />
+      <span style={{ flex: 1 }}>
+        Este sitio usa Google Analytics para medir visitas y mejorar tu experiencia.
+      </span>
+      <button 
+        onClick={dismissBanner} 
         style={{
-          alignSelf: "flex-end",
+          marginLeft: "15px",
           padding: "6px 14px",
           backgroundColor: "#4CAF50",
           color: "#fff",
           border: "none",
           borderRadius: "6px",
           cursor: "pointer",
-          fontWeight: "600",
-          fontSize: "0.9rem",
-          transition: "background-color 0.3s ease"
+          fontWeight: "bold"
         }}
-        onMouseOver={(e) => (e.target.style.backgroundColor = "#45a049")}
-        onMouseOut={(e) => (e.target.style.backgroundColor = "#4CAF50")}
       >
-        Entendido
+        Aceptar
       </button>
     </div>
   );
