@@ -1,22 +1,31 @@
 // src/App.jsx
-import Navbar from "@/Components/Navbar.jsx";
-import Hero from "@/Components/Hero.jsx";
-import Skills from "@/Components/Skills.jsx";
-import Projects from "@/Components/Projects.jsx";
-import Footer from "@/Components/Footer.jsx";
-import CookieBanner from "@/Components/CookieBanner";
-import "@/App.css";
+
+import PersonalIntro from "@/personal-branding/components/PersonalIntro";
+import "@/shared/styles/globals.css";
+import "@/shared/styles/animations.css";
+import "@/shared/styles/components.css";
+import "@/shared/styles/responsive.css";
+import "@/shared/styles/tech-colors.css";
+import "@/shared/styles/themes.css";
+import NavigationButtons from "./personal-branding/components/NavigationButtons";
+import ProjectsContainer from "./portfolio-showcase/components/ProjectsContainer";
+import AboutCard from "./personal-branding/components/AboutCard";
+import SocialLinks from "./professional-network/components/SocialLinks";
 
 
 function App() {
   return (
     <>
-      <Navbar />
-      <Hero />
-      <Skills />
-      <Projects />
-      <Footer />
-      <CookieBanner />
+    <PersonalIntro />
+    <AboutCard />
+    <NavigationButtons />
+    <ProjectsContainer/>
+    <SocialLinks 
+        context="footer"
+        variant="default"
+        showPersonalInfo={true}
+        enableAnimations={true}
+      />
     </>
   );
 }
