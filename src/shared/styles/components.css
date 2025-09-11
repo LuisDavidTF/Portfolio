@@ -1,0 +1,340 @@
+/* Base styles para skill items */
+.skill-item,
+.project-skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 8px;
+  min-width: 60px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover effects */
+.skill-item:hover,
+.project-skill:hover {
+  filter: brightness(110%);
+  transform: translateY(-3px);
+}
+
+/* Interactive styles (cuando tiene onClick) */
+.skill-item[role="button"],
+.project-skill[role="button"] {
+  cursor: pointer;
+}
+
+.skill-item[role="button"]:focus,
+.project-skill[role="button"]:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.5);
+  outline-offset: 2px;
+}
+
+/* Iconos */
+.skill-item i,
+.project-skill i {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  transition: transform 0.2s ease;
+}
+
+.skill-item:hover i,
+.project-skill:hover i {
+  transform: scale(1.1);
+}
+
+/* Labels */
+.skill-label {
+  font-size: 0.8rem;
+  text-align: center;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-top: 2px;
+}
+
+/* ==========================================
+   SIZE VARIANTS
+   ========================================== */
+
+/* Small size */
+.skill-small {
+  padding: 6px;
+  min-width: 45px;
+  border-radius: 6px;
+}
+
+.skill-small i {
+  font-size: 1.2rem;
+  margin-bottom: 3px;
+}
+
+.skill-small .skill-label {
+  font-size: 0.7rem;
+}
+
+/* Medium size (default) */
+.skill-medium {
+  padding: 10px;
+  min-width: 60px;
+  border-radius: 8px;
+}
+
+.skill-medium i {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.skill-medium .skill-label {
+  font-size: 0.8rem;
+}
+
+/* Large size */
+.skill-large {
+  padding: 14px;
+  min-width: 75px;
+  border-radius: 10px;
+}
+
+.skill-large i {
+  font-size: 1.8rem;
+  margin-bottom: 6px;
+}
+
+.skill-large .skill-label {
+  font-size: 0.9rem;
+}
+
+/* ==========================================
+   PROJECT SPECIFIC STYLES
+   ========================================== */
+
+/* Project skills container */
+.project-skills,
+.velonia-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  margin-bottom: 15px;
+}
+
+.project-card:hover .project-skills,
+.project-card:hover .velonia-skills {
+  opacity: 1;
+}
+
+/* Project skill specific adjustments */
+.project-skill {
+  padding: 8px;
+  min-width: 60px;
+}
+
+.project-skill i {
+  font-size: 1.5rem;
+  margin-bottom: 3px;
+}
+
+.project-skill .skill-label {
+  font-size: 0.75rem;
+}
+
+/* ==========================================
+   SKILLS DEMONSTRATION STYLES
+   ========================================== */
+
+/* Skills container */
+.skills-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  margin-top: 10px;
+}
+
+.tech-card:hover .skills-icons {
+  opacity: 1;
+}
+
+/* ==========================================
+   BUTTON COMPONENTS
+   ========================================== */
+
+/* Hero buttons */
+.btn-hero {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: filter 0.3s ease, transform 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-hero:hover {
+  filter: brightness(110%);
+  transform: translateY(-2px);
+  text-decoration: none;
+  color: var(--white);
+}
+
+.btn-hero:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.5);
+  outline-offset: 2px;
+}
+
+/* Custom navigation buttons */
+.custom-btn-nav {
+  padding: 8px 18px;
+  border-radius: 12px;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transition: all 0.3s ease;
+  color: inherit;
+}
+
+.custom-btn-nav:hover {
+  background-color: rgba(255, 255, 255, 0.35);
+  transform: translateY(-2px);
+  filter: brightness(110%);
+  text-decoration: none;
+}
+
+/* ==========================================
+   CARD COMPONENTS
+   ========================================== */
+
+/* Tech cards */
+.tech-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 20px;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.tech-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.tech-card h5 {
+  margin-bottom: 10px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Project cards */
+.project-card {
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 30px;
+}
+
+.project-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Hero about card */
+.hero-about-card {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);  
+  padding: 20px 25px;
+  border-radius: 12px;
+  max-width: 700px;
+  margin: 20px auto 0;
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.5;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-about-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ==========================================
+   LOADING STATES
+   ========================================== */
+
+.skill-item.loading,
+.project-skill.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.skill-item.loading::after,
+.project-skill.loading::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* ==========================================
+   RESPONSIVE ADJUSTMENTS
+   ========================================== */
+
+@media (max-width: 768px) {
+  .skill-item,
+  .project-skill {
+    min-width: 50px;
+    padding: 8px;
+  }
+  
+  .skill-item i,
+  .project-skill i {
+    font-size: 1.3rem;
+  }
+  
+  .skill-label {
+    font-size: 0.75rem;
+  }
+  
+  .tech-card {
+    padding: 15px;
+  }
+  
+  .hero-about-card {
+    padding: 15px 20px;
+    font-size: 0.9rem;
+  }
+}
