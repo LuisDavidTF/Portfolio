@@ -1,0 +1,605 @@
+/* ==========================================
+   RESPONSIVE DESIGN SYSTEM
+   ========================================== */
+
+/* ==========================================
+   BREAKPOINTS
+   ========================================== */
+
+/* 
+   Breakpoints utilizados:
+   - xs: 0px - 575px (Mobile portrait)
+   - sm: 576px - 767px (Mobile landscape)  
+   - md: 768px - 991px (Tablet)
+   - lg: 992px - 1199px (Desktop)
+   - xl: 1200px - 1399px (Large desktop)
+   - xxl: 1400px+ (Extra large desktop)
+*/
+
+/* ==========================================
+   MOBILE FIRST - BASE STYLES (0px+)
+   ========================================== */
+
+/* Container responsive */
+.container-responsive {
+  width: 100%;
+  padding-left: var(--spacing-md);
+  padding-right: var(--spacing-md);
+  margin: 0 auto;
+}
+
+/* Grid responsive */
+.grid-responsive {
+  display: grid;
+  gap: var(--spacing-md);
+  grid-template-columns: 1fr;
+}
+
+/* Flexbox responsive */
+.flex-responsive {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+/* Typography responsive */
+h1 { font-size: 2rem; }    /* 32px */
+h2 { font-size: 1.75rem; } /* 28px */
+h3 { font-size: 1.5rem; }  /* 24px */
+h4 { font-size: 1.25rem; } /* 20px */
+h5 { font-size: 1.125rem; }/* 18px */
+h6 { font-size: 1rem; }    /* 16px */
+
+/* ==========================================
+   SMALL DEVICES (576px+) - MOBILE LANDSCAPE
+   ========================================== */
+
+@media (min-width: 576px) {
+  .container-responsive {
+    max-width: 540px;
+  }
+  
+  /* Grid - 2 columnas en móvil landscape */
+  .grid-sm-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Flexbox - row en landscape */
+  .flex-sm-row {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  /* Skills grid - 2 columnas */
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+  }
+  
+  /* Hero ajustes */
+  .hero {
+    padding: 0 var(--spacing-xl);
+  }
+  
+  .hero-buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  /* Tech cards - 2 columnas */
+  .tech-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ==========================================
+   MEDIUM DEVICES (768px+) - TABLET
+   ========================================== */
+
+@media (min-width: 768px) {
+  .container-responsive {
+    max-width: 720px;
+    padding-left: var(--spacing-lg);
+    padding-right: var(--spacing-lg);
+  }
+  
+  /* Typography scale up */
+  h1 { font-size: 2.5rem; }  /* 40px */
+  h2 { font-size: 2rem; }    /* 32px */
+  h3 { font-size: 1.75rem; } /* 28px */
+  
+  /* Grid - 3 columnas en tablet */
+  .grid-md-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .grid-md-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  /* Skills grid - 4 columnas */
+  .skills-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  /* Tech cards - mejor distribución */
+  .tech-card {
+    min-height: 120px;
+  }
+  
+  /* Project cards - mejor layout */
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-xl);
+  }
+  
+  /* Hero - más espacio */
+  .hero {
+    padding: 0 var(--spacing-xxl);
+  }
+  
+  .hero-about-card {
+    max-width: 800px;
+    padding: var(--spacing-xl);
+    font-size: var(--font-size-lg);
+  }
+  
+  /* Navbar - mejor espaciado */
+  .navbar-nav .nav-item {
+    margin-left: var(--spacing-md);
+  }
+  
+  /* Footer - layout horizontal */
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+/* ==========================================
+   LARGE DEVICES (992px+) - DESKTOP
+   ========================================== */
+
+@media (min-width: 992px) {
+  .container-responsive {
+    max-width: 960px;
+  }
+  
+  /* Typography - tamaños completos */
+  h1 { font-size: 3rem; }    /* 48px */
+  h2 { font-size: 2.25rem; } /* 36px */
+  h3 { font-size: 1.875rem; }/* 30px */
+  
+  /* Grid - layouts complejos */
+  .grid-lg-5 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  
+  .grid-lg-6 {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  
+  /* Skills - layout desktop */
+  .skills-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-xl);
+  }
+  
+  /* Project cards - 3 columnas */
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  /* Hero - layout completo */
+  .hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .hero-buttons {
+    gap: var(--spacing-lg);
+  }
+  
+  /* Navbar - menú completo */
+  .navbar-menu {
+    display: flex;
+  }
+  
+  .navbar-mobile-toggle {
+    display: none;
+  }
+  
+  /* Tech cards hover effects más pronunciados */
+  .tech-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px var(--shadow-strong);
+  }
+  
+  /* Skills icons - más espacio */
+  .skills-icons {
+    gap: var(--spacing-md);
+  }
+  
+  .skill-item,
+  .project-skill {
+    min-width: 70px;
+    padding: var(--spacing-md);
+  }
+}
+
+/* ==========================================
+   EXTRA LARGE DEVICES (1200px+)
+   ========================================== */
+
+@media (min-width: 1200px) {
+  .container-responsive {
+    max-width: 1140px;
+  }
+  
+  /* Typography - máximos tamaños */
+  h1 { font-size: 3.5rem; }  /* 56px */
+  h2 { font-size: 2.5rem; }  /* 40px */
+  
+  /* Hero - espaciado máximo */
+  .hero-about-card {
+    max-width: 1000px;
+    padding: var(--spacing-xxl);
+    font-size: var(--font-size-xl);
+  }
+  
+  /* Projects - layout óptimo */
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-xxl);
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  /* Skills - distribución perfecta */
+  .skills-container {
+    gap: var(--spacing-xxl);
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+/* ==========================================
+   EXTRA EXTRA LARGE (1400px+)
+   ========================================== */
+
+@media (min-width: 1400px) {
+  .container-responsive {
+    max-width: 1320px;
+  }
+  
+  /* Layouts especiales para pantallas muy grandes */
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .skills-showcase {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: var(--spacing-xl);
+  }
+}
+
+/* ==========================================
+   MOBILE SPECIFIC ADJUSTMENTS
+   ========================================== */
+
+@media (max-width: 767px) {
+  /* Reducir espaciado en móvil */
+  :root {
+    --spacing-xl: 1.5rem;
+    --spacing-xxl: 2rem;
+  }
+  
+  /* Hero mobile */
+  .hero {
+    height: 100vh;
+    padding: var(--spacing-lg);
+    text-align: center;
+  }
+  
+  .hero h1 {
+    font-size: 1.75rem;
+    line-height: 1.2;
+  }
+  
+  .hero-about-card {
+    padding: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+    font-size: var(--font-size-sm);
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-lg);
+  }
+  
+  .btn-hero {
+    width: 200px;
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+  
+  /* Skills mobile */
+  .tech-card {
+    padding: var(--spacing-md);
+    min-height: 100px;
+  }
+  
+  .skills-icons {
+    gap: var(--spacing-sm);
+  }
+  
+  .skill-item,
+  .project-skill {
+    min-width: 50px;
+    padding: var(--spacing-sm);
+  }
+  
+  .skill-item i,
+  .project-skill i {
+    font-size: 1.2rem;
+  }
+  
+  .skill-label {
+    font-size: 0.7rem;
+  }
+  
+  /* Project cards mobile */
+  .project-card {
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .project-card .p-3 {
+    padding: var(--spacing-md);
+  }
+  
+  /* Navigation mobile */
+  .navbar-brand {
+    font-size: var(--font-size-lg);
+  }
+  
+  /* Footer mobile */
+  footer {
+    padding: var(--spacing-lg) 0;
+  }
+  
+  footer i {
+    font-size: var(--font-size-lg);
+    margin: 0 var(--spacing-xs);
+  }
+}
+
+/* ==========================================
+   LANDSCAPE MOBILE ADJUSTMENTS
+   ========================================== */
+
+@media (max-width: 767px) and (orientation: landscape) {
+  .hero {
+    height: 100vh;
+    padding: var(--spacing-md) var(--spacing-lg);
+  }
+  
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+  
+  .hero-about-card {
+    padding: var(--spacing-md);
+    font-size: var(--font-size-sm);
+  }
+  
+  .hero-buttons {
+    flex-direction: row;
+    gap: var(--spacing-sm);
+  }
+  
+  .btn-hero {
+    width: auto;
+    padding: var(--spacing-xs) var(--spacing-md);
+  }
+}
+
+/* ==========================================
+   TABLET SPECIFIC ADJUSTMENTS
+   ========================================== */
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Adjustments específicos para tablets */
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .hero-buttons {
+    gap: var(--spacing-md);
+  }
+}
+
+/* ==========================================
+   TOUCH DEVICE OPTIMIZATIONS
+   ========================================== */
+
+@media (hover: none) and (pointer: coarse) {
+  /* Dispositivos táctiles - botones más grandes */
+  .btn-hero,
+  .custom-btn-nav {
+    min-height: 44px;
+    padding: var(--spacing-md) var(--spacing-lg);
+  }
+  
+  /* Skills items - área táctil más grande */
+  .skill-item,
+  .project-skill {
+    min-width: 60px;
+    min-height: 60px;
+  }
+  
+  /* Eliminar hover effects en touch */
+  .tech-card:hover,
+  .project-card:hover,
+  .skill-item:hover,
+  .project-skill:hover {
+    transform: none;
+    filter: none;
+  }
+  
+  /* Focus más visible en touch */
+  .btn-hero:focus,
+  .custom-btn-nav:focus {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
+  }
+}
+
+/* ==========================================
+   PRINT STYLES
+   ========================================== */
+
+@media print {
+  /* Ocultar elementos no necesarios */
+  .navbar,
+  .hero-buttons,
+  .btn-hero,
+  .custom-btn-nav {
+    display: none !important;
+  }
+  
+  /* Ajustar colores para impresión */
+  * {
+    background: white !important;
+    color: black !important;
+    box-shadow: none !important;
+  }
+  
+  /* Mejor tipografía para impresión */
+  body {
+    font-size: 12pt;
+    line-height: 1.4;
+  }
+  
+  h1 { font-size: 18pt; }
+  h2 { font-size: 16pt; }
+  h3 { font-size: 14pt; }
+  
+  /* Evitar saltos de página */
+  .project-card,
+  .tech-card {
+    break-inside: avoid;
+  }
+}
+
+/* ==========================================
+   UTILITY CLASSES RESPONSIVE
+   ========================================== */
+
+/* Display utilities */
+.d-mobile-none { display: none; }
+.d-tablet-none { display: block; }
+.d-desktop-none { display: block; }
+
+@media (min-width: 768px) {
+  .d-mobile-none { display: block; }
+  .d-tablet-none { display: none; }
+}
+
+@media (min-width: 992px) {
+  .d-tablet-none { display: block; }
+  .d-desktop-none { display: none; }
+}
+
+/* Spacing utilities responsive */
+@media (max-width: 767px) {
+  .p-mobile-sm { padding: var(--spacing-sm); }
+  .p-mobile-md { padding: var(--spacing-md); }
+  .m-mobile-sm { margin: var(--spacing-sm); }
+  .m-mobile-md { margin: var(--spacing-md); }
+}
+
+/* Text alignment responsive */
+.text-mobile-center { text-align: center; }
+.text-tablet-left { text-align: center; }
+.text-desktop-left { text-align: center; }
+
+@media (min-width: 768px) {
+  .text-tablet-left { text-align: left; }
+}
+
+@media (min-width: 992px) {
+  .text-desktop-left { text-align: left; }
+}
+
+/* ==========================================
+   CONTAINER QUERIES (FUTURE-PROOF)
+   ========================================== */
+
+/* Para cuando los container queries tengan mejor soporte */
+@supports (container-type: inline-size) {
+  .card-container {
+    container-type: inline-size;
+  }
+  
+  @container (min-width: 300px) {
+    .project-card {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}
+
+/* ==========================================
+   ACCESSIBILITY RESPONSIVE
+   ========================================== */
+
+/* Reducir animaciones en dispositivos móviles */
+@media (max-width: 768px) {
+  * {
+    animation-duration: 0.2s !important;
+    transition-duration: 0.2s !important;
+  }
+}
+
+/* Focus visible mejorado en diferentes tamaños */
+@media (min-width: 992px) {
+  .focus-ring:focus {
+    outline-width: 3px;
+    outline-offset: 3px;
+  }
+}
+
+/* ==========================================
+   PERFORMANCE OPTIMIZATIONS
+   ========================================== */
+
+/* Lazy loading para imágenes en móvil */
+@media (max-width: 767px) {
+  img {
+    loading: lazy;
+  }
+}
+
+/* Reducir efectos costosos en móviles */
+@media (max-width: 767px) {
+  .hero {
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+  }
+  
+  .custom-navbar {
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+  }
+}

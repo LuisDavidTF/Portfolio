@@ -1,0 +1,485 @@
+/* ==========================================
+   TECHNOLOGY COLORS - CSS STYLES
+   ========================================== */
+
+/* 
+   Este archivo complementa tech-colors.js proporcionando
+   clases CSS para los colores de tecnologías.
+   Elimina 40+ líneas CSS duplicadas del App.css original.
+*/
+
+/* ==========================================
+   PROGRAMMING LANGUAGES
+   ========================================== */
+
+/* JavaScript */
+.skill-javascript,
+.skill-item[data-tech="javascript"],
+.project-skill[data-tech="javascript"],
+.skill-item[title="JavaScript"],
+.project-skill[title="JavaScript"] {
+  background-color: #F0DB4F !important;
+  color: #000 !important;
+}
+
+/* TypeScript */
+.skill-typescript,
+.skill-item[data-tech="typescript"],
+.project-skill[data-tech="typescript"],
+.skill-item[title="TypeScript"],
+.project-skill[title="TypeScript"] {
+  background-color: #007ACC !important;
+  color: #fff !important;
+}
+
+/* HTML5 */
+.skill-html5,
+.skill-item[data-tech="html5"],
+.project-skill[data-tech="html5"],
+.skill-item[title="HTML5"],
+.project-skill[title="HTML5"] {
+  background-color: #E34F26 !important;
+  color: #fff !important;
+}
+
+/* CSS3 */
+.skill-css3,
+.skill-item[data-tech="css3"],
+.project-skill[data-tech="css3"],
+.skill-item[title="CSS3"],
+.project-skill[title="CSS3"] {
+  background-color: #264DE4 !important;
+  color: #fff !important;
+}
+
+/* SQL */
+.skill-sql,
+.skill-item[data-tech="sql"],
+.project-skill[data-tech="sql"],
+.skill-item[title="SQL"],
+.project-skill[title="SQL"] {
+  background-color: #4479A1 !important;
+  color: #fff !important;
+}
+
+/* C# */
+.skill-csharp,
+.skill-item[data-tech="csharp"],
+.project-skill[data-tech="csharp"],
+.skill-item[title="C#"],
+.project-skill[title="C#"] {
+  background-color: #68217A !important;
+  color: #fff !important;
+}
+
+/* Java */
+.skill-java,
+.skill-item[data-tech="java"],
+.project-skill[data-tech="java"],
+.skill-item[title="Java"],
+.project-skill[title="Java"] {
+  background-color: #f89820 !important;
+  color: #fff !important;
+}
+
+/* Python */
+.skill-python,
+.skill-item[data-tech="python"],
+.project-skill[data-tech="python"],
+.skill-item[title="Python"],
+.project-skill[title="Python"] {
+  background-color: #306998 !important;
+  color: #fff !important;
+}
+
+/* ==========================================
+   FRAMEWORKS & LIBRARIES
+   ========================================== */
+
+/* Angular */
+.skill-angular,
+.skill-item[data-tech="angular"],
+.project-skill[data-tech="angular"],
+.skill-item[title="Angular"],
+.project-skill[title="Angular"] {
+  background-color: #DD0031 !important;
+  color: #fff !important;
+}
+
+/* React */
+.skill-react,
+.skill-item[data-tech="react"],
+.project-skill[data-tech="react"],
+.skill-item[title="React"],
+.project-skill[title="React"] {
+  background-color: #61DAFB !important;
+  color: #000 !important;
+}
+
+/* Vue.js */
+.skill-vue,
+.skill-item[data-tech="vue"],
+.project-skill[data-tech="vue"],
+.skill-item[title="Vue.js"],
+.project-skill[title="Vue.js"] {
+  background-color: #4FC08D !important;
+  color: #fff !important;
+}
+
+/* Node.js */
+.skill-nodejs,
+.skill-item[data-tech="nodejs"],
+.project-skill[data-tech="nodejs"],
+.skill-item[title="Node.js"],
+.project-skill[title="Node.js"] {
+  background-color: #339933 !important;
+  color: #fff !important;
+}
+
+/* Express */
+.skill-express,
+.skill-item[data-tech="express"],
+.project-skill[data-tech="express"],
+.skill-item[title="Express"],
+.project-skill[title="Express"] {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+/* Bootstrap */
+.skill-bootstrap,
+.skill-item[data-tech="bootstrap"],
+.project-skill[data-tech="bootstrap"],
+.skill-item[title="Bootstrap"],
+.project-skill[title="Bootstrap"] {
+  background-color: #563d7c !important;
+  color: #fff !important;
+}
+
+/* Tailwind CSS */
+.skill-tailwind,
+.skill-item[data-tech="tailwind"],
+.project-skill[data-tech="tailwind"],
+.skill-item[title="Tailwind"],
+.project-skill[title="Tailwind"] {
+  background-color: #38B2AC !important;
+  color: #fff !important;
+}
+
+/* ==========================================
+   DATABASES
+   ========================================== */
+
+/* MySQL */
+.skill-mysql,
+.skill-item[data-tech="mysql"],
+.project-skill[data-tech="mysql"],
+.skill-item[title="MySQL"],
+.project-skill[title="MySQL"] {
+  background-color: #4479A1 !important;
+  color: #fff !important;
+}
+
+/* SQL Server */
+.skill-sqlserver,
+.skill-item[data-tech="sqlserver"],
+.project-skill[data-tech="sqlserver"],
+.skill-item[title="SQL Server"],
+.project-skill[title="SQL Server"] {
+  background-color: #CC2927 !important;
+  color: #fff !important;
+}
+
+/* MongoDB */
+.skill-mongodb,
+.skill-item[data-tech="mongodb"],
+.project-skill[data-tech="mongodb"],
+.skill-item[title="MongoDB"],
+.project-skill[title="MongoDB"] {
+  background-color: #4DB33D !important;
+  color: #fff !important;
+}
+
+/* PostgreSQL */
+.skill-postgresql,
+.skill-item[data-tech="postgresql"],
+.project-skill[data-tech="postgresql"],
+.skill-item[title="PostgreSQL"],
+.project-skill[title="PostgreSQL"] {
+  background-color: #336791 !important;
+  color: #fff !important;
+}
+
+/* ==========================================
+   TOOLS & SERVICES
+   ========================================== */
+
+/* Git */
+.skill-git,
+.skill-item[data-tech="git"],
+.project-skill[data-tech="git"],
+.skill-item[title="Git"],
+.project-skill[title="Git"] {
+  background-color: #F1502F !important;
+  color: #fff !important;
+}
+
+/* GitHub */
+.skill-github,
+.skill-item[data-tech="github"],
+.project-skill[data-tech="github"],
+.skill-item[title="GitHub"],
+.project-skill[title="GitHub"] {
+  background-color: #171515 !important;
+  color: #fff !important;
+}
+
+/* VS Code */
+.skill-vscode,
+.skill-item[data-tech="vscode"],
+.project-skill[data-tech="vscode"],
+.skill-item[title="VS Code"],
+.project-skill[title="VS Code"] {
+  background-color: #007ACC !important;
+  color: #fff !important;
+}
+
+/* Stripe */
+.skill-stripe,
+.skill-item[data-tech="stripe"],
+.project-skill[data-tech="stripe"],
+.skill-item[title="Stripe"],
+.project-skill[title="Stripe"],
+.skill-item[title="Stripe API"],
+.project-skill[title="Stripe API"] {
+  background-color: #6772E5 !important;
+  color: #fff !important;
+}
+
+/* JWT */
+.skill-jwt,
+.skill-item[data-tech="jwt"],
+.project-skill[data-tech="jwt"],
+.skill-item[title="JWT"],
+.project-skill[title="JWT"] {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+/* Docker */
+.skill-docker,
+.skill-item[data-tech="docker"],
+.project-skill[data-tech="docker"],
+.skill-item[title="Docker"],
+.project-skill[title="Docker"] {
+  background-color: #2496ED !important;
+  color: #fff !important;
+}
+
+/* AWS */
+.skill-aws,
+.skill-item[data-tech="aws"],
+.project-skill[data-tech="aws"],
+.skill-item[title="AWS"],
+.project-skill[title="AWS"] {
+  background-color: #FF9900 !important;
+  color: #000 !important;
+}
+
+/* ==========================================
+   METHODOLOGIES & CONCEPTS
+   ========================================== */
+
+/* MVC */
+.skill-mvc,
+.skill-item[data-tech="mvc"],
+.project-skill[data-tech="mvc"],
+.skill-item[title="MVC"],
+.project-skill[title="MVC"] {
+  background-color: #6c757d !important;
+  color: #fff !important;
+}
+
+/* REST API */
+.skill-restapi,
+.skill-item[data-tech="restapi"],
+.project-skill[data-tech="restapi"],
+.skill-item[title="REST API"],
+.project-skill[title="REST API"] {
+  background-color: #00AEEF !important;
+  color: #fff !important;
+}
+
+/* Scrum/Agile */
+.skill-scrum,
+.skill-item[data-tech="scrum"],
+.project-skill[data-tech="scrum"],
+.skill-item[title="Scrum/Agile"],
+.project-skill[title="Scrum/Agile"] {
+  background-color: #FFCA28 !important;
+  color: #000 !important;
+}
+
+/* GraphQL */
+.skill-graphql,
+.skill-item[data-tech="graphql"],
+.project-skill[data-tech="graphql"],
+.skill-item[title="GraphQL"],
+.project-skill[title="GraphQL"] {
+  background-color: #E10098 !important;
+  color: #fff !important;
+}
+
+/* ==========================================
+   HOVER EFFECTS WITH TECH COLORS
+   ========================================== */
+
+/* Brightening effect mantiene los colores específicos */
+.skill-item:hover,
+.project-skill:hover {
+  filter: brightness(110%) !important;
+  transform: translateY(-3px) !important;
+}
+
+/* Glow effect específico por tecnología */
+.skill-item[title="JavaScript"]:hover,
+.project-skill[title="JavaScript"]:hover {
+  box-shadow: 0 4px 15px rgba(240, 219, 79, 0.4) !important;
+}
+
+.skill-item[title="Angular"]:hover,
+.project-skill[title="Angular"]:hover {
+  box-shadow: 0 4px 15px rgba(221, 0, 49, 0.4) !important;
+}
+
+.skill-item[title="Node.js"]:hover,
+.project-skill[title="Node.js"]:hover {
+  box-shadow: 0 4px 15px rgba(51, 153, 51, 0.4) !important;
+}
+
+.skill-item[title="React"]:hover,
+.project-skill[title="React"]:hover {
+  box-shadow: 0 4px 15px rgba(97, 218, 251, 0.4) !important;
+}
+
+.skill-item[title="Stripe"]:hover,
+.skill-item[title="Stripe API"]:hover,
+.project-skill[title="Stripe"]:hover,
+.project-skill[title="Stripe API"]:hover {
+  box-shadow: 0 4px 15px rgba(103, 114, 229, 0.4) !important;
+}
+
+/* ==========================================
+   THEME COMPATIBILITY
+   ========================================== */
+
+/* Los colores de tecnologías se mantienen en ambos temas */
+[data-theme="dark"] .skill-item,
+[data-theme="dark"] .project-skill {
+  /* Los colores específicos de tecnologías tienen !important */
+  /* por lo que se mantienen igual en tema oscuro */
+}
+
+/* ==========================================
+   SIZE VARIANTS WITH TECH COLORS
+   ========================================== */
+
+/* Small, medium, large mantienen los mismos colores */
+.skill-small[title="JavaScript"],
+.skill-medium[title="JavaScript"],
+.skill-large[title="JavaScript"] {
+  background-color: #F0DB4F !important;
+  color: #000 !important;
+}
+
+/* Y así para todas las tecnologías... */
+
+/* ==========================================
+   LOADING STATES FOR TECH COLORS
+   ========================================== */
+
+.skill-item.loading,
+.project-skill.loading {
+  opacity: 0.6 !important;
+}
+
+.skill-item.loading::after,
+.project-skill.loading::after {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  ) !important;
+}
+
+/* ==========================================
+   FALLBACK COLORS
+   ========================================== */
+
+/* Tecnologías sin color específico */
+.skill-item:not([title]),
+.project-skill:not([title]),
+.skill-unknown {
+  background-color: var(--primary-color) !important;
+  color: var(--white) !important;
+}
+
+/* ==========================================
+   UTILITY CLASSES
+   ========================================== */
+
+/* Para forzar colores específicos */
+.force-tech-color {
+  background-color: inherit !important;
+  color: inherit !important;
+}
+
+/* Para deshabilitar colores de tecnología */
+.no-tech-color {
+  background-color: var(--primary-color) !important;
+  color: var(--white) !important;
+}
+
+/* ==========================================
+   RESPONSIVE ADJUSTMENTS
+   ========================================== */
+
+@media (max-width: 768px) {
+  /* En móvil, reducir intensity de glow effects */
+  .skill-item:hover,
+  .project-skill:hover {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2) !important;
+  }
+}
+
+/* ==========================================
+   HIGH CONTRAST MODE
+   ========================================== */
+
+@media (prefers-contrast: high) {
+  /* En high contrast, usar colores más contrastantes */
+  .skill-item,
+  .project-skill {
+    border: 2px solid #000 !important;
+  }
+  
+  [data-theme="dark"] .skill-item,
+  [data-theme="dark"] .project-skill {
+    border: 2px solid #fff !important;
+  }
+}
+
+/* ==========================================
+   PRINT STYLES
+   ========================================== */
+
+@media print {
+  /* En impresión, usar colores más suaves */
+  .skill-item,
+  .project-skill {
+    background-color: #f8f9fa !important;
+    color: #000 !important;
+    border: 1px solid #dee2e6 !important;
+  }
+}
