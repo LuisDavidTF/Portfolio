@@ -1,0 +1,195 @@
+/* ==========================================
+   MOBILE MENU STYLES
+   ========================================== */
+
+/* Base mobile menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.mobile-menu-open {
+  pointer-events: all;
+  opacity: 1;
+}
+
+.mobile-menu-closed {
+  pointer-events: none;
+  opacity: 0;
+}
+
+/* Overlay */
+.mobile-menu-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+/* Content container */
+.mobile-menu-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 320px;
+  max-width: 85vw;
+  height: 100vh;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary-css);
+  box-shadow: -4px 0 20px var(--shadow-color);
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-menu-open .mobile-menu-content {
+  transform: translateX(0);
+}
+
+/* ==========================================
+   HEADER
+   ========================================== */
+
+.mobile-menu-header {
+  padding: var(--spacing-lg) var(--spacing-lg) var(--spacing-md);
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--bg-primary);
+}
+
+.menu-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary-css);
+}
+
+.btn-close-mobile {
+  background: none;
+  border: none;
+  color: var(--text-color-css);
+  font-size: var(--font-size-lg);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.btn-close-mobile:hover {
+  background-color: var(--border-color);
+  color: var(--text-primary-css);
+}
+
+/* ==========================================
+   USER INFO
+   ========================================== */
+
+.mobile-menu-user-info {
+  padding: 0 var(--spacing-lg) var(--spacing-lg);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.avatar-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+.user-name {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary-css);
+}
+
+.user-title {
+  font-size: var(--font-size-sm);
+  color: var(--text-color-css);
+}
+
+.user-location {
+  font-size: var(--font-size-xs);
+  color: var(--text-color-css);
+}
+
+/* ==========================================
+   MENU BODY
+   ========================================== */
+
+.mobile-menu-body {
+  flex: 1;
+  padding: var(--spacing-md) 0;
+  overflow-y: auto;
+}
+
+.mobile-menu-section {
+  padding: 0 var(--spacing-lg);
+}
+
+
+/* ==========================================
+   MENU ITEMS
+   ========================================== */
+
+.mobile-menu-item {
+  margin-bottom: var(--spacing-xs);
+}
+
+.mobile-menu-link {
+  display: block;
+  padding: var(--spacing-md);
+  margin: 0 var(--spacing-lg);
+  border-radius: var(--border-radius-lg);
+  text-decoration: none;
+  color: var(--text-primary-css);
+  transition: all var(--transition-base);
+  border: 1px solid transparent;
+}
+
+.mobile-menu-link:hover,
+.mobile-menu-link:focus {
+  background-color: var(--border-light);
+  color: var(--text-primary-css);
+  text-decoration: none;
+  transform: translateX(4px);
+}
+
+.mobile-menu-link.active {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.mobile-menu-link.action-item:hover {
+  background-color: var(--third-color);
+  border-color: var(--border-color);
+}
+
+/* Menu item content */
+.menu-item-content {
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.menu-item-description{
+  color:var(--text-color-css)
+}
+
+.menu-item-label{
+  color:var(--text-primary-css)
+}
+

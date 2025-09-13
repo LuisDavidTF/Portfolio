@@ -1,0 +1,456 @@
+/* ==========================================
+   THEME SYSTEM - DARK/LIGHT MODE
+   ========================================== */
+
+/* ==========================================
+   LIGHT THEME (DEFAULT)
+   ========================================== */
+
+:root {
+  /* Colores principales - Light theme */
+  --primary-color: #D4A373;
+  --secondary-color: #DDA15E;
+  --third-color: #FAEDCD;
+  --light-color: #FAFAFA;
+  --white: #fff;
+  --text-color-css: #6c757d !important;
+  --text-primary-css: #333;
+  --dark-color: #333;
+  
+  /* Backgrounds */
+  --bg-primary: #FAFAFA;
+  --bg-secondary: #fff;
+  --bg-tertiary: #FAEDCD;
+  
+  /* Borders */
+  --border-color: rgba(0, 0, 0, 0.1);
+  --border-light: rgba(0, 0, 0, 0.05);
+  --border-strong: rgba(0, 0, 0, 0.2);
+  
+  /* Shadows */
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --shadow-light: rgba(0, 0, 0, 0.05);
+  --shadow-strong: rgba(0, 0, 0, 0.15);
+  
+  /* Overlays */
+  --overlay-light: rgba(255, 255, 255, 0.9);
+  --overlay-medium: rgba(255, 255, 255, 0.7);
+  --overlay-strong: rgba(255, 255, 255, 0.95);
+  
+  /* Glass effect */
+  --glass-bg: rgba(210, 190, 150, 0.11);
+  --glass-border: rgba(255, 255, 255, 0.15);
+  
+  /* Status colors - Light theme */
+  --success-color: #22c55e;
+  --warning-color: #f59e0b;
+  --error-color: #ef4444;
+  --info-color: #3b82f6;
+  
+  --success-bg: #f0fdf4;
+  --warning-bg: #fffbeb;
+  --error-bg: #fef2f2;
+  --info-bg: #eff6ff;
+}
+
+/* ==========================================
+   DARK THEME
+   ========================================== */
+
+[data-theme="dark"] {
+  /* Colores principales - Dark theme */
+  --primary-color: #E5B684;
+  --secondary-color: #EEB169;
+  --third-color: #2D2D2D;
+  --light-color: #1a1a1a;
+  --white: #2d2d2d;
+  --text-color-css: #6e6363 !important;
+  --text-primary-css: #f5f5f5;
+  --dark-color: #f5f5f5;
+  
+  /* Backgrounds */
+  --bg-primary: #1a1a1a;
+  --bg-secondary: #2d2d2d;
+  --bg-tertiary: #3d3d3d;
+  
+  /* Borders */
+  --border-color: rgba(255, 255, 255, 0.15);
+  --border-light: rgba(255, 255, 255, 0.1);
+  --border-strong: rgba(255, 255, 255, 0.25);
+  
+  /* Shadows */
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --shadow-light: rgba(0, 0, 0, 0.2);
+  --shadow-strong: rgba(0, 0, 0, 0.4);
+  
+  /* Overlays */
+  --overlay-light: rgba(45, 45, 45, 0.9);
+  --overlay-medium: rgba(45, 45, 45, 0.7);
+  --overlay-strong: rgba(45, 45, 45, 0.95);
+  
+  /* Glass effect */
+  --glass-bg: rgba(45, 45, 45, 0.9);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  
+  /* Status colors - Dark theme */
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --error-color: #f87171;
+  --info-color: #60a5fa;
+  
+  --success-bg: #064e3b;
+  --warning-bg: #451a03;
+  --error-bg: #7f1d1d;
+  --info-bg: #1e3a8a;
+}
+
+/* ==========================================
+   AUTOMATIC THEME (SYSTEM PREFERENCE)
+   ========================================== */
+
+
+/* ==========================================
+   THEME TRANSITIONS
+   ========================================== */
+
+/* Smooth transition entre temas */
+*,
+*::before,
+*::after {
+  transition: 
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Excepciones para elementos que no deben tener transición */
+.no-theme-transition,
+.no-theme-transition *,
+input,
+textarea,
+select {
+  transition: none !important;
+}
+
+/* ==========================================
+   COMPONENT THEME OVERRIDES
+   ========================================== */
+
+
+
+/* Hero section */
+.hero {
+  background-color: rgba(212, 163, 115, 0.7);
+}
+
+[data-theme="dark"] .hero {
+  background-color: rgba(229, 182, 132, 0.8);
+}
+
+/* Navbar */
+.custom-navbar {
+  background-color: rgba(0, 0, 0, 0)!important;
+  border-bottom: 0px solid var(--glass-border)!important;
+}
+
+/* Cards */
+.tech-card {
+  background: var(--glass-bg);
+  color: var(--white);
+}
+
+.project-card {
+  background: var(--glass-bg) !important;
+  box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+.hero-about-card {
+  background-color: var(--glass-bg) !important;
+  color: var(--text-primary-css);
+}
+
+/* Footer */
+footer {
+  background-color: var(--bg-secondary) !important;
+  border-top: 1px solid var(--border-color);
+  
+
+}
+
+.text-secondary{
+  color:var(--text-color-css);
+}
+
+.text{
+  color:var(--text-primary-css)
+}
+
+.title{
+  color:var(--primary-color);
+  
+}
+
+/* Buttons */
+.btn-hero {
+  background-color: var(--secondary-color);
+  color: var(--white);
+}
+
+.custom-btn-nav {
+  background-color: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  color: var(--text-primary-css);
+}
+
+/* ==========================================
+   THEME TOGGLE COMPONENT
+   ========================================== */
+
+.theme-toggle {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  background-color: var(--border-color);
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.theme-toggle::before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  background-color: var(--bg-secondary);
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+[data-theme="dark"] .theme-toggle {
+  background-color: var(--primary-color);
+}
+
+[data-theme="dark"] .theme-toggle::before {
+  transform: translateX(30px);
+}
+
+/* Theme toggle icons */
+.theme-toggle-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: var(--text-color-css);
+  transition: opacity 0.3s ease;
+}
+
+.theme-toggle-sun {
+  left: 8px;
+  opacity: 1;
+}
+
+.theme-toggle-moon {
+  right: 8px;
+  opacity: 0.5;
+}
+
+[data-theme="dark"] .theme-toggle-sun {
+  opacity: 0.5;
+}
+
+[data-theme="dark"] .theme-toggle-moon {
+  opacity: 1;
+}
+
+/* ==========================================
+   SKILL ICONS THEME COLORS
+   ========================================== */
+
+/* Mantener colores originales de tecnologías en ambos temas */
+.skill-item[title="JavaScript"],
+.project-skill[title="JavaScript"] {
+  background-color: #F0DB4F !important;
+  color: #000 !important;
+}
+
+.skill-item[title="TypeScript"],
+.project-skill[title="TypeScript"] {
+  background-color: #007ACC !important;
+  color: #fff !important;
+}
+
+.skill-item[title="Angular"],
+.project-skill[title="Angular"] {
+  background-color: #DD0031 !important;
+  color: #fff !important;
+}
+
+.skill-item[title="Node.js"],
+.project-skill[title="Node.js"] {
+  background-color: #339933 !important;
+  color: #fff !important;
+}
+
+.skill-item[title="React"],
+.project-skill[title="React"] {
+  background-color: #61DAFB !important;
+  color: #000 !important;
+}
+
+/* Más colores de tecnologías... */
+.skill-item[title="HTML5"],
+.project-skill[title="HTML5"] {
+  background-color: #E34F26 !important;
+  color: #fff !important;
+}
+
+.skill-item[title="CSS3"],
+.project-skill[title="CSS3"] {
+  background-color: #264DE4 !important;
+  color: #fff !important;
+}
+
+.skill-item[title="MySQL"],
+.project-skill[title="MySQL"] {
+  background-color: #4479A1 !important;
+  color: #fff !important;
+}
+
+.skill-item[title="Stripe"],
+.project-skill[title="Stripe"] {
+  background-color: #6772E5 !important;
+  color: #fff !important;
+}
+
+/* ==========================================
+   LOADING STATES THEME
+   ========================================== */
+
+/* Skeleton loading */
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--bg-primary) 25%,
+    var(--bg-tertiary) 50%,
+    var(--bg-primary) 75%
+  );
+}
+
+/* Spinner */
+.spinner {
+  border-color: var(--border-light);
+  border-top-color: var(--primary-color);
+}
+
+/* ==========================================
+   FORM ELEMENTS THEME
+   ========================================== */
+
+input,
+textarea,
+select {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary-css);
+  border: 1px solid var(--border-color);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(212, 163, 115, 0.1);
+}
+
+[data-theme="dark"] input:focus,
+[data-theme="dark"] textarea:focus,
+[data-theme="dark"] select:focus {
+  box-shadow: 0 0 0 3px rgba(229, 182, 132, 0.1);
+}
+
+/* ==========================================
+   SCROLLBAR THEME
+   ========================================== */
+
+/* Webkit scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--border-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--primary-color);
+}
+
+/* ==========================================
+   HIGH CONTRAST MODE
+   ========================================== */
+
+@media (prefers-contrast: high) {
+  :root {
+    --primary-color: #8B4513;
+    --secondary-color: #A0522D;
+    --text-color-css: #000 ;
+    --border-color: #000;
+  }
+  
+  [data-theme="dark"] {
+    --primary-color: #DEB887;
+    --secondary-color: #F4A460;
+    --text-color-css: #fff;
+    --border-color: #fff;
+  }
+}
+
+/* ==========================================
+   THEME UTILITIES
+   ========================================== */
+
+/* Clases para forzar colores específicos */
+.text-theme-primary { color: var(--primary-color) !important; }
+.text-theme-secondary { color: var(--secondary-color) !important; }
+.text-theme-base { color: var(--text-color-css) !important; }
+.text-theme-strong { color: var(--text-primary) !important; }
+
+.bg-theme-primary { background-color: var(--bg-primary) !important; }
+.bg-theme-secondary { background-color: var(--bg-secondary) !important; }
+.bg-theme-glass { background-color: var(--glass-bg) !important; }
+
+.border-theme { border-color: var(--border-color) !important; }
+.border-theme-light { border-color: var(--border-light) !important; }
+
+/* Ocultar en temas específicos */
+.light-only { display: block; }
+.dark-only { display: none; }
+
+[data-theme="dark"] .light-only { display: none; }
+[data-theme="dark"] .dark-only { display: block; }
+
+/* ==========================================
+   THEME DETECTION HELPERS
+   ========================================== */
+
+/* Para JavaScript - detectar tema actual */
+.theme-detector {
+  display: none;
+}
+
+.theme-detector::before {
+  content: 'light';
+}
+
+[data-theme="dark"] .theme-detector::before {
+  content: 'dark';
+}
