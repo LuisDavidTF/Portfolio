@@ -20,7 +20,7 @@ export default function ProjectCard({
   const [showFullDesc, setShowFullDesc] = useState(showFullDescription);
 
   const projectSkills = getProjectSkills(project.id);
-
+console.log(projectSkills)
   const getCardClasses = () => {
     const baseClasses = 'project-card h-100';
     const layoutClasses = {
@@ -242,12 +242,13 @@ export default function ProjectCard({
             <div className="col">
               <h6 className="card-title mb-1">{project.name}</h6>
               <p className="text small text-secondary mb-2">
+                {projectSkills}
                 {getDescriptionText()}
               </p>
               {showTechStack && projectSkills.length > 0 && (
                 <TechStackDisplay
                   skills={projectSkills}
-                  variant="compact"
+                  variant="project"
                   maxSkills={4}
                 />
               )}
@@ -316,17 +317,19 @@ export default function ProjectCard({
               Read more
             </button>
           )}
+          
         </p>
 
         {/* Tech Stack */}
         {showTechStack && projectSkills.length > 0 && (
-          <div className="project-tech-stack mb-3">
+          <div className="project-tech-stack text mb-3">
             <TechStackDisplay
               skills={projectSkills}
-              variant="project"
+              variant="detailed"
               size="small"
               maxSkills={layout === 'grid' ? 8 : null}
             />
+            
           </div>
         )}
 

@@ -12,28 +12,29 @@ import SocialLinks from "@/professional-network/components/SocialLinks";
 import MainNavbar from "@/site-navigation/components/MainNavbar";
 import { HashRouter, Route, Routes } from "react-router-dom";
 import HomePage from "@/pages/HomePage";
-
+import DocumentationPage from "./pages/DocumentationPage";
 
 function App() {
   return (
-    
+
     <HashRouter>
       <div className="bg-theme-primary">
-      {/* Navbar global */}
-      <MainNavbar />
+        {/* Navbar global */}
+        <MainNavbar />
 
-      {/* Contenido principal según ruta */}
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-      </Routes>
+        {/* Contenido principal según ruta */}
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/docs/:projectId" element={<DocumentationPage />}/>
+        </Routes>
 
-      {/* Footer global */}
-      <SocialLinks
-        context="footer"
-        variant="default"
-        showPersonalInfo={true}
-        enableAnimations={true}
-      />
+        {/* Footer global */}
+        <SocialLinks
+          context="footer"
+          variant="default"
+          showPersonalInfo={true}
+          enableAnimations={true}
+        />
       </div>
     </HashRouter>
   );

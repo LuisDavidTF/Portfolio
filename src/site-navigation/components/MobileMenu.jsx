@@ -358,9 +358,6 @@ export default function MobileMenu({
           <small className="text-secondary d-block">
             © {new Date().getFullYear()} {personalInfo?.fullName || 'Portfolio'}
           </small>
-          <small className="text-secondary d-block mt-1">
-            Made with <i className="fas fa-heart text-danger" style={{ fontSize: '0.7rem' }}></i> using React
-          </small>
         </div>
       </div>
     );

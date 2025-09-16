@@ -5,7 +5,7 @@ import { personalInfo, getContextualTitle, displayConfig } from '../data/persona
  * Reemplaza la parte superior del Hero.jsx original
  */
 export default function PersonalIntro({ 
-  variant = 'hero', // 'hero', 'navbar', 'compact'
+  variant = 'navbar', // 'hero', 'navbar', 'compact'
   showTitle = true,
   showTagline = true,
   animateText = true,

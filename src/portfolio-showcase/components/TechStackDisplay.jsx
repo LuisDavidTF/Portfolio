@@ -146,7 +146,7 @@ export default function TechStackDisplay({
           </small>
         </div>
         
-        <div className="tech-stack-content">
+        <div className="velonia-skills">
           {Object.entries(groupedSkills).map(([categoryName, categorySkills]) =>
             renderSkillGroup(categoryName, categorySkills)
           )}

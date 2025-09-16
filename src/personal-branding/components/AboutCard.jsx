@@ -4,14 +4,15 @@ import { getBio, getAchievements, personalInfo, displayConfig } from '../data/pe
  * AboutCard - Tarjeta con descripción personal y achievements
  * Reemplaza la hero-about-card del Hero.jsx original
  */
-export default function AboutCard({ 
+export default function AboutCard({
   bioLength = 'medium', // 'short', 'medium', 'long'
   showAchievements = false,
   showStats = false,
   variant = 'default', // 'default', 'compact', 'detailed'
   enableAnimations = true,
   className = ''
-}) {
+}) 
+{
   const bio = getBio(bioLength);
   const featuredAchievements = getAchievements(true); // Solo los destacados
   const config = displayConfig.hero;
@@ -24,7 +25,7 @@ export default function AboutCard({
       detailed: 'about-card-detailed'
     };
     const animationClass = enableAnimations ? 'animate-fade-in-up' : '';
-    
+
     return `${baseClasses} ${variantClasses[variant]} ${animationClass}`.trim();
   };
 
@@ -56,10 +57,10 @@ export default function AboutCard({
           </h6>
           <div className="achievements-list">
             {featuredAchievements.map((achievement, index) => (
-              <div 
-                key={achievement.id} 
+              <div
+                key={achievement.id}
                 className={`achievement-item ${enableAnimations ? 'animate-slide-in' : ''}`}
-                style={{animationDelay: enableAnimations ? `${0.1 * index}s` : '0'}}
+                style={{ animationDelay: enableAnimations ? `${0.1 * index}s` : '0' }}
               >
                 <div className="achievement-icon">
                   <i className={achievement.icon}></i>
@@ -109,12 +110,12 @@ export default function AboutCard({
           </h6>
           <div className="learning-tags">
             {personalInfo.status.currentlyLearning.map((tech, index) => (
-              <span 
-                key={tech} 
+              <span
+                key={tech}
                 className={`badge bg-light text-dark me-1 mb-1 ${enableAnimations ? 'animate-scale-in' : ''}`}
-                style={{animationDelay: enableAnimations ? `${0.1 * index}s` : '0'}}
+                style={{ animationDelay: enableAnimations ? `${0.1 * index}s` : '0' }}
               >
-                <i className="fas fa-graduation-cap me-1" style={{fontSize: '10px'}}></i>
+                <i className="fas fa-graduation-cap me-1" style={{ fontSize: '10px' }}></i>
                 {tech}
               </span>
             ))}
@@ -127,7 +128,7 @@ export default function AboutCard({
         <div className="about-cta mt-4">
           <div className="row">
             <div className="col-auto">
-              <a 
+              <a
                 href={`mailto:${personalInfo.contact.email}`}
                 className="btn btn-outline-primary btn-sm"
               >
@@ -136,7 +137,7 @@ export default function AboutCard({
               </a>
             </div>
             <div className="col-auto">
-              <a 
+              <a
                 href={personalInfo.contact.social.linkedin.url}
                 target="_blank"
                 rel="noopener noreferrer"

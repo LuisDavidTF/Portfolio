@@ -22,6 +22,7 @@ body {
 .hero {
     background-color: rgba(212, 163, 115, 0.7);
     backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -57,6 +58,7 @@ body {
 .hero-about-card {
     background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     padding: 20px 25px;
     border-radius: 12px;
     max-width: 700px;
@@ -257,18 +259,7 @@ body {
     transform: scale(1.02);
 }
 
-.velonia-skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    margin-bottom: 15px;
-}
 
-.project-card:hover .velonia-skills {
-    opacity: 1;
-}
 
 .project-skill {
     display: flex;
