@@ -130,7 +130,7 @@ export const mobileMenuSections = {
     title: 'Resources',
     icon: 'fas fa-download',
     items: [
-      {
+      /* {
         id: 'cv-download',
         label: 'Download CV',
         icon: 'fas fa-file-pdf',
@@ -140,7 +140,7 @@ export const mobileMenuSections = {
         external: true,
         isNew: true,
         badge: 'NEW'
-      },
+      }, */
       {
         id: 'github-profile',
         label: 'GitHub Profile',
