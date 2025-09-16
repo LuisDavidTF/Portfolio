@@ -353,12 +353,7 @@ export default function MobileMenu({
           </div>
         </div>
 
-        {/* Información adicional */}
-        <div className="footer-info text-center">
-          <small className="text-secondary d-block">
-            © {new Date().getFullYear()} {personalInfo?.fullName || 'Portfolio'}
-          </small>
-        </div>
+        
       </div>
     );
   };

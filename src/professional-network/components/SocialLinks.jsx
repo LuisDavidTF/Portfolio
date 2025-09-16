@@ -168,11 +168,6 @@ export default function SocialLinks({
               <div className="social-links-list gap-3 ">
                 {socialLinks.map(renderSocialLink)}
               </div>
-
-              {/* Copyright info */}
-              <small className="copyright text-theme-base mt-3 d-block">
-                © {new Date().getFullYear()} {personalInfo.fullName}. All rights reserved.
-              </small>
             </div>
           </div>
         </div>
