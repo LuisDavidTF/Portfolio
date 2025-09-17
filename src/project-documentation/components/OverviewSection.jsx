@@ -3,7 +3,7 @@ import { getProjectSkills } from "@/portfolio-showcase/data/projects-data";
 
 export default function OverviewSection({ description, techStack }) {
     const projectSkills = getProjectSkills('velonia');
-    console.log(projectSkills)
+
     return (
         <div className="hero-about-card" >
             <p className="mb-3">{description}</p>

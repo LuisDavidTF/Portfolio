@@ -303,7 +303,7 @@ export const handleNavigation = (link, customHandler = null) => {
       if (customHandler) {
         customHandler(link.action, link);
       } else {
-        console.log(`Action: ${link.action}`, link);
+
       }
       break;
 

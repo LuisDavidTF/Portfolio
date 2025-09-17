@@ -71,8 +71,7 @@ export default function TechStackDisplay({
         animate-scale-in
       `.trim(),
       onClick: () => {
-        // Opcional: mostrar detalles de la tecnología
-        console.log(`Technology: ${skill.name}`, skill);
+
       }
     };
   };

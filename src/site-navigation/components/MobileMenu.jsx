@@ -78,7 +78,7 @@ export default function MobileMenu({
   // Detectar si el SO está en modo oscuro
   const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
   const initialTheme = prefersDark ? "dark" : "light";
- console.log(initialTheme);
+
   // Si body no tiene tema aún, asigna el del sistema
   if (!document.body.getAttribute("data-theme")) {
     document.body.setAttribute("data-theme", initialTheme);
@@ -136,14 +136,14 @@ export default function MobileMenu({
         document.body.setAttribute('data-theme', newTheme);
         localStorage.setItem('theme', newTheme);
         setCurrentTheme(newTheme);
-        console.log('Theme changed to:', newTheme);
+
         break;
 
       case 'toggleLanguage':
         const newLang = currentLanguage === 'EN' ? 'ES' : 'EN';
         setCurrentLanguage(newLang);
         localStorage.setItem('language', newLang);
-        console.log('Language changed to:', newLang);
+
         // Aquí podrías disparar un evento o callback para cambio de idioma
         break;
 
@@ -166,7 +166,7 @@ export default function MobileMenu({
           link.click();
           document.body.removeChild(link);
           
-          console.log('CV download initiated:', fileName);
+
         } catch (error) {
           console.error('Error downloading CV:', error);
           alert(`CV download is not available yet. File should be placed in: /assets/files/CV-${currentLanguage === 'EN' ? 'English' : 'Español'}.pdf`);
@@ -174,7 +174,7 @@ export default function MobileMenu({
         break;
 
       default:
-        console.log('Unknown action:', action);
+
     }
   };
 

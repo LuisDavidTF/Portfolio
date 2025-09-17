@@ -49,7 +49,7 @@ export const projectsData = [
     // URLs
     liveUrl: '',
     githubUrl: 'https://github.com/LuisDavidTF/Velonia-Angular',
-    documentationUrl: '#/docs/velonia', // URL interna para la nueva sección de docs
+    //documentationUrl: '#/docs/velonia', // URL interna para la nueva sección de docs
     
     // Media
     image: 'https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?auto=format&fit=crop&w=800&q=80',
@@ -103,7 +103,7 @@ export const projectsData = [
   },
   
   // Placeholder para próximos proyectos
-  {
+  /* {
     id: 'portfolio-v2',
     name: 'Portfolio V2',
     tagline: 'Modern portfolio with Screaming Architecture',
@@ -157,7 +157,7 @@ export const projectsData = [
       developmentHours: '25+',
       features: 6
     }
-  },
+  }, */
 {
   id: 'recipe-planner',
   name: 'CulinaSmart',
@@ -171,8 +171,7 @@ export const projectsData = [
   techStack: [
     'react',
     'spring-boot',
-    'mysql',
-    'mongodb',
+    'postgresql',
     'jwt',
     'google-oauth',
     'tailwind',
@@ -221,7 +220,7 @@ export const projectsData = [
       linesOfCode: '0',
       commits: '0',
       developmentHours: '10+',
-      features: 8
+      features: 7
     }
 }
 

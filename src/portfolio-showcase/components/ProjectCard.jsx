@@ -20,7 +20,7 @@ export default function ProjectCard({
   const [showFullDesc, setShowFullDesc] = useState(showFullDescription);
 
   const projectSkills = getProjectSkills(project.id);
-console.log(projectSkills)
+
   const getCardClasses = () => {
     const baseClasses = 'project-card h-100';
     const layoutClasses = {

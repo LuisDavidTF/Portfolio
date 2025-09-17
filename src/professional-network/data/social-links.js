@@ -204,8 +204,7 @@ export const generateSocialClickData = (platform, context) => {
 export const handleSocialClick = (platform, context = 'footer') => {
   const clickData = generateSocialClickData(platform, context);
   
-  // Log para desarrollo
-  console.log('Social link clicked:', clickData);
+
   
   // Aquí podrías enviar a analytics
   // gtag('event', 'click', clickData);

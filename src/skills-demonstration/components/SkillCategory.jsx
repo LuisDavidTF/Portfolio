@@ -49,7 +49,7 @@ export default function SkillCategory({
               showLabel={true}
               onClick={() => {
                 // Opcional: manejar clicks en skills individuales
-                console.log(`Clicked on ${skill.name} - Level: ${skill.level}`);
+               
               }}
             />
           ))}

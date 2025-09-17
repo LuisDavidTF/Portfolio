@@ -30,12 +30,6 @@ export default function HomePage() {
                 variant="detailed"
                 enableAnimations={true}
             />
-            <SkillsContainer
-                showTitle={true}
-                variant="skill"
-                size="medium"
-                enableAnimations={true}
-            />
 
             <ProjectsContainer
                 showTitle={true}
@@ -43,6 +37,13 @@ export default function HomePage() {
                 enableFiltering={false}
                 layout="grid"
                 maxProjects={null}
+            />
+
+            <SkillsContainer
+                showTitle={true}
+                variant="skill"
+                size="medium"
+                enableAnimations={true}
             />
         </div>
     );

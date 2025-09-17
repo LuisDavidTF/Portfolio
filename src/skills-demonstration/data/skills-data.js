@@ -182,7 +182,17 @@ export const skillsData = {
       experience: '6 months',
       color: '#4DB33D',
       textColor: '#fff'
+    },
+    {
+      id: 'postgresql',
+      name: 'PostgreSQL',
+      icon: 'fas fa-database',
+      level: 'basic',
+      experience: '0',
+      color: '#336791',
+      textColor: '#fff'
     }
+
   ],
 
   [skillCategories.TOOLS]: [
