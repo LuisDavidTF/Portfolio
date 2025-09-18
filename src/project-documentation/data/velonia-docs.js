@@ -13,8 +13,8 @@ const VeloniaDocs = {
       analytics, and responsive design for all devices.
     `,
     images: [
-      "@/src/assets/images/projects/velonia/home-nologin.jpeg",
-      "/src/assets/images/projects/velonia/register.jpeg",
+      "src/assets/images/projects/velonia/add-product.jpeg",
+      "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/add-product.jpeg?raw=true",
       "/images/projects/velonia/login.jpeg",
       "/projects/velonia/home-login.jpeg",
       "/velonia/categorys.jpeg",
