@@ -26,7 +26,7 @@ const VeloniaDocs = {
       "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/pago-sucess.jpeg?raw=true",
       "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/pago-error.jpeg?raw=true",
       "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/profile.jpeg?raw=true",
-      "main/src/assets/images/projects/velonia/edit-profile.jpeg",
+      "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/edit-profile.jpeg?raw=true",
     ]
   },
 
