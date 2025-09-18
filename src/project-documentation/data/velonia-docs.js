@@ -12,7 +12,22 @@ const VeloniaDocs = {
       user authentication, and secure payments. It includes an admin dashboard,
       analytics, and responsive design for all devices.
     `,
-    image: "/assets/images/velonia/overview.png"
+    images: [
+      "src/assets/images/projects/velonia/home-nologin.jpeg",
+      "src/assets/images/projects/velonia/register.jpeg",
+      "src/assets/images/projects/velonia/login.jpeg",
+      "src/assets/images/projects/velonia/home-login.jpeg",
+      "src/assets/images/projects/velonia/categorys.jpeg",
+      "src/assets/images/projects/velonia/add-product.jpeg",
+      "src/assets/images/projects/velonia/add-variants.jpeg",
+      "src/assets/images/projects/velonia/details.jpeg",
+      "src/assets/images/projects/velonia/cart.jpeg",
+      "src/assets/images/projects/velonia/stripe.jpeg",
+      "src/assets/images/projects/velonia/pago-sucess.jpeg",
+      "src/assets/images/projects/velonia/pago-error.jpeg",
+      "src/assets/images/projects/velonia/profile.jpeg",
+      "src/assets/images/projects/velonia/edit-profile.jpeg",
+    ]
   },
 
   installation: {

@@ -38,8 +38,8 @@ export default function PersonalIntro({
     const baseClasses = `personal-intro ${className}`;
     const variantClasses = {
       hero: 'text-center hero-intro',
-      navbar: 'navbar-intro',
-      compact: 'compact-intro'
+      navbar: ' text-center navbar-intro',
+      compact: 'text-center compact-intro'
     };
     const animationClass = animateText && variant === 'hero' ? 'animate-fade-in' : '';
     

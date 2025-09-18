@@ -56,7 +56,7 @@ h6 { font-size: 1rem; }    /* 16px */
 
 @media (min-width: 576px) {
   .container-responsive {
-    max-width: 540px;
+    max-width: 100%;
   }
   
   /* Grid - 2 columnas en móvil landscape */
@@ -98,7 +98,7 @@ h6 { font-size: 1rem; }    /* 16px */
 
 @media (min-width: 768px) {
   .container-responsive {
-    max-width: 720px;
+    max-width: 100%;
     padding-left: var(--spacing-lg);
     padding-right: var(--spacing-lg);
   }
@@ -139,7 +139,7 @@ h6 { font-size: 1rem; }    /* 16px */
   }
   
   .hero-about-card {
-    max-width: 800px;
+    max-width: 100%;
     padding: var(--spacing-xl);
     font-size: var(--font-size-lg);
   }
@@ -163,7 +163,7 @@ h6 { font-size: 1rem; }    /* 16px */
 
 @media (min-width: 992px) {
   .container-responsive {
-    max-width: 960px;
+    max-width: 100%;
   }
   
   /* Typography - tamaños completos */
@@ -229,13 +229,21 @@ h6 { font-size: 1rem; }    /* 16px */
   }
 }
 
+.icon-docs i {
+  font-size: clamp(1.4rem, 2vw, 3rem) !important;
+}
+
+.icon-docs i.exclude-me {
+  font-size: 1rem !important; /* o lo que necesites */
+}
+
 /* ==========================================
    EXTRA LARGE DEVICES (1200px+)
    ========================================== */
 
 @media (min-width: 1200px) {
   .container-responsive {
-    max-width: 1140px;
+    max-width: 100%;
   }
   
   /* Typography - máximos tamaños */
@@ -244,7 +252,7 @@ h6 { font-size: 1rem; }    /* 16px */
   
   /* Hero - espaciado máximo */
   .hero-about-card {
-    max-width: 1000px;
+    max-width: 1200px;
     padding: var(--spacing-xxl);
     font-size: var(--font-size-xl);
   }
@@ -271,7 +279,7 @@ h6 { font-size: 1rem; }    /* 16px */
 
 @media (min-width: 1400px) {
   .container-responsive {
-    max-width: 1320px;
+    max-width: 100%;
   }
   
   /* Layouts especiales para pantallas muy grandes */

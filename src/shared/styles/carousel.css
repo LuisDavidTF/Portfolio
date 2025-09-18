@@ -1,0 +1,34 @@
+/* Estilo para desenfocar el fondo cuando modal abierto */
+.modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+/* Que el modal (contenido) esté por encima del backdrop */
+.modal {
+    z-index: 1050;
+}
+
+/* Para que el close button se vea bien sobre imagen */
+.modal-content {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* Ajustes si necesitas centrar mejor */
+.modal-dialog {
+    max-width: 90%;
+    margin: 1.75rem auto;
+}
+
+@keyframes pulse-scale {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.25);
+    opacity: 0.8;
+  }
+}

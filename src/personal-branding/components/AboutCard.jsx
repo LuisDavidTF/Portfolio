@@ -18,7 +18,7 @@ export default function AboutCard({
   const config = displayConfig.hero;
 
   const getCardClasses = () => {
-    const baseClasses = `hero-about-card mt-4 ${className}`;
+    const baseClasses = `hero-about-card mt-4 div-center ${className}`;
     const variantClasses = {
       default: 'about-card-default',
       compact: 'about-card-compact',
@@ -42,7 +42,7 @@ export default function AboutCard({
   return (
     <div className={getCardClasses()} id='about'>
       {/* Biografía principal */}
-      <div className="about-bio">
+      <div className="about-bio text-center">
         <p className={`mb-${showAchievements || showStats ? '3' : '0'}`}>
           {bio}
         </p>
@@ -51,7 +51,7 @@ export default function AboutCard({
       {/* Achievements destacados (opcional) */}
       {showAchievements && featuredAchievements.length > 0 && (
         <div className="about-achievements mt-3">
-          <h6 className="text-secondary mb-2">
+          <h6 className="text-secondary text-center mb-2">
             <i className="fas fa-trophy me-2"></i>
             Key Achievements
           </h6>
@@ -59,15 +59,15 @@ export default function AboutCard({
             {featuredAchievements.map((achievement, index) => (
               <div
                 key={achievement.id}
-                className={`achievement-item ${enableAnimations ? 'animate-slide-in' : ''}`}
+                className={`achievement-item div-center ${enableAnimations ? 'animate-slide-in' : ''}`}
                 style={{ animationDelay: enableAnimations ? `${0.1 * index}s` : '0' }}
               >
                 <div className="achievement-icon">
                   <i className={achievement.icon}></i>
                 </div>
                 <div className="achievement-content">
-                  <small className="fw-bold">{achievement.title}</small>
-                  <small className="text-secondary d-block">{achievement.description}</small>
+                  <small className="fw-bold text-center d-block">{achievement.title}</small>
+                  <small className="text-secondary text-center d-block">{achievement.description}</small>
                 </div>
               </div>
             ))}
@@ -104,7 +104,7 @@ export default function AboutCard({
       {/* Indicador de estado actual de aprendizaje */}
       {personalInfo.status.currentlyLearning.length > 0 && variant === 'detailed' && (
         <div className="currently-learning mt-3">
-          <h6 className="text-secondary mb-2">
+          <h6 className="text-secondary text-center mb-2">
             <i className="fas fa-book me-2"></i>
             Currently Learning
           </h6>
@@ -125,7 +125,7 @@ export default function AboutCard({
 
       {/* Call to action opcional */}
       {variant === 'detailed' && (
-        <div className="about-cta mt-4">
+        <div className="about-cta mt-3">
           <div className="row">
             <div className="col-auto">
               <a

@@ -5,7 +5,7 @@ import AboutCard from "@/personal-branding/components/AboutCard";
 import SkillsContainer from "@/skills-demonstration/components/SkillsContainer";
 export default function HomePage() {
     return (
-        <div className=" App container py-5">
+        <div className="App py-5 max-w-[90%] mx-auto">
             <PersonalIntro
                 variant="hero"
                 showTitle={true}

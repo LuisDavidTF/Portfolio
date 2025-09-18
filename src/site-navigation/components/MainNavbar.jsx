@@ -154,7 +154,7 @@ export default function MainNavbar({
     return (
       <li className="nav-item dropdown">
         <button
-          className={`nav-link dropdown-toggle btn btn-link custom-btn-nav ${isOpen ? 'show' : ''}`}
+          className={`nav-link visible dropdown-toggle btn btn-link custom-btn-nav ${isOpen ? 'show' : ''}`}
           type="button"
           onClick={(e) => {
             e.preventDefault();
@@ -167,7 +167,7 @@ export default function MainNavbar({
           {title}
         </button>
 
-        <ul className={`dropdown-menu dropdown-menu-end ${isOpen ? 'show' : ''}`}>
+        <ul className={`dropdown-menu visible dropdown-menu-end ${isOpen ? 'show' : ''}`}>
           {links.map(link => (
             <li key={link.id}>
               {link.type === 'action' ? (
@@ -256,7 +256,7 @@ export default function MainNavbar({
               aria-controls="mobile-navigation-menu"
             >
               <span>
-                <i className={`fas ${isMobileMenuOpen ? 'fa-times' : 'fa-bars'}`}></i>
+                <i className={`fas ${isMobileMenuOpen ? 'fa-times text-theme-primary' : 'fa-bars text-theme-primary '}`} ></i>
               </span>
             </button>
           )}

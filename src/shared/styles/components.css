@@ -119,16 +119,28 @@
   gap: 10px;
   opacity: 0;
   transition: opacity 0.3s ease;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+  
+  
 }
 
 .skills-documentation .velonia-skills {
   opacity: 1 !important;      
   transition: none !important; 
+  
+
 }
+
 
 .skills-documentation:hover .velonia-skills {
   opacity: 1 !important; 
+}
+
+
+.div-center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .project-card:hover .project-skills,

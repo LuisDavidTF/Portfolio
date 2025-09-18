@@ -114,6 +114,7 @@ body {
     opacity: 0;
     transition: opacity 0.3s ease;
     margin-top: 10px;
+    width: 10;
 }
 
 .tech-card:hover .skills-icons {

@@ -227,6 +227,14 @@ p {
   z-index: var(--z-navbar);
 }
 
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    border: none!important;
+    
+}
+
 [data-theme="dark"] .custom-navbar {
   background-color: rgba(45, 45, 45, 0.9);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);

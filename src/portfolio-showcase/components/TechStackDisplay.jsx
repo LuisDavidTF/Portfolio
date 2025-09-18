@@ -88,7 +88,7 @@ export default function TechStackDisplay({
         <small className="skill-category-label text-secondary d-block mb-1">
           {categoryName}
         </small>
-        <div className="skill-category-items d-flex flex-wrap gap-1">
+        <div className="skill-category-items d-flex flex-wrap gap-1 ">
           {categorySkills.map((skill, index) => (
             <SkillIcon {...getSkillIconProps(skill, index)} />
           ))}
@@ -136,16 +136,16 @@ export default function TechStackDisplay({
     return (
       <div className={getContainerClasses()}>
         <div className="tech-stack-header mb-2">
-          <h6 className="tech-stack-title mb-1">
-            <i className="fas fa-tools me-2"></i>
+          <div className="fw-bold mb-1">
+            <i className="fas fa-tools exclude-me me-2"></i>
             Tech Stack
-          </h6>
+          </div>
           <small className="text-secondary">
             {skills.length} technolog{skills.length !== 1 ? 'ies' : 'y'} used
           </small>
         </div>
         
-        <div className="velonia-skills">
+        <div className="velonia-skills ">
           {Object.entries(groupedSkills).map(([categoryName, categorySkills]) =>
             renderSkillGroup(categoryName, categorySkills)
           )}
