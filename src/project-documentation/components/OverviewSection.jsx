@@ -14,7 +14,7 @@ export default function OverviewSection({ description, techStack, images }) {
                 variant="detailed"
                 maxSkills={10}
             /></div></p>
-            <Carousel images={images} productName="Zapatos"/>
+            <Carousel images={images} productName="Project-Image-Docs"/>
         </div>
     );
 }
