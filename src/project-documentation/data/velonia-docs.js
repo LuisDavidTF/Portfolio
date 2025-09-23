@@ -90,7 +90,7 @@ ng serve
   },
 
   database: {
-    diagram: "./src/assets/images/projects/velonia/db-schema.svg",
+    diagram: "https://raw.githubusercontent.com/LuisDavidTF/Portfolio/9ae8b7244a3b81954faac57242b1c643110194b7/src/assets/images/projects/velonia/db-schema.svg",
     tables: [
       { name: "Users", description: "Stores user credentials and profile information." },
       { name: "Products", description: "Product details with support for images as BLOBs." },
