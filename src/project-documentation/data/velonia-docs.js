@@ -13,20 +13,20 @@ const VeloniaDocs = {
       analytics, and responsive design for all devices.
     `,
     images: [
-      "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/home-nologin.jpeg?raw=true",
-      "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/register.jpeg?raw=true",
-      "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/login.jpeg?raw=true",
-      "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/home-login.jpeg?raw=true",
-      "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/categorys.jpeg?raw=true",
-      "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/add-product.jpeg?raw=true",
-      "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/add-variants.jpeg?raw=true",
-      "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/details.jpeg?raw=true",
-      "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/cart.jpeg?raw=true",
-      "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/stripe.jpeg?raw=true",
-      "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/pago-sucess.jpeg?raw=true",
-      "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/pago-error.jpeg?raw=true",
-      "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/profile.jpeg?raw=true",
-      "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/edit-profile.jpeg?raw=true",
+      {link:"https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/home-nologin.jpeg?raw=true",description:"Home", icon:"d fas fa-house"},
+      {link:"https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/register.jpeg?raw=true", description:"User Register", icon:"fas fa-clipboard"},
+      {link:"https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/login.jpeg?raw=true", description:"User Login", icon:"fas fa-sign-in-alt"},
+      {link:"https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/home-login.jpeg?raw=true", description:"Home when the user Logged in", icon:"fas fa-house"},
+      {link:"https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/categorys.jpeg?raw=true", description:"Men's Category", icon:"fas fa-male"},
+      {link:"https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/add-product.jpeg?raw=true", description:"Add a new Product", icon:"fas fa-add"},
+      {link:"https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/add-variants.jpeg?raw=true", description:"Add a variants to the product", icon:"fas fa-add"},
+      {link:"https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/details.jpeg?raw=true", description:"Product details", icon:"fas fa-circle-info"},
+      {link:"https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/cart.jpeg?raw=true", description:"Cart Section", icon:"fas fa-cart-shopping"},
+      {link:"https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/stripe.jpeg?raw=true", description:"Payment with Stripe", icon:"fas fa-credit-card"},
+      {link:"https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/pago-sucess.jpeg?raw=true", description:"Successful payment", icon:"fas fa-check"},
+      {link:"https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/pago-error.jpeg?raw=true", description:"Incorrect payment", icon:"fas fa-xmark"},
+      {link:"https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/profile.jpeg?raw=true", description:"Profile Section", icon:"fas fa-user"},
+      {link:"https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/edit-profile.jpeg?raw=true", description:"Edit Profile", icon:"fas fa-user-pen"},
     ]
   },
 
@@ -90,7 +90,7 @@ ng serve
   },
 
   database: {
-    diagram: "/assets/images/velonia/db-schema.png",
+    diagram: "./src/assets/images/projects/velonia/db-schema.svg",
     tables: [
       { name: "Users", description: "Stores user credentials and profile information." },
       { name: "Products", description: "Product details with support for images as BLOBs." },

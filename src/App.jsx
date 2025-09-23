@@ -13,6 +13,7 @@ import MainNavbar from "@/site-navigation/components/MainNavbar";
 import { HashRouter, Route, Routes } from "react-router-dom";
 import HomePage from "@/pages/HomePage";
 import DocumentationPage from "./pages/DocumentationPage";
+import ScrollToTop from "./shared/components/layout/ScrollToTop";
 
 function App() {
   return (
@@ -21,11 +22,11 @@ function App() {
       <div className="bg-theme-primary">
         {/* Navbar global */}
         <MainNavbar />
-
+        <ScrollToTop />
         {/* Contenido principal según ruta */}
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/docs/:projectId" element={<DocumentationPage />}/>
+          <Route path="/docs/:projectId" element={<DocumentationPage />} />
         </Routes>
 
         {/* Footer global */}

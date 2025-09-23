@@ -11,9 +11,9 @@ const CodeBlock = ({ code }) => {
   };
 
   return (
-    <pre className="position-relative bg-light p-3 rounded">
+    <pre className="position-relative bg-theme-primary background p-3 rounded">
       <button
-        className="btn btn-sm btn-warning position-absolute top-0 end-0 m-2"
+        className="btn btn-sm btn-warning bg-container position-absolute top-0 end-0 m-2"
         onClick={copyToClipboard}
       >
         {copied ? "Copied!" : "Copy"}

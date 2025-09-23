@@ -4,6 +4,8 @@ import HeroSection from "@/project-documentation/components/HeroSection";
 import OverviewSection from "../project-documentation/components/OverviewSection";
 import { getProjectSkills } from "@/portfolio-showcase/data/projects-data";
 import "@/project-documentation/styles/docs-styles.css";
+import InstallationGuide from "../project-documentation/components/InstallationGuide";
+import RoadmapSection from "../project-documentation/components/RoadmapSection";
 const docsMap = {
   velonia: VeloniaDocs
 };
@@ -18,7 +20,17 @@ export default function DocumentationPage() {
   return (
     <div className="App py-5 max-w-[90%] mx-auto ">
       <HeroSection title={data.title} tagline={data.tagline} image={data.overview.image} />
-      <OverviewSection description={data.overview.description} techStack={projectSkills} images={data.overview.images} />
+      <OverviewSection
+        description={data.overview.description}
+        techStack={projectSkills}
+        images={data.overview.images.map(image => image.link)}
+        descriptionimage={data.overview.images.map(image => image.description)}
+        icon={data.overview.images.map(image => image.icon)}
+      />
+      <InstallationGuide
+        installation={data.installation}
+      />
+      <RoadmapSection imageURL={data.database.diagram}/>
     </div>
   );
 };

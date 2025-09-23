@@ -427,6 +427,8 @@ select:focus {
 .bg-theme-primary { background-color: var(--bg-primary) !important; }
 .bg-theme-secondary { background-color: var(--bg-secondary) !important; }
 .bg-theme-glass { background-color: var(--glass-bg) !important; }
+.bg-container{background-color: var(--primary-color) !important;
+border-color: #00000000 !important;}
 
 .border-theme { border-color: var(--border-color) !important; }
 .border-theme-light { border-color: var(--border-light) !important; }

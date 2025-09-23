@@ -49,7 +49,7 @@ export const projectsData = [
     // URLs
     liveUrl: '',
     githubUrl: 'https://github.com/LuisDavidTF/Velonia-Angular',
-    //documentationUrl: '#/docs/velonia', // URL interna para la nueva sección de docs
+    documentationUrl: '#/docs/velonia', // URL interna para la nueva sección de docs
     
     // Media
     image: 'https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?auto=format&fit=crop&w=800&q=80',

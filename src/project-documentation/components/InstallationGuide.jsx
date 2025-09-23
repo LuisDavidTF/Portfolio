@@ -4,23 +4,25 @@ const InstallationGuide = ({ installation }) => {
   if (!installation) return null;
 
   return (
-    <section>
-      <h2 className="text-center mb-4">Installation</h2>
-      <div className="card-style">
-        {installation.notes?.map((note, i) => (
-          <div key={i} className="note mb-3">{note}</div>
-        ))}
-
-        <ol>
-          {installation.steps.map((step, i) => (
-            <li key={i} className="mb-3">
-              <strong>{step.title}</strong> – {step.description}
-              {step.code && <CodeBlock code={step.code} />}
-            </li>
+    <>
+      <h2 className="text-center mt-3 mb-3 section-title">Installation</h2>
+      <section className="hero-about-card ">
+        <div className="card-style">
+          {installation.notes?.map((note, i) => (
+            <div key={i} className="note mb-3">{note}</div>
           ))}
-        </ol>
-      </div>
-    </section>
+
+          <ol>
+            {installation.steps.map((step, i) => (
+              <li key={i} className="mb-3">
+                <strong>{step.title}</strong> – {step.description}
+                {step.code && <CodeBlock code={step.code} />}
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+    </>
   );
 };
 
