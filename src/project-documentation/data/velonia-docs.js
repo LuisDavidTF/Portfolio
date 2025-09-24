@@ -90,7 +90,7 @@ ng serve
   },
 
   database: {
-    diagram: "https://raw.githubusercontent.com/LuisDavidTF/Portfolio/9ae8b7244a3b81954faac57242b1c643110194b7/src/assets/images/projects/velonia/db-schema.svg",
+    diagram: "https://raw.githubusercontent.com/LuisDavidTF/Portfolio/9ae8b7244a3b81954faac57242b1c643110194b7/src/assets/images/projects/velonia/db-schema.svg?sanitize=true",
     tables: [
       { name: "Users", description: "Stores user credentials and profile information." },
       { name: "Products", description: "Product details with support for images as BLOBs." },
@@ -100,7 +100,7 @@ ng serve
 
   architecture: {
     description: "Velonia follows a full-stack architecture with Angular frontend, Node.js + Express backend, and MySQL database. Stripe is integrated for payments.",
-    diagram: "https://raw.githubusercontent.com/LuisDavidTF/Portfolio/main/src/assets/images/projects/velonia/Architecture%20Velonia.svg?sanitize=true"
+    diagram: "https://raw.githubusercontent.com/LuisDavidTF/Portfolio/e14fabe6abd8ed6106b59a14b6126b4474ec1e07/src/assets/images/projects/velonia/Architecture-Velonia.svg?sanitize=true"
   },
 
   features: [
