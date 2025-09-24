@@ -100,7 +100,7 @@ ng serve
 
   architecture: {
     description: "Velonia follows a full-stack architecture with Angular frontend, Node.js + Express backend, and MySQL database. Stripe is integrated for payments.",
-    diagram: "/assets/images/velonia/architecture.png"
+    diagram: "https://raw.githubusercontent.com/LuisDavidTF/Portfolio/main/src/assets/images/projects/velonia/Architecture%20Velonia.svg?sanitize=true"
   },
 
   features: [

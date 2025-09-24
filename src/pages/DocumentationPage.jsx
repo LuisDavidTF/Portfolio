@@ -7,6 +7,7 @@ import "@/project-documentation/styles/docs-styles.css";
 import InstallationGuide from "../project-documentation/components/InstallationGuide";
 import RoadmapSection from "../project-documentation/components/RoadmapSection";
 import ArchitectureSection from "../project-documentation/components/ArchitectureSection";
+import DatabaseSchema from "../project-documentation/components/DatabaseSchema";
 const docsMap = {
   velonia: VeloniaDocs
 };
@@ -31,7 +32,7 @@ export default function DocumentationPage() {
       <InstallationGuide
         installation={data.installation}
       />
-      <RoadmapSection imageURL={data.database.diagram} />
+      <DatabaseSchema url={data.database.diagram}/>
       <ArchitectureSection url={data.architecture.diagram}/>
     </div>
   );

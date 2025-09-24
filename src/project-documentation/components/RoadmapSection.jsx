@@ -308,7 +308,6 @@ export default function RoadmapSection({ imageURL }) {
 
   return (
     <>
-      <h2 className="section-title mt-3">Database Schema</h2>
       <section className="hero-about-card">
         <div
           ref={containerRef}
