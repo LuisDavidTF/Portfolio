@@ -6,6 +6,7 @@ import { getProjectSkills } from "@/portfolio-showcase/data/projects-data";
 import "@/project-documentation/styles/docs-styles.css";
 import InstallationGuide from "../project-documentation/components/InstallationGuide";
 import RoadmapSection from "../project-documentation/components/RoadmapSection";
+import ArchitectureSection from "../project-documentation/components/ArchitectureSection";
 const docsMap = {
   velonia: VeloniaDocs
 };
@@ -30,7 +31,8 @@ export default function DocumentationPage() {
       <InstallationGuide
         installation={data.installation}
       />
-      <RoadmapSection imageURL={data.database.diagram}/>
+      <RoadmapSection imageURL={data.database.diagram} />
+      <ArchitectureSection url={data.architecture.diagram}/>
     </div>
   );
 };
