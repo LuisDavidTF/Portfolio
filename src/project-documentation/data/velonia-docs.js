@@ -13,20 +13,20 @@ const VeloniaDocs = {
       analytics, and responsive design for all devices.
     `,
     images: [
-      {link:"https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/home-nologin.jpeg?raw=true",description:"Home", icon:"d fas fa-house"},
-      {link:"https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/register.jpeg?raw=true", description:"User Register", icon:"fas fa-clipboard"},
-      {link:"https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/login.jpeg?raw=true", description:"User Login", icon:"fas fa-sign-in-alt"},
-      {link:"https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/home-login.jpeg?raw=true", description:"Home when the user Logged in", icon:"fas fa-house"},
-      {link:"https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/categorys.jpeg?raw=true", description:"Men's Category", icon:"fas fa-male"},
-      {link:"https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/add-product.jpeg?raw=true", description:"Add a new Product", icon:"fas fa-add"},
-      {link:"https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/add-variants.jpeg?raw=true", description:"Add a variants to the product", icon:"fas fa-add"},
-      {link:"https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/details.jpeg?raw=true", description:"Product details", icon:"fas fa-circle-info"},
-      {link:"https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/cart.jpeg?raw=true", description:"Cart Section", icon:"fas fa-cart-shopping"},
-      {link:"https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/stripe.jpeg?raw=true", description:"Payment with Stripe", icon:"fas fa-credit-card"},
-      {link:"https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/pago-sucess.jpeg?raw=true", description:"Successful payment", icon:"fas fa-check"},
-      {link:"https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/pago-error.jpeg?raw=true", description:"Incorrect payment", icon:"fas fa-xmark"},
-      {link:"https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/profile.jpeg?raw=true", description:"Profile Section", icon:"fas fa-user"},
-      {link:"https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/edit-profile.jpeg?raw=true", description:"Edit Profile", icon:"fas fa-user-pen"},
+      { link: "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/home-nologin.jpeg?raw=true", description: "Home", icon: "d fas fa-house" },
+      { link: "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/register.jpeg?raw=true", description: "User Register", icon: "fas fa-clipboard" },
+      { link: "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/login.jpeg?raw=true", description: "User Login", icon: "fas fa-sign-in-alt" },
+      { link: "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/home-login.jpeg?raw=true", description: "Home when the user Logged in", icon: "fas fa-house" },
+      { link: "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/categorys.jpeg?raw=true", description: "Men's Category", icon: "fas fa-male" },
+      { link: "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/add-product.jpeg?raw=true", description: "Add a new Product", icon: "fas fa-add" },
+      { link: "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/add-variants.jpeg?raw=true", description: "Add a variants to the product", icon: "fas fa-add" },
+      { link: "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/details.jpeg?raw=true", description: "Product details", icon: "fas fa-circle-info" },
+      { link: "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/cart.jpeg?raw=true", description: "Cart Section", icon: "fas fa-cart-shopping" },
+      { link: "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/stripe.jpeg?raw=true", description: "Payment with Stripe", icon: "fas fa-credit-card" },
+      { link: "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/pago-sucess.jpeg?raw=true", description: "Successful payment", icon: "fas fa-check" },
+      { link: "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/pago-error.jpeg?raw=true", description: "Incorrect payment", icon: "fas fa-xmark" },
+      { link: "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/profile.jpeg?raw=true", description: "Profile Section", icon: "fas fa-user" },
+      { link: "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/edit-profile.jpeg?raw=true", description: "Edit Profile", icon: "fas fa-user-pen" },
     ]
   },
 
@@ -104,13 +104,54 @@ ng serve
   },
 
   features: [
-    "Full product catalog with variants and categories",
-    "Secure authentication and authorization",
-    "Shopping cart and checkout",
-    "Stripe integration with webhooks",
-    "Inventory management",
-    "Admin dashboard with analytics",
-    "Responsive design"
+    {
+      "id": 1,
+      "title": "Secure Authentication",
+      "description": "Sign up, login, and access control with JWT.",
+      "size": "square"
+    },
+    {
+      "id": 2,
+      "title": "Product Management",
+      "description": "Create, edit, and organize products and variants.",
+      "size": "tall"
+    },
+    {
+      "id": 3,
+      "title": "Interactive Cart",
+      "description": "Add products and validate stock in real time.",
+      "size": "small"
+    },
+    {
+      "id": 4,
+      "title": "Stripe Payments",
+      "description": "Secure and reliable transactions.",
+      "size": "small"
+    },
+    {
+      "id": 5,
+      "title": "Security & Data Protection",
+      "description": "User data protection and private route control.",
+      "size": "medium"
+    },
+    {
+      "id": 6,
+      "title": "Detailed Product View",
+      "description": "View product info, images, and variants with a clean design.",
+      "size": "medium"
+    },
+    {
+      "id": 7,
+      "title": "Seller Dashboard",
+      "description": "Manage your products with privacy and control.",
+      "size": "medium"
+    },
+    {
+      "id": 8,
+      "title": "Modern UI",
+      "description": "Fast and consistent experience built with Angular.",
+      "size": "small"
+    }
   ],
 
   roadmap: [

@@ -8,6 +8,7 @@ import InstallationGuide from "../project-documentation/components/InstallationG
 import RoadmapSection from "../project-documentation/components/RoadmapSection";
 import ArchitectureSection from "../project-documentation/components/ArchitectureSection";
 import DatabaseSchema from "../project-documentation/components/DatabaseSchema";
+import FeaturesSection from "../project-documentation/components/FeaturesSection";
 const docsMap = {
   velonia: VeloniaDocs
 };
@@ -34,6 +35,7 @@ export default function DocumentationPage() {
       />
       <DatabaseSchema url={data.database.diagram}/>
       <ArchitectureSection url={data.architecture.diagram}/>
+      <FeaturesSection features={data.features}/>
     </div>
   );
 };
