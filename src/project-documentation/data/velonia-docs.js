@@ -105,52 +105,58 @@ ng serve
 
   features: [
     {
-      "id": 1,
-      "title": "Secure Authentication",
-      "description": "Sign up, login, and access control with JWT.",
-      "size": "square"
+      id: 1,
+      title: "Secure Authentication",
+      description: "Sign up, login, and access control with JWT.",
+      image:"https://raw.githubusercontent.com/LuisDavidTF/Portfolio/refs/heads/main/src/assets/images/projects/velonia/Img-Auth.jpg",
+      size: "square"
     },
     {
-      "id": 2,
-      "title": "Product Management",
-      "description": "Create, edit, and organize products and variants.",
-      "size": "tall"
+      id: 2,
+      title: "Product Management",
+      description: "Create, edit, and organize products and variants.",
+      image:"https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/Img-Product-Management.jpg?raw=true",
+      size: "tall"
     },
     {
-      "id": 3,
-      "title": "Interactive Cart",
-      "description": "Add products and validate stock in real time.",
-      "size": "small"
+      id: 3,
+      title: "Interactive Cart",
+      description: "Add products and validate stock in real time.",
+      image:"https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/Img-Cart.jpg?raw=true",
+      size: "small"
     },
     {
-      "id": 4,
-      "title": "Stripe Payments",
-      "description": "Secure and reliable transactions.",
-      "size": "small"
+      id: 4,
+      title: "Stripe Payments",
+      description: "Secure and reliable transactions.",
+      image:"https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/Img-Stripe.jpg?raw=true",
+      size: "tall"
     },
     {
-      "id": 5,
-      "title": "Security & Data Protection",
-      "description": "User data protection and private route control.",
-      "size": "medium"
+      id: 7,
+      title: "Security & Data Protection",
+      description: "User data protection and private route control.",
+      size: "small"
     },
     {
-      "id": 6,
-      "title": "Detailed Product View",
-      "description": "View product info, images, and variants with a clean design.",
-      "size": "medium"
+      id: 5,
+      title: "Detailed Product View",
+      description: "View product info, images, and variants with a clean design.",
+      image:"https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/Img-Detail.jpg?raw=true",
+      size: "medium"
     },
     {
-      "id": 7,
-      "title": "Seller Dashboard",
-      "description": "Manage your products with privacy and control.",
-      "size": "medium"
+      id: 6,
+      title: "Seller Dashboard",
+      description: "Manage your products with privacy and control.",
+      image:"https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/Img-Seller.jpg?raw=true",
+      size: "medium"
     },
     {
-      "id": 8,
-      "title": "Modern UI",
-      "description": "Fast and consistent experience built with Angular.",
-      "size": "small"
+      id: 8,
+      title: "Modern UI",
+      description: "Fast and consistent experience built with Angular.",
+      size: "small"
     }
   ],
 
