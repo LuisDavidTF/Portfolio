@@ -51,7 +51,7 @@ export default function AboutCard({
       {/* Achievements destacados (opcional) */}
       {showAchievements && featuredAchievements.length > 0 && (
         <div className="about-achievements mt-3">
-          <h6 className="text-secondary text-center mb-2">
+          <h6 className="text-primary-css text-center mb-2">
             <i className="fas fa-trophy me-2"></i>
             Key Achievements
           </h6>
@@ -103,8 +103,8 @@ export default function AboutCard({
 
       {/* Indicador de estado actual de aprendizaje */}
       {personalInfo.status.currentlyLearning.length > 0 && variant === 'detailed' && (
-        <div className="currently-learning mt-3">
-          <h6 className="text-secondary text-center mb-2">
+        <div className="mt-3">
+          <h6 className="text-primary-css text-center mb-2">
             <i className="fas fa-book me-2"></i>
             Currently Learning
           </h6>
@@ -125,7 +125,7 @@ export default function AboutCard({
 
       {/* Call to action opcional */}
       {variant === 'detailed' && (
-        <div className="about-cta mt-3">
+        <div className="about-cta mt-5">
           <div className="row">
             <div className="col-auto">
               <a
@@ -141,7 +141,7 @@ export default function AboutCard({
                 href={personalInfo.contact.social.linkedin.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-outline-secondary btn-sm"
+                className="btn btn-outline-primary btn-sm"
               >
                 <i className="fab fa-linkedin me-1"></i>
                 Connect

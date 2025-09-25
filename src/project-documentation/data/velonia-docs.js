@@ -169,10 +169,8 @@ ng serve
 
   credits: {
     author: "Luis David Trejo Fuentes",
-    collaborators: [],
+    collaborators: ["Rocío Suarez, Yamileth Antonio"],
     repo: "https://github.com/LuisDavidTF/Velonia-Angular",
-    linkedin: "https://www.linkedin.com/in/luis-david-trejo-fuentes/",
-    email: "luisdavidtrejofuentes@gmail.com"
   }
 };
 

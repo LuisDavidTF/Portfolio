@@ -9,6 +9,7 @@ import RoadmapSection from "../project-documentation/components/RoadmapSection";
 import ArchitectureSection from "../project-documentation/components/ArchitectureSection";
 import DatabaseSchema from "../project-documentation/components/DatabaseSchema";
 import FeaturesSection from "../project-documentation/components/FeaturesSection";
+import CreditsSection from "../project-documentation/components/CreditsSection";
 const docsMap = {
   velonia: VeloniaDocs
 };
@@ -26,16 +27,16 @@ export default function DocumentationPage() {
       <OverviewSection
         description={data.overview.description}
         techStack={projectSkills}
-        images={data.overview.images.map(image => image.link)}
         descriptionimage={data.overview.images.map(image => image.description)}
         icon={data.overview.images.map(image => image.icon)}
       />
+      <FeaturesSection features={data.features}/>
       <InstallationGuide
         installation={data.installation}
       />
       <DatabaseSchema url={data.database.diagram}/>
       <ArchitectureSection url={data.architecture.diagram}/>
-      <FeaturesSection features={data.features}/>
+      <CreditsSection credits={data.credits}/>
     </div>
   );
 };

@@ -202,7 +202,7 @@ export default function ProjectsContainer({
             </a>
             <a 
               href="mailto:luisdavidtrejofuentes@gmail.com"
-              className="btn btn-primary"
+              className="btn btn-outline-primary"
             >
               <i className="fas fa-envelope me-1"></i>
               Get in Touch

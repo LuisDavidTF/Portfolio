@@ -178,12 +178,16 @@ footer {
 
 }
 
+.text-primary-css{
+  color: var(--primary-color) !important;
+}
+
 .text-secondary{
   color:var(--text-color-css);
 }
 
 .text{
-  color:var(--text-primary-css)
+  color:var(--text-primary-css);
 }
 
 .title{

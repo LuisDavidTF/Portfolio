@@ -5,7 +5,7 @@ const InstallationGuide = ({ installation }) => {
 
   return (
     <>
-      <h2 className="text-center mt-3 mb-3 section-title">Installation</h2>
+      <h2 className="text-center mb-3 section-title">Installation</h2>
       <section className="hero-about-card ">
         <div className="card-style">
           {installation.notes?.map((note, i) => (
