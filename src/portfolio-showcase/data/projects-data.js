@@ -196,7 +196,7 @@ export const projectsData = [
     'Favorites system for quick access',
     'Weekly menu planner based on inventory',
     'Filtering & searching recipes by ingredients and categories',
-    'Hybrid database architecture (MySQL + MongoDB)'
+    'Hybrid database architecture (PostgreSQL + MongoDB)'
   ],
     
     // Challenges y soluciones
@@ -217,10 +217,10 @@ export const projectsData = [
     
     // Stats del proyecto
     stats: {
-      linesOfCode: '0',
-      commits: '0',
-      developmentHours: '10+',
-      features: 7
+      linesOfCode: '750+',
+      commits: '19',
+      developmentHours: '64+',
+      features: 5
     }
 }
 
