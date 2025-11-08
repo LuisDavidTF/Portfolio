@@ -2,8 +2,8 @@ import TechStackDisplay from "@/portfolio-showcase/components/TechStackDisplay";
 import { getProjectSkills } from "@/portfolio-showcase/data/projects-data";
 import Carousel from "../../shared/components/ui/Carousel";
 
-export default function OverviewSection({ description, images, descriptionimage, icon }) {
-    const projectSkills = getProjectSkills('velonia');
+export default function OverviewSection({ description, images, descriptionimage, icon, idproject }) {
+    const projectSkills = getProjectSkills(idproject);
     return (
         <div className="hero-about-card " >
             <p className="mb-3 text-center">{description}</p>
