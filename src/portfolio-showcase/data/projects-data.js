@@ -161,25 +161,34 @@ export const projectsData = [
 {
   id: 'recipe-planner',
   name: 'CulinaSmart',
-  tagline: 'Smart Recipe Planner',
+  tagline: 'AI-powered meal plans from your pantry',
   description: 'A web application for personalized recipe, menu & profile management.',
-  longDescription: `CulinaSmart is a web platform that empowers users to create, manage, and share recipes easily. It includes secure authentication both via email/password and Google OAuth. Users can personalize their profile, mark favorites, and plan weekly menus intelligently based on available ingredients. A hybrid data setup (MySQL + MongoDB) is used to showcase skills in both relational and NoSQL databases, ensuring both structure and flexibility.`,
+  longDescription: `
+      Smart Recipe Planner is a menu planning app with integrated AI 
+      to suggest recipes to include in your weekly meal plan based on 
+      your nutritional goals and the ingredients you have at home.
+    `,
   
   category: 'Web Application',
-  status: projectStatus.PLANNING,
+  status: projectStatus.IN_PROGRESS,
   
   techStack: [
     'react',
-    'spring-boot',
+    'nextjs',
     'postgresql',
     'jwt',
-    'google-oauth',
+    'prisma',
+    'zod',
+    'google-genai',
     'tailwind',
+    'express',
     'scrum'
   ],
   
-  liveUrl: '',
-  githubUrl: '',
+  liveUrl: 'https://smart-recipe-planner.vercel.app/',
+  githubUrl: 'https://github.com/LuisDavidTF/smart-recipe-planner',
+  githubApiUrl: 'https://github.com/LuisDavidTF/smart-recipe-planner-api',
+  documentationUrl: '#/docs/recipe-planner',
   
   image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg',  // suggestion
   // (you may download a similar free image from Pexels or Unsplash that fits usage)
@@ -217,9 +226,9 @@ export const projectsData = [
     
     // Stats del proyecto
     stats: {
-      linesOfCode: '750+',
-      commits: '19',
-      developmentHours: '64+',
+      linesOfCode: '6000+',
+      commits: '39',
+      developmentHours: '168+',
       features: 5
     }
 }
@@ -299,7 +308,7 @@ export const getProjectsBySkill = (skillId) => {
 export const getProjectSkills = (projectId) => {
   const project = getProjectById(projectId);
   if (!project) return [];
-  
+  console.log('Project Tech Stack:', project.techStack);
   return getSkillsByIds(project.techStack);
 };
 
