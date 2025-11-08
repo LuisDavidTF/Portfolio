@@ -205,6 +205,19 @@ export default function ProjectCard({
           </a>
         )}
 
+        {/* Botón GitHub API*/}
+        {project.githubApiUrl && (
+          <a
+            href={project.githubApiUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-outline-secondary me-2"
+          >
+            <i className="fab fa-github me-1"></i>
+            GitHub API
+          </a>
+        )}
+
         {/* Botón Documentation (nuevo) */}
         {project.documentationUrl && (
           <a
