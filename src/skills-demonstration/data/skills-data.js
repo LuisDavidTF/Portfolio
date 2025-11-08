@@ -151,6 +151,15 @@ export const skillsData = {
       experience: '1+ year',
       color: '#6DB33F',
       textColor: '#fff'
+    },
+    {
+      id: 'nextjs',
+      name: 'Next.js',
+      icon: 'fas fa-code',
+      level: 'basic',
+      experience: '1 month',
+      color: '#000',
+      textColor: '#fff'
     }
   ],
 
@@ -275,6 +284,33 @@ export const skillsData = {
       icon: 'fab fa-google',
       level: 'intermediate',
       experience: '1+ year',
+      color: '#4285F4',
+      textColor: '#fff'
+    },
+    {
+      id: 'prisma',
+      name: 'Prisma',
+      icon: 'fas fa-database',
+      level: 'basic',
+      experience:' 1 month',
+      color: '#0C344B',
+      textColor: '#fff'
+    },
+    {
+      id: 'zod',
+      name: 'Zod',
+      icon: 'fas fa-check-circle',
+      level: 'basic',
+      experience:' 1 month',
+      color: '#F43E5C',
+      textColor: '#fff'
+    },
+    {
+      id: 'google-genai',
+      name: 'Google GenAI',
+      icon: 'fas fa-robot',
+      level: 'basic',
+      experience:' 1 month',
       color: '#4285F4',
       textColor: '#fff'
     }
