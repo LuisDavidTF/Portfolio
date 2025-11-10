@@ -31,78 +31,12 @@ const SmartRecipePlannerDocs = {
       { link: "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/edit-profile.jpeg?raw=true", description: "Edit Profile", icon: "fas fa-user-pen" },
     ]
   },
-
-  installation: {
-    prerequisites: [
-      "Node.js >= 18",
-      "MySQL >= 8",
-      "Angular CLI",
-      "Stripe account with API keys"
-    ],
-    notes: [
-      "Make sure you import the initial database schema from `backend/database/schema.sql` before starting."
-    ],
-    steps: [
-      {
-        title: "Clone the repository",
-        description: "Download the project source code from GitHub.",
-        code: `git clone https://github.com/LuisDavidTF/Velonia-Angular.git`
-      },
-      {
-        title: "Install dependencies",
-        description: "Install required packages for both frontend and backend.",
-        code: `
-cd VeloniaAngular
-npm install
-
-cd backend
-npm install
-        `
-      },
-      {
-        title: "Set environment variables",
-        description: "Create a \`.env\` file inside the backend folder with your local configuration.",
-        code: `
-DB_HOST=localhost
-DB_USER=root
-DB_PASSWORD=your_password
-DB_NAME=velonia
-JWT_SECRET=your_jwt_secret
-STRIPE_SECRET_KEY=your_stripe_key
-PORT=3000
-        `
-      },
-      {
-        title: "Run the application",
-        description: "Start backend and frontend servers.",
-        code: `
-cd backend
-npm start
-
-# In another terminal
-ng serve
-        `
-      }
-    ],
-    deployment: [
-      "Deploy the backend on AWS Elastic Beanstalk",
-      "Use RDS for MySQL database",
-      "Deploy frontend on AWS Amplify or GitHub Pages"
-    ]
-  },
-
   database: {
-    diagram: "https://raw.githubusercontent.com/LuisDavidTF/Portfolio/9ae8b7244a3b81954faac57242b1c643110194b7/src/assets/images/projects/velonia/db-schema.svg?sanitize=true",
-    tables: [
-      { name: "Users", description: "Stores user credentials and profile information." },
-      { name: "Products", description: "Product details with support for images as BLOBs." },
-      { name: "Orders", description: "Links users with products, handling order history and status." }
-    ]
+    diagram: "./src/assets/images/projects/smart-recipe/db-schema.svg"
   },
 
   architecture: {
-    description: "Velonia follows a full-stack architecture with Angular frontend, Node.js + Express backend, and MySQL database. Stripe is integrated for payments.",
-    diagram: "https://raw.githubusercontent.com/LuisDavidTF/Portfolio/e14fabe6abd8ed6106b59a14b6126b4474ec1e07/src/assets/images/projects/velonia/Architecture-Velonia.svg?sanitize=true"
+    diagram: "./src/assets/images/projects/smart-recipe/architecture-diagram.svg"
   },
 
   features: [
@@ -110,68 +44,46 @@ ng serve
       id: 1,
       title: "Secure Authentication",
       description: "Sign up, login, and access control with JWT.",
-      image:"https://raw.githubusercontent.com/LuisDavidTF/Portfolio/refs/heads/main/src/assets/images/projects/velonia/Img-Auth.jpg",
+      image:"./src/assets/images/projects/smart-recipe/Img-Auth.png",
       size: "square"
     },
     {
       id: 2,
       title: "Product Management",
       description: "Create, edit, and organize products and variants.",
-      image:"https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/Img-Product-Management.jpg?raw=true",
-      size: "tall"
+      image:"./src/assets/images/projects/smart-recipe/feed.png",
+      size: "square"
     },
     {
       id: 3,
       title: "Interactive Cart",
       description: "Add products and validate stock in real time.",
-      image:"https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/Img-Cart.jpg?raw=true",
-      size: "small"
+      image:"./src/assets/images/projects/smart-recipe/edit-delete.png",
+      size: "square"
     },
     {
       id: 4,
       title: "Stripe Payments",
       description: "Secure and reliable transactions.",
-      image:"https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/Img-Stripe.jpg?raw=true",
-      size: "tall"
-    },
-    {
-      id: 7,
-      title: "Security & Data Protection",
-      description: "User data protection and private route control.",
-      size: "small"
-    },
-    {
-      id: 5,
-      title: "Detailed Product View",
-      description: "View product info, images, and variants with a clean design.",
-      image:"https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/Img-Detail.jpg?raw=true",
-      size: "medium"
-    },
-    {
-      id: 6,
-      title: "Seller Dashboard",
-      description: "Manage your products with privacy and control.",
-      image:"https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/Img-Seller.jpg?raw=true",
-      size: "medium"
-    },
-    {
-      id: 8,
-      title: "Modern UI",
-      description: "Fast and consistent experience built with Angular.",
-      size: "small"
+      image:"./src/assets/images/projects/smart-recipe/gen-magic.png",
+      size: "square"
     }
   ],
 
   roadmap: [
-    "Add internationalization (i18n)",
-    "Migrate backend to TypeScript",
-    "Implement automated tests with Jest",
-    "Introduce recommendation system with AI"
+    "Add profile sections for users to manage their information.",
+    "Add ingredient inventory management.",
+    "Add profile management features.",
+    "Add ingredient-based recipe suggestions using AI.",
+    "Implement weekly meal planning features.",
+    "Integrate grocery list generation from meal plans.",
+    "Enhance nutritional tracking and goal setting.",
+    "Develop mobile app version for on-the-go access."
   ],
 
   credits: {
     author: "Luis David Trejo Fuentes",
-    collaborators: ["Rocío Suarez"],
+    collaborators: [],
     repo: "https://github.com/LuisDavidTF/Velonia-Angular",
   }
 };
