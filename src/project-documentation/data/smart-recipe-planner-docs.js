@@ -84,8 +84,11 @@ const SmartRecipePlannerDocs = {
   credits: {
     author: "Luis David Trejo Fuentes",
     collaborators: [],
-    repo: "https://github.com/LuisDavidTF/Velonia-Angular",
-  }
+    repo: "https://github.com/LuisDavidTF/Smart-Recipe-Planner",
+    repoApi:"https://github.com/LuisDavidTF/Smart-Recipe-Planner-API",
+  },
+
+  deployedURL: "https://smart-recipe-planner.vercel.app/"
 };
 
 export default SmartRecipePlannerDocs;
