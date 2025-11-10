@@ -14,29 +14,14 @@ const SmartRecipePlannerDocs = {
       to suggest recipes to include in your weekly meal plan based on 
       your nutritional goals and the ingredients you have at home.
     `,
-    images: [
-      { link: "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/home-nologin.jpeg?raw=true", description: "Home", icon: "d fas fa-house" },
-      { link: "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/register.jpeg?raw=true", description: "User Register", icon: "fas fa-clipboard" },
-      { link: "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/login.jpeg?raw=true", description: "User Login", icon: "fas fa-sign-in-alt" },
-      { link: "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/home-login.jpeg?raw=true", description: "Home when the user Logged in", icon: "fas fa-house" },
-      { link: "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/categorys.jpeg?raw=true", description: "Men's Category", icon: "fas fa-male" },
-      { link: "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/add-product.jpeg?raw=true", description: "Add a new Product", icon: "fas fa-add" },
-      { link: "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/add-variants.jpeg?raw=true", description: "Add a variants to the product", icon: "fas fa-add" },
-      { link: "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/details.jpeg?raw=true", description: "Product details", icon: "fas fa-circle-info" },
-      { link: "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/cart.jpeg?raw=true", description: "Cart Section", icon: "fas fa-cart-shopping" },
-      { link: "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/stripe.jpeg?raw=true", description: "Payment with Stripe", icon: "fas fa-credit-card" },
-      { link: "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/pago-sucess.jpeg?raw=true", description: "Successful payment", icon: "fas fa-check" },
-      { link: "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/pago-error.jpeg?raw=true", description: "Incorrect payment", icon: "fas fa-xmark" },
-      { link: "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/profile.jpeg?raw=true", description: "Profile Section", icon: "fas fa-user" },
-      { link: "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/velonia/edit-profile.jpeg?raw=true", description: "Edit Profile", icon: "fas fa-user-pen" },
-    ]
+    images: []
   },
   database: {
     diagram: "./src/assets/images/projects/smart-recipe/db-schema.svg"
   },
 
   architecture: {
-    diagram: "./src/assets/images/projects/smart-recipe/architecture-diagram.svg"
+    diagram: "./src/assets/images/projects/smart-recipe/architecture-diagram2.svg"
   },
 
   features: [
