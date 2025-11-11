@@ -17,11 +17,11 @@ const SmartRecipePlannerDocs = {
     images: []
   },
   database: {
-    diagram: "./src/assets/images/projects/smart-recipe/db-schema.svg"
+    diagram: "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/smart-recipe/db-schema.svg?raw=true"
   },
 
   architecture: {
-    diagram: "./src/assets/images/projects/smart-recipe/architecture-diagram2.svg"
+    diagram: "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/smart-recipe/architecture-diagram2.svg?raw=true"
   },
 
   features: [
@@ -29,28 +29,28 @@ const SmartRecipePlannerDocs = {
       id: 1,
       title: "Secure Authentication",
       description: "Sign up, login, and access control with JWT.",
-      image:"./src/assets/images/projects/smart-recipe/Img-Auth.png",
+      image:"https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/smart-recipe/Img-Auth.png?raw=true",
       size: "square"
     },
     {
       id: 2,
-      title: "Product Management",
-      description: "Create, edit, and organize products and variants.",
-      image:"./src/assets/images/projects/smart-recipe/feed.png",
+      title: "Feed with Infinite Scroll",
+      description: "Infinitely scrolling news page.",
+      image:"https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/smart-recipe/feed.png?raw=true",
       size: "square"
     },
     {
       id: 3,
       title: "Interactive Cart",
-      description: "Add products and validate stock in real time.",
-      image:"./src/assets/images/projects/smart-recipe/edit-delete.png",
+      description: "Edit and delete recipes with authentication.",
+      image:"https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/smart-recipe/edit-delete.png?raw=true",
       size: "square"
     },
     {
       id: 4,
-      title: "Stripe Payments",
-      description: "Secure and reliable transactions.",
-      image:"./src/assets/images/projects/smart-recipe/gen-magic.png",
+      title: "AI-Powered Recipe Generation",
+      description: "Generate recipes based on word prompts using Google GenAI.",
+      image:"https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/smart-recipe/gen-magic.png?raw=true",
       size: "square"
     }
   ],

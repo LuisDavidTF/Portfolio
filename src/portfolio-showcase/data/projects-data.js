@@ -226,9 +226,9 @@ export const projectsData = [
     
     // Stats del proyecto
     stats: {
-      linesOfCode: '6000+',
+      linesOfCode: 1049+2121,
       commits: '39',
-      developmentHours: '168+',
+      developmentHours: '138+',
       features: 5
     }
 }
