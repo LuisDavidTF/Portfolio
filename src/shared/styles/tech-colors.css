@@ -166,6 +166,16 @@
   color: #fff !important;
 }
 
+/* Next.js */
+.skill-nextjs,
+.skill-item[data-tech="nextjs"],
+.project-skill[data-tech="nextjs"],
+.skill-item[title="Next.js"],
+.project-skill[title="Next.js"] {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
 /* ==========================================
    DATABASES
    ========================================== */
@@ -286,6 +296,35 @@
   color: #000 !important;
 }
 
+/* Zod */
+.skill-zod,
+.skill-item[data-tech="zod"],
+.project-skill[data-tech="zod"],
+.skill-item[title="Zod"],
+.project-skill[title="Zod"] {
+  background-color: #F43E5C !important;
+  color: #fff !important;
+}
+
+/* Prisma */
+.skill-prisma,
+.skill-item[data-tech="prisma"],
+.project-skill[data-tech="prisma"],
+.skill-item[title="prisma"],
+.project-skill[title="prisma"] {
+  background-color: #0C344B !important;
+  color: #fff !important;
+}
+
+/* Google Genai */
+.skill-googlegenai,
+.skill-item[data-tech="google-genai"],
+.project-skill[data-tech="google-genai"],
+.skill-item[title="Google GenAI"],
+.project-skill[title="Google GenAI"] {
+  background-color: #4285F4 !important;
+  color: #fff !important;
+}
 /* ==========================================
    METHODOLOGIES & CONCEPTS
    ========================================== */
