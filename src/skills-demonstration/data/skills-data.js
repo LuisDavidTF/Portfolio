@@ -160,6 +160,42 @@ export const skillsData = {
       experience: '1 month',
       color: '#000',
       textColor: '#fff'
+    },
+    {
+      id: 'astro',
+      name: 'Astro 6',
+      icon: 'fas fa-rocket',
+      level: 'intermediate',
+      experience: '6 months',
+      color: '#FF5D01',
+      textColor: '#fff'
+    },
+    {
+      id: 'react19',
+      name: 'React 19',
+      icon: 'fab fa-react',
+      level: 'advanced',
+      experience: '2+ years',
+      color: '#61DAFB',
+      textColor: '#000'
+    },
+    {
+      id: 'tailwind4',
+      name: 'Tailwind 4',
+      icon: 'fab fa-css3-alt',
+      level: 'advanced',
+      experience: '2+ years',
+      color: '#38B2AC',
+      textColor: '#fff'
+    },
+    {
+      id: 'zustand',
+      name: 'Zustand 5',
+      icon: 'fas fa-bear',
+      level: 'intermediate',
+      experience: '1 year',
+      color: '#433929',
+      textColor: '#fff'
     }
   ],
 
@@ -312,6 +348,15 @@ export const skillsData = {
       level: 'basic',
       experience:' 1 month',
       color: '#4285F4',
+      textColor: '#fff'
+    },
+    {
+      id: 'bff',
+      name: 'BFF Architecture',
+      icon: 'fas fa-network-wired',
+      level: 'advanced',
+      experience: '1 year',
+      color: '#000',
       textColor: '#fff'
     }
   ]

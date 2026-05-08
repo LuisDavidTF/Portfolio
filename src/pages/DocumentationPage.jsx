@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import { useEffect } from "react";
 import VeloniaDocs from "@/project-documentation/data/velonia-docs";
 import SmartRecipePlannerDocs from "@/project-documentation/data/smart-recipe-planner-docs";
 import HeroSection from "@/project-documentation/components/HeroSection";
@@ -13,12 +14,22 @@ import FeaturesSection from "../project-documentation/components/FeaturesSection
 import CreditsSection from "../project-documentation/components/CreditsSection";
 const docsMap = {
   velonia: VeloniaDocs,
-  'recipe-planner': SmartRecipePlannerDocs
+  'cacomi': SmartRecipePlannerDocs
 };
 
 export default function DocumentationPage() {
   const { projectId } = useParams();
   const data = docsMap[projectId];
+
+  useEffect(() => {
+    if (data) {
+      document.title = `${data.title} | Luis David Trejo Fuentes`;
+    }
+    return () => {
+      document.title = "Luis David Trejo Fuentes | Portfolio";
+    };
+  }, [data]);
+
   if (!data) {
     return <div className="text-center mt-5">⚠️ Documentation not found</div>;
   }

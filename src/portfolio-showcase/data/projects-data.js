@@ -158,80 +158,79 @@ export const projectsData = [
       features: 6
     }
   }, */
-{
-  id: 'recipe-planner',
-  name: 'CulinaSmart',
-  tagline: 'AI-powered meal plans from your pantry',
-  description: 'A web application for personalized recipe, menu & profile management.',
-  longDescription: `
-      Smart Recipe Planner is a menu planning app with integrated AI 
-      to suggest recipes to include in your weekly meal plan based on 
-      your nutritional goals and the ingredients you have at home.
-    `,
-  
-  category: 'Web Application',
-  status: projectStatus.IN_PROGRESS,
-  
-  techStack: [
-    'react',
-    'nextjs',
-    'postgresql',
-    'jwt',
-    'prisma',
-    'zod',
-    'google-genai',
-    'tailwind',
-    'express',
-    'scrum'
-  ],
-  
-  liveUrl: 'https://smart-recipe-planner.vercel.app/',
-  githubUrl: 'https://github.com/LuisDavidTF/smart-recipe-planner',
-  githubApiUrl: 'https://github.com/LuisDavidTF/smart-recipe-planner-api',
-  documentationUrl: '#/docs/recipe-planner',
-  
-  image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg',  // suggestion
-  // (you may download a similar free image from Pexels or Unsplash that fits usage)
-  
-  startDate: '2025-09-10',
-  completionDate: null,
-  featured: false,
-  priority: 3,
-  
-  keyFeatures: [
-    'Manual registration + Google sign-in (OAuth 2.0)',
-    'User profile customization (photo, username, settings)',
-    'Create, edit, delete own recipes',
-    'Favorites system for quick access',
-    'Weekly menu planner based on inventory',
-    'Filtering & searching recipes by ingredients and categories',
-    'Hybrid database architecture (PostgreSQL + MongoDB)'
-  ],
+  {
+    id: 'cacomi',
+    name: 'Cacomi',
+    tagline: 'AI-Powered Culinary Intelligence & BFF Orchestration',
+    description: 'High-performance meal planning platform built with Astro 6 and React 19. Features a robust BFF architecture to orchestrate microservices and secure sensitive data.',
+    longDescription: `
+        Cacomi is a high-performance meal planning platform built with Astro 6 and React 19. 
+        It features a robust Backend-for-Frontend (BFF) architecture to orchestrate 
+        microservices and secure sensitive data. Optimized for mobile as a PWA with 
+        full offline support via IndexedDB.
+      `,
     
-    // Challenges y soluciones
-    challenges: [
-      {
-        problem: 'Complex product variant management',
-        solution: 'Implemented flexible variant system with size, color, and custom attributes'
-      },
-      {
-        problem: 'Secure payment processing',
-        solution: 'Integrated Stripe API with proper error handling and webhook validation'
-      },
-      {
-        problem: 'Real-time inventory tracking',
-        solution: 'Built automated inventory updates with low-stock alerts'
-      }
+    category: projectCategories.WEB_APP,
+    status: projectStatus.COMPLETED,
+    
+    techStack: [
+      'astro',
+      'react19',
+      'tailwind4',
+      'zustand',
+      'bff',
+      'postgresql',
+      'jwt',
+      'google-genai',
+      'scrum'
     ],
     
-    // Stats del proyecto
-    stats: {
-      linesOfCode: 1049+2121,
-      commits: '39',
-      developmentHours: '138+',
-      features: 5
-    }
-}
+    liveUrl: 'https://cacomi.app',
+    githubUrl: 'https://github.com/LuisDavidTF/smart-recipe-planner',
+    githubApiUrl: 'https://github.com/LuisDavidTF/smart-recipe-planner-api',
+    documentationUrl: '#/docs/cacomi',
+    
+    image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg',
+    
+    startDate: '2025-09-10',
+    completionDate: '2026-05-01',
+    featured: true,
+    priority: 1,
+    
+    keyFeatures: [
+      'BFF Secure Proxy for microservices orchestration',
+      'Offline-First Experience with Dexie.js and Service Workers',
+      'AI Recipe Orchestration using Vercel AI SDK and Gemini',
+      'Smart Inventory Sync with semantic item unification',
+      'Manual registration + Google sign-in (OAuth 2.0)',
+      'User profile customization and management',
+      'PWA mobile-optimized interface'
+    ],
+      
+      // Challenges y soluciones
+      challenges: [
+        {
+          problem: 'Managing complex microservices communication securely',
+          solution: 'Implemented a Backend-for-Frontend (BFF) layer to centralize authentication and data orchestration'
+        },
+        {
+          problem: 'Ensuring full functionality in low-connectivity areas',
+          solution: 'Developed an offline-first architecture using IndexedDB (Dexie.js) and custom Service Workers'
+        },
+        {
+          problem: 'Personalizing recipe generation based on partial inventory',
+          solution: 'Integrated Gemini Pro with a custom orchestration layer to process semantic inventory data'
+        }
+      ],
+      
+      // Stats del proyecto
+      stats: {
+        linesOfCode: '25000+',
+        commits: '120+',
+        developmentHours: '450+',
+        features: 12
+      }
+  }
 
 
 ];

@@ -1,79 +1,65 @@
-import { version } from 'react';
-import { getSkillsByIds } from '../../skills-demonstration/data/skills-data.js';
-
-
-const SmartRecipePlannerDocs = {
-  id: "smartRecipePlanner",
-  version: "0.1.0",
-  title: "CulinaSmart Documentation",
-  tagline: "AI-powered meal plans from your pantry",
-
+const CacomiDocs = {
+  id: "cacomi",
+  version: "1.0.0",
+  title: "Cacomi — Smart Meal Planner",
+  tagline: "AI-Powered Culinary Intelligence & BFF Orchestration",
   overview: {
     description: `
-      Smart Recipe Planner is a menu planning app with integrated AI 
-      to suggest recipes to include in your weekly meal plan based on 
-      your nutritional goals and the ingredients you have at home.
+      Cacomi is a high-performance meal planning platform built with Astro 6 and React 19. 
+      It features a robust Backend-for-Frontend (BFF) architecture to orchestrate 
+      microservices and secure sensitive data. Optimized for mobile as a PWA with 
+      full offline support via IndexedDB.
     `,
     images: []
   },
   database: {
     diagram: "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/smart-recipe/db-schema.svg?raw=true"
   },
-
   architecture: {
     diagram: "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/smart-recipe/architecture-diagram2.svg?raw=true"
   },
-
   features: [
     {
       id: 1,
-      title: "Secure Authentication",
-      description: "Sign up, login, and access control with JWT.",
-      image:"https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/smart-recipe/Img-Auth.png?raw=true",
+      title: "BFF Secure Proxy",
+      description: "Secure orchestration layer that protects internal infrastructure and manages JWT sessions via HttpOnly cookies.",
+      image: "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/smart-recipe/Img-Auth.png?raw=true",
       size: "square"
     },
     {
       id: 2,
-      title: "Feed with Infinite Scroll",
-      description: "Infinitely scrolling news page.",
-      image:"https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/smart-recipe/feed.png?raw=true",
+      title: "Offline-First Experience",
+      description: "Advanced PWA with Service Workers and IndexedDB (Dexie.js) for full meal planning and shopping list access without internet.",
+      image: "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/smart-recipe/feed.png?raw=true",
       size: "square"
     },
     {
       id: 3,
-      title: "Interactive Cart",
-      description: "Edit and delete recipes with authentication.",
-      image:"https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/smart-recipe/edit-delete.png?raw=true",
+      title: "AI Recipe Orchestration",
+      description: "Generative AI integration using Vercel AI SDK and Gemini to transform pantry inventory into personalized culinary plans.",
+      image: "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/smart-recipe/gen-magic.png?raw=true",
       size: "square"
     },
     {
       id: 4,
-      title: "AI-Powered Recipe Generation",
-      description: "Generate recipes based on word prompts using Google GenAI.",
-      image:"https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/smart-recipe/gen-magic.png?raw=true",
+      title: "Smart Inventory Sync",
+      description: "Real-time synchronization between pantry, recipes, and shopping lists with semantic item unification.",
+      image: "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/smart-recipe/edit-delete.png?raw=true",
       size: "square"
     }
   ],
-
   roadmap: [
-    "Add profile sections for users to manage their information.",
-    "Add ingredient inventory management.",
-    "Add profile management features.",
-    "Add ingredient-based recipe suggestions using AI.",
-    "Implement weekly meal planning features.",
-    "Integrate grocery list generation from meal plans.",
-    "Enhance nutritional tracking and goal setting.",
-    "Develop mobile app version for on-the-go access."
+    "Implement Bank-Grade Security (RBAC & Stealth Mode)",
+    "Advanced AI Discovery Loop for recipe recommendations",
+    "Global I18n support (ES, EN, FR) for international markets",
+    "Integrate Real-time Nutritional Telemetry with Recharts"
   ],
-
   credits: {
     author: "Luis David Trejo Fuentes",
     collaborators: [],
-    repo: "https://github.com/LuisDavidTF/Smart-Recipe-Planner",
-    repoApi:"https://github.com/LuisDavidTF/Smart-Recipe-Planner-API",
+    repo: "https://github.com/LuisDavidTF/smart-recipe-planner",
+    repoApi: "https://github.com/LuisDavidTF/smart-recipe-planner-api",
   },
-
-  deployedURL: "https://smart-recipe-planner.vercel.app/"
+  deployedURL: "https://cacomi.app"
 };
-
-export default SmartRecipePlannerDocs;
+export default CacomiDocs;
