@@ -162,24 +162,26 @@ export const projectsData = [
     id: 'cacomi',
     name: 'Cacomi',
     tagline: 'AI-Powered Culinary Intelligence & BFF Orchestration',
-    description: 'High-performance meal planning platform built with Astro 6 and React 19. Features a robust BFF architecture to orchestrate microservices and secure sensitive data.',
+    description: 'End-to-End meal planning ecosystem. Built with a high-performance Java 25 & Spring Boot core, orchestrated by an Astro BFF proxy, and delivered as an offline-first PWA.',
     longDescription: `
-        Cacomi is a high-performance meal planning platform built with Astro 6 and React 19. 
-        It features a robust Backend-for-Frontend (BFF) architecture to orchestrate 
-        microservices and secure sensitive data. Optimized for mobile as a PWA with 
-        full offline support via IndexedDB.
+        Cacomi is a production-grade, end-to-end culinary intelligence platform. 
+        The core transactional backend is engineered with Java 25, Spring Boot 4, and compiled via GraalVM Native Image for sub-millisecond cloud starts. 
+        To ensure bank-grade security and optimal mobile performance, it utilizes a Backend-for-Frontend (BFF) architecture built with Astro 6 and React 19. 
+        This ecosystem seamlessly integrates Google Gemini AI, PostgreSQL, and an offline-first PWA powered by IndexedDB.
       `,
     
     category: projectCategories.WEB_APP,
     status: projectStatus.COMPLETED,
     
     techStack: [
+      'java',
+      'spring-boot',
+      'postgresql',
       'astro',
       'react19',
       'tailwind4',
       'zustand',
       'bff',
-      'postgresql',
       'jwt',
       'google-genai',
       'scrum'
@@ -189,7 +191,7 @@ export const projectsData = [
     githubUrl: 'https://github.com/LuisDavidTF/smart-recipe-planner',
     documentationUrl: '#/docs/cacomi',
     
-    image: '/images/projects/cacomi/updated-macbook-air-cacomi.app.png',
+    image: 'public/images/projects/cacomi/upscalemedia-transformed.png',
     
     startDate: '2025-09-10',
     completionDate: '2026-05-01',
@@ -209,16 +211,16 @@ export const projectsData = [
       // Challenges y soluciones
       challenges: [
         {
-          problem: 'Managing complex microservices communication securely',
-          solution: 'Implemented a Backend-for-Frontend (BFF) layer to centralize authentication and data orchestration'
+          problem: 'High memory consumption and slow cold starts in traditional cloud deployments',
+          solution: 'Engineered the backend core with Java 25 and GraalVM Native Image, reducing memory footprint by 60%'
         },
         {
-          problem: 'Ensuring full functionality in low-connectivity areas',
-          solution: 'Developed an offline-first architecture using IndexedDB (Dexie.js) and custom Service Workers'
+          problem: 'Managing complex microservices communication securely for mobile clients',
+          solution: 'Implemented an Astro-based Backend-for-Frontend (BFF) layer to centralize authentication and sanitize payloads'
         },
         {
-          problem: 'Personalizing recipe generation based on partial inventory',
-          solution: 'Integrated Gemini Pro with a custom orchestration layer to process semantic inventory data'
+          problem: 'Ensuring seamless UX during network drops in supermarkets',
+          solution: 'Developed an offline-first PWA architecture using IndexedDB (Dexie.js) and custom Service Workers'
         }
       ],
       
