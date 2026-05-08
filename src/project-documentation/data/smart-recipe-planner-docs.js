@@ -13,10 +13,10 @@ const CacomiDocs = {
     images: []
   },
   database: {
-    diagram: "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/smart-recipe/db-schema.svg?raw=true"
+    diagram: "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/smart-recipe/database-diagram.svg?raw=true"
   },
   architecture: {
-    diagram: "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/smart-recipe/architecture-diagram2.svg?raw=true"
+    diagram: "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/smart-recipe/architecture-diagram.svg?raw=true"
   },
   features: [
     {

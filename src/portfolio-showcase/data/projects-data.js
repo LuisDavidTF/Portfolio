@@ -187,10 +187,9 @@ export const projectsData = [
     
     liveUrl: 'https://cacomi.app',
     githubUrl: 'https://github.com/LuisDavidTF/smart-recipe-planner',
-    githubApiUrl: 'https://github.com/LuisDavidTF/smart-recipe-planner-api',
     documentationUrl: '#/docs/cacomi',
     
-    image: '/images/projects/cacomi/Macbook-Air-cacomi.app.png',
+    image: '/images/projects/cacomi/updated-macbook-air-cacomi.app.png',
     
     startDate: '2025-09-10',
     completionDate: '2026-05-01',
