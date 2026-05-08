@@ -5,10 +5,10 @@ const CacomiDocs = {
   tagline: "AI-Powered Culinary Intelligence & BFF Orchestration",
   overview: {
     description: `
-      Cacomi is a production-grade, end-to-end culinary intelligence platform. 
-      The core transactional backend is engineered with Java 25, Spring Boot 4, and compiled via GraalVM Native Image for sub-millisecond cloud starts. 
-      To ensure bank-grade security and optimal mobile performance, it utilizes a Backend-for-Frontend (BFF) architecture built with Astro 6 and React 19. 
-      This ecosystem seamlessly integrates Google Gemini AI, PostgreSQL, and an offline-first PWA powered by IndexedDB.
+      Cacomi is a production-grade culinary intelligence platform built to reinvent how we manage our food, time, and money. 
+      The core transactional backend is engineered with Java 25 and Spring Boot, compiled via GraalVM for sub-millisecond cloud starts. 
+      To guarantee bank-grade security and seamless mobile delivery, it employs a Backend-for-Frontend (BFF) proxy built with Astro 6 and React 19. 
+      By combining Google Gemini AI for smart recipe orchestration, robust microservices, and an offline-first PWA, Cacomi transforms everyday ingredients into optimized daily plans.
     `,
     images: []
   },
@@ -21,34 +21,49 @@ const CacomiDocs = {
   features: [
     {
       id: 1,
-      title: "BFF Secure Proxy",
-      description: "Secure orchestration layer that protects internal infrastructure and manages JWT sessions via HttpOnly cookies.",
-      image: "/Portfolio/images/projects/cacomi/iPad-PRO-11-cacomi.app.png",
-      size: "square"
-    },
-    {
-      id: 2,
-      title: "Offline-First Experience",
-      description: "Advanced PWA with Service Workers and IndexedDB (Dexie.js) for full meal planning and shopping list access without internet.",
-      image: "/Portfolio/images/projects/cacomi/iPad-PRO-11-cacomi.app_1_.png",
-      size: "square"
-    },
-    {
-      id: 3,
-      title: "AI Recipe Orchestration",
-      description: "Generative AI integration using Vercel AI SDK and Gemini to transform pantry inventory into personalized culinary plans.",
+      title: "AI Recipe Discovery & Exploration",
+      description: "Seamlessly filters and queries a vast recipe catalog. Powered by Google Gemini AI, it dynamically generates personalized meal plans based on real-time pantry inventory, ensuring zero food waste.",
       image: "/Portfolio/images/projects/cacomi/iPad-PRO-11-cacomi.app_2_.png",
       size: "square"
     },
     {
+      id: 2,
+      title: "Smart Planning & BFF Orchestration",
+      description: "A drag-and-drop weekly planner backed by an Astro Backend-for-Frontend (BFF) proxy. The BFF securely orchestrates microservices, sanitizes payloads, and manages JWT sessions via HttpOnly cookies for bank-grade security.",
+      image: "/Portfolio/images/projects/cacomi/Macbook-Air-cacomi.app.png",
+      size: "square"
+    },
+    {
+      id: 3,
+      title: "Real-Time Inventory Management",
+      description: "A synchronized digital pantry that tracks ingredient expiration and semantic item unification. It integrates directly with the shopping list to provide a cohesive, data-driven culinary experience.",
+      image: "/Portfolio/images/projects/cacomi/iPad-PRO-11-cacomi.app_4_.png",
+      size: "square"
+    },
+    {
       id: 4,
-      title: "Smart Inventory Sync",
-      description: "Real-time synchronization between pantry, recipes, and shopping lists with semantic item unification.",
+      title: "Dynamic Nutritional State Management",
+      description: "Utilizes React 19 and Zustand 5 to manage complex, reactive UI states. Users can dynamically scale portions, instantly recalculating macro and micronutritional data without latency.",
+      image: "/Portfolio/images/projects/cacomi/Macbook-Air-cacomi.app_1_.png",
+      size: "square"
+    },
+    {
+      id: 5,
+      title: "Offline-First PWA Architecture",
+      description: "Engineered for maximum reliability in low-connectivity environments (like supermarkets). It leverages advanced Service Workers and IndexedDB (Dexie.js) to cache data and provide full functionality offline.",
       image: "/Portfolio/images/projects/cacomi/iPad-PRO-11-cacomi.app_3_.png",
+      size: "square"
+    },
+    {
+      id: 6,
+      title: "Premium UI/UX & Dark Mode",
+      description: "A responsive, accessible interface styled with Tailwind CSS 4. It features a seamless dark mode and smooth micro-animations, delivering an experience that feels both modern and professional.",
+      image: "/Portfolio/images/projects/cacomi/Macbook-Air-cacomi.app_2_.png",
       size: "square"
     }
   ],
   roadmap: [
+    "Cacomi Tech Blog: A space to share engineering challenges, AI decisions, and system architecture updates.",
     "Implement Bank-Grade Security (RBAC & Stealth Mode)",
     "Advanced AI Discovery Loop for recipe recommendations",
     "Global I18n support (ES, EN, FR) for international markets",
