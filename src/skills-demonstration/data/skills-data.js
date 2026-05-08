@@ -165,10 +165,11 @@ export const skillsData = {
       id: 'astro',
       name: 'Astro 6',
       icon: 'fas fa-rocket',
-      level: 'intermediate',
-      experience: '6 months',
+      level: 'advanced',
+      experience: '1 year',
       color: '#FF5D01',
-      textColor: '#fff'
+      textColor: '#fff',
+      featured: true
     },
     {
       id: 'react19',
@@ -177,7 +178,8 @@ export const skillsData = {
       level: 'advanced',
       experience: '2+ years',
       color: '#61DAFB',
-      textColor: '#000'
+      textColor: '#000',
+      featured: true
     },
     {
       id: 'tailwind4',
@@ -186,16 +188,18 @@ export const skillsData = {
       level: 'advanced',
       experience: '2+ years',
       color: '#38B2AC',
-      textColor: '#fff'
+      textColor: '#fff',
+      featured: true
     },
     {
       id: 'zustand',
       name: 'Zustand 5',
       icon: 'fas fa-bear',
-      level: 'intermediate',
+      level: 'advanced',
       experience: '1 year',
       color: '#433929',
-      textColor: '#fff'
+      textColor: '#fff',
+      featured: true
     }
   ],
 
@@ -232,10 +236,11 @@ export const skillsData = {
       id: 'postgresql',
       name: 'PostgreSQL',
       icon: 'fas fa-database',
-      level: 'basic',
-      experience: '0',
+      level: 'intermediate',
+      experience: '1 year',
       color: '#336791',
-      textColor: '#fff'
+      textColor: '#fff',
+      featured: true
     }
 
   ],
@@ -336,19 +341,21 @@ export const skillsData = {
       id: 'zod',
       name: 'Zod',
       icon: 'fas fa-check-circle',
-      level: 'basic',
-      experience:' 1 month',
+      level: 'advanced',
+      experience: '1 year',
       color: '#F43E5C',
-      textColor: '#fff'
+      textColor: '#fff',
+      featured: true
     },
     {
       id: 'google-genai',
       name: 'Google GenAI',
       icon: 'fas fa-robot',
-      level: 'basic',
-      experience:' 1 month',
+      level: 'intermediate',
+      experience: '1 year',
       color: '#4285F4',
-      textColor: '#fff'
+      textColor: '#fff',
+      featured: true
     },
     {
       id: 'bff',
@@ -357,7 +364,8 @@ export const skillsData = {
       level: 'advanced',
       experience: '1 year',
       color: '#000',
-      textColor: '#fff'
+      textColor: '#fff',
+      featured: true
     }
   ]
 };
