@@ -1,6 +1,6 @@
 export default function HeroSection ({ title, tagline, image }) {
   return (
-    <section className="relative pt-32 pb-8 md:pt-40 md:pb-16 overflow-hidden flex flex-col items-center justify-center text-center px-4 w-full">
+    <section className="relative pb-8 md:pb-16 overflow-hidden flex flex-col items-center justify-center text-center px-4 w-full" style={{ paddingTop: '140px' }}>
       <div className="absolute inset-0 z-0 pointer-events-none">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-[#D4A373]/10 rounded-full blur-[80px]"></div>
       </div>
