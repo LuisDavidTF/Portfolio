@@ -12,8 +12,9 @@ export default function OverviewSection({ description, images, descriptionimage,
             <div className="w-full flex justify-center mb-12">
                 <TechStackDisplay
                     skills={projectSkills}
-                    variant="detailed"
+                    variant="compact"
                     maxSkills={10}
+                    className="justify-center"
                 />
             </div>
             {images && images.length > 0 && (
