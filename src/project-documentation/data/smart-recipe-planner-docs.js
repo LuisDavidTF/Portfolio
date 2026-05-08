@@ -23,28 +23,28 @@ const CacomiDocs = {
       id: 1,
       title: "BFF Secure Proxy",
       description: "Secure orchestration layer that protects internal infrastructure and manages JWT sessions via HttpOnly cookies.",
-      image: "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/smart-recipe/Img-Auth.png?raw=true",
+      image: "/images/projects/cacomi/iPad-PRO-11-cacomi.app.png",
       size: "square"
     },
     {
       id: 2,
       title: "Offline-First Experience",
       description: "Advanced PWA with Service Workers and IndexedDB (Dexie.js) for full meal planning and shopping list access without internet.",
-      image: "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/smart-recipe/feed.png?raw=true",
+      image: "/images/projects/cacomi/iPad-PRO-11-cacomi.app_1_.png",
       size: "square"
     },
     {
       id: 3,
       title: "AI Recipe Orchestration",
       description: "Generative AI integration using Vercel AI SDK and Gemini to transform pantry inventory into personalized culinary plans.",
-      image: "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/smart-recipe/gen-magic.png?raw=true",
+      image: "/images/projects/cacomi/iPad-PRO-11-cacomi.app_2_.png",
       size: "square"
     },
     {
       id: 4,
       title: "Smart Inventory Sync",
       description: "Real-time synchronization between pantry, recipes, and shopping lists with semantic item unification.",
-      image: "https://github.com/LuisDavidTF/Portfolio/blob/main/src/assets/images/projects/smart-recipe/edit-delete.png?raw=true",
+      image: "/images/projects/cacomi/iPad-PRO-11-cacomi.app_3_.png",
       size: "square"
     }
   ],
