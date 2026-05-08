@@ -191,7 +191,7 @@ export const projectsData = [
     githubUrl: 'https://github.com/LuisDavidTF/smart-recipe-planner',
     documentationUrl: '#/docs/cacomi',
     
-    image: 'public/images/projects/cacomi/upscalemedia-transformed.png',
+    image: '/Portfolio/images/projects/cacomi/upscalemedia-transformed.png',
     
     startDate: '2025-09-10',
     completionDate: '2026-05-01',
