@@ -34,7 +34,7 @@ export default function DocumentationPage() {
     return <div className="text-center mt-5">⚠️ Documentation not found</div>;
   }
   return (
-    <div className="App py-5 max-w-[90%] mx-auto ">
+    <div className="w-full bg-white dark:bg-slate-950 pb-20">
       <HeroSection title={data.title} tagline={data.tagline} image={data.overview.image} />
       <OverviewSection
         description={data.overview.description}

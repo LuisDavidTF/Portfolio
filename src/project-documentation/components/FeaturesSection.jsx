@@ -7,7 +7,6 @@ export default function FeaturesSection({ features }) {
   const [isDragging, setIsDragging] = useState(false);
   const [startPos, setStartPos] = useState({ x: 0, y: 0 });
 
-  // ✅ Bloqueo del scroll del body cuando el modal está abierto
   useEffect(() => {
     if (selectedImage) {
       document.body.style.overflow = "hidden";
@@ -42,38 +41,75 @@ export default function FeaturesSection({ features }) {
     setOffset({ x: 0, y: 0 });
   };
 
-  return (
-    <>
-    <h2 className="section-title mt-3 mb-0">Features</h2>
-      <section className="feature-grid">
-        {features.map((feature) => {
-          const hasImage = Boolean(feature.image);
-          return (
-            <article
-              key={feature.id}
-              className={`feature-card ${feature.size || "small"} ${
-                hasImage ? "has-image" : ""
-              }`}
-            >
-              {hasImage && (
-                <div
-                  className="feature-image"
-                  style={{ backgroundImage: `url(${feature.image})` }}
-                  onClick={() => setSelectedImage(feature.image)}
-                />
-              )}
-              <div className="feature-info">
-                <h3>{feature.title}</h3>
-                {feature.description && <p>{feature.description}</p>}
-              </div>
-            </article>
-          );
-        })}
-      </section>
+  if (!features || features.length === 0) return null;
 
+  return (
+    <section className="py-24 bg-gray-50/50 dark:bg-gray-900/30 relative overflow-hidden border-y border-gray-200 dark:border-gray-800 w-full">
+      <div className="container px-4 mx-auto max-w-7xl relative z-10">
+        <div className="text-center mb-20 md:mb-32">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight text-gray-900 dark:text-gray-100">
+            Platform Capabilities
+          </h2>
+          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            A deep dive into the engineering and features powering this project.
+          </p>
+        </div>
+
+        <div className="space-y-32 md:space-y-40">
+          {features.map((feature, index) => {
+            const isReverse = index % 2 !== 0;
+            const hasImage = Boolean(feature.image);
+
+            return (
+              <div
+                key={feature.id}
+                className={`flex flex-col ${
+                  isReverse ? "md:flex-row-reverse" : "md:flex-row"
+                } items-center gap-12 lg:gap-24`}
+              >
+                <div
+                  className={`flex-1 space-y-6 text-left ${
+                    isReverse ? "md:text-right" : ""
+                  }`}
+                >
+                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-[#D4A373]/10 text-[#D4A373] font-bold text-xl mb-2">
+                    {index + 1}
+                  </div>
+                  <h3 className="text-2xl md:text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-100">
+                    {feature.title}
+                  </h3>
+                  {feature.description && (
+                    <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+                      {feature.description}
+                    </p>
+                  )}
+                </div>
+
+                {hasImage && (
+                  <div className="flex-1 relative group w-full">
+                    <div className="absolute -inset-4 bg-gradient-to-tr from-[#D4A373]/20 to-[#DDA15E]/20 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-3xl"></div>
+                    <div 
+                      className="relative z-10 transform group-hover:scale-[1.02] transition-transform duration-500 w-full cursor-zoom-in"
+                      onClick={() => setSelectedImage(feature.image)}
+                    >
+                      <img
+                        src={feature.image}
+                        alt={feature.title}
+                        className="rounded-3xl shadow-2xl border border-gray-200 dark:border-gray-800 w-full h-auto object-cover"
+                      />
+                    </div>
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Modal Zoom Viewer */}
       {selectedImage && (
         <div
-          className="modal-overlay"
+          className="fixed inset-0 bg-black/80 backdrop-blur-md flex justify-center items-center z-[9999] overflow-hidden"
           onClick={closeModal}
           onWheel={handleWheel}
           onMouseMove={duringDrag}
@@ -81,181 +117,34 @@ export default function FeaturesSection({ features }) {
           onMouseLeave={stopDrag}
         >
           <div
-            className="modal-content"
+            className="relative w-[95%] h-[90%] md:w-[90%] md:h-[95%] flex justify-center items-center rounded-2xl overflow-hidden"
             onClick={(e) => e.stopPropagation()}
             onMouseDown={startDrag}
           >
-            <button className="modal-close" onClick={closeModal}>×</button>
+            <button
+              className="absolute top-4 right-4 bg-black/60 hover:bg-black/90 text-white text-3xl leading-none px-3 py-1 rounded-lg z-50 transition-colors"
+              onClick={closeModal}
+            >
+              ×
+            </button>
             <img
               src={selectedImage}
               alt="Zoom preview"
+              className="max-w-full max-h-full transition-transform duration-200 select-none shadow-2xl"
               style={{
                 transform: `scale(${zoom}) translate(${offset.x / zoom}px, ${offset.y / zoom}px)`,
-                cursor: zoom > 1 ? (isDragging ? "grabbing" : "grab") : "default"
+                cursor: zoom > 1 ? (isDragging ? "grabbing" : "grab") : "zoom-in",
               }}
               draggable={false}
             />
-            {zoom > 0 && (
-              <p className="zoom-hint">Scroll para acercar/alejar, arrastra para mover</p>
+            {zoom > 1 && (
+              <div className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-black/60 text-white text-sm px-4 py-2 rounded-full pointer-events-none backdrop-blur-sm">
+                Arrastra para mover el canvas
+              </div>
             )}
           </div>
         </div>
       )}
-      <style>{`
-        /* ===== GRID ===== */
-        .feature-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-          grid-auto-rows: 180px;
-          gap: 20px;
-          padding: 40px 20px;
-          max-width: 1300px;
-          margin: 0 auto;
-          grid-auto-flow: dense;
-        }
-
-        .feature-card {
-          position: relative;
-          border-radius: 16px;
-          overflow: hidden;
-          background: #ffffff;
-          box-shadow: 0 1px 4px rgba(0,0,0,0.08);
-          transition: transform 0.4s ease;
-          display: flex;
-          align-items: flex-end;
-          cursor: default;
-        }
-
-        .feature-image {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background-size: cover;
-          background-position: center;
-          transition: transform 0.4s ease;
-          cursor: zoom-in;
-        }
-
-        .feature-info {
-          position: relative;
-          width: 100%;
-          padding: clamp(8px, 2vw, 16px);
-          background: rgba(0,0,0,0.45);
-          color: #fff;
-          transition: background 0.3s ease;
-          text-align: left;
-          word-break: break-word;
-        }
-
-        .feature-info h3 {
-          font-size: clamp(0.9rem, 1.2vw, 1.3rem);
-          margin-bottom: 4px;
-          line-height: 1.2;
-        }
-
-        .feature-info p {
-          font-size: clamp(0.75rem, 1vw, 1rem);
-          line-height: 1.3;
-        }
-
-        .feature-card.has-image:hover .feature-image {
-          transform: scale(1.08);
-        }
-
-        .feature-card.has-image:hover .feature-info {
-          background: rgba(0,0,0,0);
-          text-shadow: 0 2px 6px rgba(0,0,0,0.6);
-        }
-
-        .feature-card.has-image:hover {
-          transform: scale(1.05);
-          z-index: 2;
-        }
-
-        /* Tamaños */
-        .feature-card.small   { grid-column: span 1; grid-row: span 1; }
-        .feature-card.medium  { grid-column: span 2; grid-row: span 1; }
-        .feature-card.square  { grid-column: span 2; grid-row: span 2; }
-        .feature-card.tall    { grid-column: span 1; grid-row: span 2; }
-
-        /* ===== MODAL ===== */
-        .modal-overlay {
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: rgba(0, 0, 0, 0.5);
-          backdrop-filter: blur(8px);
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          z-index: 999;
-          overflow: hidden;
-        }
-
-        .modal-content {
-          position: relative;
-          width: 90%;
-          height: 90%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          border-radius: 12px;
-          overflow: hidden;
-          background: rgba(0,0,0,0.8);
-        }
-
-        .modal-content img {
-          max-width: 100%;
-          max-height: 100%;
-          transition: transform 0.2s ease;
-          user-select: none;
-        }
-
-        .modal-close {
-          position: absolute;
-          top: 12px;
-          right: 16px;
-          background: rgba(0,0,0,0.6);
-          border: none;
-          color: #fff;
-          font-size: 2rem;
-          line-height: 1;
-          cursor: pointer;
-          padding: 0 10px;
-          border-radius: 8px;
-          z-index: 10;
-          transition: background 0.3s;
-        }
-
-        .modal-close:hover {
-          background: rgba(0,0,0,0.9);
-        }
-
-        .zoom-hint {
-          position: absolute;
-          bottom: 12px;
-          left: 50%;
-          transform: translateX(-50%);
-          color: #fff;
-          font-size: 0.9rem;
-          background: rgba(0,0,0,0.5);
-          padding: 4px 10px;
-          border-radius: 6px;
-          pointer-events: none;
-        }
-
-        /* Responsivo */
-        @media (max-width: 768px) {
-          .modal-content {
-            width: 95%;
-            height: 85%;
-          }
-        }
-      `}</style>
-    </>
+    </section>
   );
 }
