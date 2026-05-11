@@ -19,14 +19,14 @@ export default function CookieBanner() {
     if (!window.gtag) {
       const script = document.createElement("script");
       script.async = true;
-      script.src = "https://www.googletagmanager.com/gtag/js?id=G-X50BSFS1NL";
+      script.src = "https://www.googletagmanager.com/gtag/js?id=G-YOUR-PORTFOLIO-ID";
       document.head.appendChild(script);
 
       script.onload = () => {
         window.dataLayer = window.dataLayer || [];
         function gtag(){window.dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'G-X50BSFS1NL');
+        gtag('config', 'G-YOUR-PORTFOLIO-ID');
       };
     }
   };
