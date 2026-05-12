@@ -1,13 +1,10 @@
+import { useSettings } from '../../shared/context/SettingsContext';
 import { useState } from 'react';
 import { 
   getAllProjects, 
   getFeaturedProjects,
-  getProjectsByCategory,
-  getProjectsByStatus,
   projectCategories,
-  projectStatus,
   statusLabels,
-  projectsDisplayConfig 
 } from '../data/projects-data.js';
 import ProjectCard from './ProjectCard.jsx';
 
@@ -23,6 +20,7 @@ export default function ProjectsContainer({
   layout = 'grid', // 'grid', 'list', 'masonry'
   className = ''
 }) {
+  const { t, language } = useSettings();
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedStatus, setSelectedStatus] = useState('all');
   const [sortBy, setSortBy] = useState('priority'); // 'priority', 'name', 'date'
@@ -92,11 +90,11 @@ export default function ProjectsContainer({
       {/* Título y estadísticas */}
       {showTitle && (
         <div className="projects-header text-center mb-4">
-          <h2 className="section-title">Projects</h2>
+          <h2 className="section-title">{t.projects.title}</h2>
           <p className="text-secondary">
             {showOnlyFeatured 
-              ? `${featuredCount} featured project${featuredCount !== 1 ? 's' : ''}`
-              : `${totalProjects} project${totalProjects !== 1 ? 's' : ''} showcasing my development journey`
+              ? `${featuredCount} ${language === 'es' ? 'proyectos destacados' : 'featured projects'}`
+              : `${totalProjects} ${language === 'es' ? 'proyectos que muestran mi camino como desarrollador' : 'projects showcasing my development journey'}`
             }
           </p>
         </div>
@@ -169,8 +167,8 @@ export default function ProjectsContainer({
         <div className="no-projects text-center">
           <div className="no-projects-content">
             <i className="fas fa-search fa-3x text-secondary mb-3"></i>
-            <h5 className="text-secondary">No projects found</h5>
-            <p className="text-secondary">Try adjusting your filters</p>
+            <h5 className="text-secondary">{language === 'es' ? 'No se encontraron proyectos' : 'No projects found'}</h5>
+            <p className="text-secondary">{language === 'es' ? 'Intenta ajustando los filtros' : 'Try adjusting your filters'}</p>
             <button 
               className="btn btn-outline-primary"
               onClick={() => {
@@ -178,7 +176,7 @@ export default function ProjectsContainer({
                 setSelectedStatus('all');
               }}
             >
-              Reset Filters
+              {language === 'es' ? 'Reiniciar Filtros' : 'Reset Filters'}
             </button>
           </div>
         </div>
@@ -188,7 +186,7 @@ export default function ProjectsContainer({
       {!showOnlyFeatured && projectsToShow.length > 0 && (
         <div className="projects-cta text-center mt-5">
           <p className="text-secondary mb-3">
-            Interested in seeing more projects or discussing collaboration?
+            {language === 'es' ? '¿Interesado en ver más proyectos o discutir una colaboración?' : 'Interested in seeing more projects or discussing collaboration?'}
           </p>
           <div className="cta-buttons">
             <a 
@@ -198,14 +196,14 @@ export default function ProjectsContainer({
               className="btn btn-outline-primary me-2"
             >
               <i className="fab fa-github me-1"></i>
-              View All on GitHub
+              {language === 'es' ? 'Ver todo en GitHub' : 'View All on GitHub'}
             </a>
             <a 
               href="mailto:luisdavidtrejofuentes@gmail.com"
               className="btn btn-outline-primary"
             >
               <i className="fas fa-envelope me-1"></i>
-              Get in Touch
+              {t.hero.ctaContact}
             </a>
           </div>
         </div>

@@ -1,6 +1,7 @@
-import React from 'react';
+import { useSettings } from '../../shared/context/SettingsContext';
 import SkillCategory from './SkillCategory';
 import { getAllSkills, orderedCategories } from '../data/skills-data';
+import React from 'react';
 
 /**
  * SkillsContainer - Componente principal de la sección Skills
@@ -14,13 +15,14 @@ export default function SkillsContainer({
   size = 'medium',
   enableAnimations = true
 }) {
+  const { t } = useSettings();
   const skillsData = getAllSkills();
 
   return (
     <section className={`container my-5 ${className}`} id="skills">
       {showTitle && (
         <h2 className="text-center mb-4 section-title">
-          Skills
+          {t.skills.title}
         </h2>
       )}
       
@@ -36,7 +38,7 @@ export default function SkillsContainer({
           return (
             <SkillCategory
               key={categoryName}
-              categoryName={categoryName}
+              categoryName={t.skills[categoryName.toLowerCase()] || categoryName}
               skills={displaySkills}
               variant={variant}
               size={size}

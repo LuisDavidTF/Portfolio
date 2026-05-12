@@ -14,8 +14,16 @@ import { HashRouter, Route, Routes } from "react-router-dom";
 import HomePage from "@/pages/HomePage";
 import DocumentationPage from "./pages/DocumentationPage";
 import ScrollToTop from "./shared/components/layout/ScrollToTop";
+import { useSettings } from "@/shared/context/SettingsContext";
+import { useEffect } from "react";
 
 function App() {
+  const init = useSettings(state => state.init);
+  
+  useEffect(() => {
+    init();
+  }, [init]);
+
   return (
 
     <HashRouter>

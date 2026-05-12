@@ -5,35 +5,30 @@ export const personalInfo = {
   lastName: 'Trejo Fuentes',
   
   // Títulos y roles
-  currentTitle: 'Full Stack Developer in Training',
+  currentTitle: 'Software Engineer | Backend & BFF Specialist',
   alternativeTitles: [
-    'Full Stack Developer',
-    'Angular Developer',
-    'Web Developer',
-    'Software Developer in Training'
+    'Backend Engineer',
+    'BFF Architect',
+    'Java Developer',
+    'Software Engineer'
   ],
   
   // Tagline/elevator pitch
-  tagline: 'Building scalable web solutions with modern technologies.',
-  shortTagline: 'Modern web solutions builder',
+  tagline: 'Designing scalable architectures and high-performance orchestration layers.',
+  shortTagline: 'Software Engineer & BFF Architect',
   
   // Biografías de diferentes longitudes
-  shortBio: 'Full Stack developer in training with experience in Angular, Node.js, Express, Stripe, and MySQL.',
+  shortBio: 'Software Engineer focused on Backend (Java/Spring Boot) and BFF orchestration.',
   
-  mediumBio: `Full Stack developer in training with experience in Angular, Node.js, Express, 
-  Stripe, and MySQL. Led the development of Velonia, an e-commerce platform with 
-  inventory management and secure payment integration.`,
+  mediumBio: `Software Engineer expert in Backend (Java/Spring Boot) and BFF orchestration. 
+  Specialist in designing scalable architectures, OWASP security, and API optimization for complex microservices.`,
   
-  longBio: `Passionate Full Stack developer in training with hands-on experience building modern web applications. 
-  Specialized in Angular frontend development and Node.js backend services, with expertise in database design 
-  and payment system integration.
+  longBio: `Software Engineer with a solid foundation in Backend (Java/Spring Boot) and advanced experience in building 
+  Backend for Frontend (BFF) orchestration layers.
   
-  Led the complete development of Velonia, a comprehensive e-commerce platform featuring inventory management, 
-  secure Stripe payments, user authentication, and responsive design. Currently expanding skills in React 
-  and modern architecture patterns while building scalable, maintainable applications.
-  
-  Committed to writing clean, efficient code and staying current with emerging technologies and best practices 
-  in web development.`,
+  Specialist in designing scalable architectures that connect complex microservices with fluid user experiences. 
+  Expert in security (OWASP), REST API optimization, and high-performance PWA development. 
+  Passionate about translating business needs into elegant, robust, and secure technical solutions.`,
   
   // Información de contacto
   contact: {
@@ -90,6 +85,25 @@ export const heroNavigation = [
     description: 'Technologies I work with'
   },
   {
+    // Habilidades y tecnologías
+    skills: {
+      core_backend: {
+        title: 'Core & Backend',
+        items: ['Java 21-25', 'Spring Boot 4', 'Node.js', 'TypeScript', 'RESTful APIs', 'Microservices']
+      },
+      bff_frontend: {
+        title: 'BFF & Frontend',
+        items: ['Astro 6', 'React 19', 'Tailwind CSS 4', 'Zustand', 'Zod', 'Islands Architecture']
+      },
+      security: {
+        title: 'Security',
+        items: ['Spring Security', 'JWT', 'OWASP Top 10', 'Header Sanitization', 'BFF Proxy Pattern']
+      },
+      data_devops: {
+        title: 'Data & DevOps',
+        items: ['PostgreSQL', 'MySQL', 'Hibernate (JPA)', 'Docker', 'Git/GitHub', 'GitHub Actions', 'SEO']
+      }
+    },
     id: 'contact',
     label: 'Contact',
     href: '#social-links',
@@ -144,27 +158,48 @@ export const achievements = [
 export const background = {
   education: [
     {
-      degree: 'Software Development',
-      institution: 'Self-taught & Online Courses',
-      period: '2022 - Present',
-      status: 'ongoing',
-      focus: ['Web Development', 'Full Stack', 'Modern Frameworks']
+      id: 'itsh',
+      degree: 'B.S. Computer Systems Engineering',
+      institution: 'Instituto Tecnológico Superior de Huauchinango',
+      location: 'Puebla, Mexico',
+      period: 'Aug 2021 - Jan 2025',
+      focus: ['Software Architecture', 'Backend Development', 'Distributed Systems'],
+      logo: 'fas fa-graduation-cap'
     }
   ],
-  
   experience: [
     {
-      role: 'Full Stack Developer',
-      type: 'personal_project',
-      project: 'Velonia E-commerce Platform',
-      period: '2023 - 2024',
-      technologies: ['Angular', 'Node.js', 'Express', 'MySQL', 'Stripe'],
+      id: 'cacomi',
+      role: 'Co-Founder & Lead BFF Engineer',
+      company: 'Cacomi',
+      location: 'Remote',
+      period: 'Oct 2025 - Present',
+      description: 'Smart Meal Planning Platform. Focused on high-impact nutrition and pantry management.',
       achievements: [
-        'Built complete e-commerce solution from scratch',
-        'Implemented secure payment processing',
-        'Created responsive admin dashboard',
-        'Managed inventory and user systems'
-      ]
+        'Designed transactional core in Java 25 & Spring Boot with GraalVM native compilation.',
+        'Optimized database response times by 40% using PostgreSQL & Hibernate Vector.',
+        'Integrated Google Gemini (Spring AI) for 100% automated nutritional data processing.',
+        'Orchestrated microservices via Astro 6 BFF, reducing mobile network latency by 35%.',
+        'Mitigated OWASP vulnerabilities via secure proxy and JWT HttpOnly cookies.'
+      ],
+      technologies: ['Java 25', 'Spring Boot', 'Astro 6', 'React 19', 'PostgreSQL', 'Zustand', 'Docker'],
+      logo: 'fas fa-rocket'
+    },
+    {
+      id: 'velonia',
+      role: 'Backend Developer (Freelance)',
+      company: 'Velonia E-commerce',
+      location: 'Remote',
+      period: 'Jan 2023 - June 2024',
+      description: 'Scalable e-commerce platform with inventory and payment management.',
+      achievements: [
+        'Designed scalable Node.js/Express API for complex business logic.',
+        'Integrated secure Stripe payment gateway.',
+        'Designed normalized MySQL schemas ensuring ACID compliance.',
+        'Defined robust RESTful API contracts for Angular client decoupling.'
+      ],
+      technologies: ['Node.js', 'Express', 'MySQL', 'Stripe', 'Angular'],
+      logo: 'fas fa-shopping-cart'
     }
   ]
 };

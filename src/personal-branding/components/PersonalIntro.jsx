@@ -1,4 +1,4 @@
-import { personalInfo, getContextualTitle, displayConfig } from '../data/personal-info.js';
+import { useSettings } from '../../shared/context/SettingsContext';
 
 /**
  * PersonalIntro - Componente para mostrar nombre y título principal
@@ -11,27 +11,27 @@ export default function PersonalIntro({
   animateText = true,
   className = ''
 }) {
-  const config = displayConfig.hero;
+  const { t } = useSettings();
   
-  // Determinar qué mostrar según el variant y config
-  const shouldShowFullName = variant === 'hero' && config.showFullName;
-  const shouldShowTitle = showTitle && config.showTitle;
-  const shouldShowTagline = showTagline && config.showTagline;
+  // Determinar qué mostrar según el variant
+  const shouldShowFullName = variant === 'hero';
+  const shouldShowTitle = showTitle;
+  const shouldShowTagline = showTagline;
   
   const getNameDisplay = () => {
     switch (variant) {
       case 'navbar':
-        return displayConfig.navbar.useShortName ? personalInfo.firstName : personalInfo.fullName;
+        return t.common.firstName;
       case 'compact':
-        return personalInfo.firstName;
+        return t.common.firstName;
       case 'hero':
       default:
-        return personalInfo.fullName;
+        return t.common.name;
     }
   };
 
   const getTitleDisplay = () => {
-    return getContextualTitle(variant);
+    return t.hero.title;
   };
 
   const getContainerClasses = () => {
@@ -83,20 +83,20 @@ export default function PersonalIntro({
         </p>
       )}
       
-      {shouldShowTagline && personalInfo.tagline && (
+      {shouldShowTagline && t.hero.tagline && (
         <p className={`tagline text-secondary mb-4 ${animateText ? 'animate-fade-in' : ''}`}
-           style={{animationDelay: animateText ? '0.4s' : '0'}}>
-          {personalInfo.tagline}
+           style={{animationDelay: animateText ? '0.2s' : '0'}}>
+          {t.hero.tagline}
         </p>
       )}
 
       {/* Status de disponibilidad (opcional) */}
-      {personalInfo.status.available && variant === 'hero' && (
+      {variant === 'hero' && (
         <div className={`availability-status ${animateText ? 'animate-fade-in' : ''}`}
-             style={{animationDelay: animateText ? '0.6s' : '0'}}>
+             style={{animationDelay: animateText ? '0.4s' : '0'}}>
           <span className="badge bg-success">
             <i className="fas fa-circle me-1" style={{fontSize: '8px'}}></i>
-            Available for opportunities
+            {t.common.available}
           </span>
         </div>
       )}

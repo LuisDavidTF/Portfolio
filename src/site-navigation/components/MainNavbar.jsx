@@ -2,10 +2,12 @@ import { useState, useEffect } from 'react';
 import {
   navigationConfig,
   handleNavigation,
-  getMobileMenuSection
+  getMobileMenuSection,
+  getNavbarLinks
 } from '../data/navigation-links.js';
 import PersonalIntro from '../../personal-branding/components/PersonalIntro.jsx';
 import MobileMenu from './MobileMenu.jsx';
+import { useSettings } from '../../shared/context/SettingsContext';
 
 export default function MainNavbar({
   variant = 'default',
@@ -17,26 +19,25 @@ export default function MainNavbar({
   const [activeLink, setActiveLink] = useState(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  // useSettings store
+  const { theme, setTheme, language, setLanguage, t } = useSettings();
+
   // dropdowns: 'more' | 'preferences' | 'resources' | null
   const [openDropdown, setOpenDropdown] = useState(null);
-
-  // Detectar tema actual al inicio
-  const getInitialTheme = () => {
-    const saved = localStorage.getItem('theme');
-    if (saved) return saved;
-    if (document.body.getAttribute('data-theme')) return document.body.getAttribute('data-theme');
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-  };
-
-  const [currentTheme, setCurrentTheme] = useState(getInitialTheme());
-  const [currentLanguage, setCurrentLanguage] = useState(localStorage.getItem('language') || 'EN');
 
   const config = navigationConfig.navbar;
 
   const preferencesLinks = getMobileMenuSection('preferences');
   const resourcesLinks = getMobileMenuSection('resources');
+  
+  // Update labels reactively
+  const getTranslatedLabel = (id, fallback) => {
+    return t.nav[id] || fallback;
+  };
 
- 
+  const toggleDropdown = (id) => {
+    setOpenDropdown(prev => prev === id ? null : id);
+  };
 
   // Cerrar dropdowns al hacer click fuera
   useEffect(() => {
@@ -67,28 +68,21 @@ export default function MainNavbar({
     return `${baseClasses} ${scrollClass} ${stickyClass} ${className}`.trim();
   };
 
-  const toggleDropdown = (id) => {
-    setOpenDropdown(prev => prev === id ? null : id);
-  };
-
   // Manejo de acciones
   const handleSpecialAction = (action) => {
     switch (action) {
       case 'toggleTheme': {
-        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-        document.body.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-        setCurrentTheme(newTheme);
+        const newTheme = theme === 'light' ? 'dark' : 'light';
+        setTheme(newTheme);
         break;
       }
       case 'toggleLanguage': {
-        const newLang = currentLanguage === 'EN' ? 'ES' : 'EN';
-        setCurrentLanguage(newLang);
-        localStorage.setItem('language', newLang);
+        const newLang = language === 'en' ? 'es' : 'en';
+        setLanguage(newLang);
         break;
       }
       case 'downloadCV': {
-        const fileName = currentLanguage === 'EN' ? 'CV-English.pdf' : 'CV-Español.pdf';
+        const fileName = language === 'en' ? 'CV-English.pdf' : 'CV-Español.pdf';
         const cvUrl = `/assets/files/${fileName}`;
         const link = document.createElement('a');
         link.href = cvUrl;
@@ -127,21 +121,22 @@ export default function MainNavbar({
 
   const renderNavLink = (link) => {
     const isActive = isLinkActive(link);
+    const label = getTranslatedLabel(link.id, link.label);
     return (
       <li key={link.id} className="nav-item">
         <a
           className={`nav-link custom-btn-nav ${isActive ? 'active' : ''}`}
           href={link.href}
           onClick={(e) => handleLinkClick(link, e)}
-          title={link.description}
-          aria-label={link.description}
+          title={label}
+          aria-label={label}
           aria-current={isActive ? 'page' : undefined}
         >
           {link.icon && <i className={`${link.icon} me-1`} aria-hidden="true"></i>}
-          <span className="nav-link-text">{link.label}</span>
+          <span className="nav-link-text">{label}</span>
           {link.isNew && (
             <span className="badge bg-danger ms-1" style={{ fontSize: '8px' }}>
-              {link.badge || 'NEW'}
+              {t.common.new}
             </span>
           )}
         </a>
@@ -149,8 +144,9 @@ export default function MainNavbar({
     );
   };
 
-  const renderDropdown = (id, title, icon, links) => {
+  const renderDropdown = (id, titleId, icon, links) => {
     const isOpen = openDropdown === id;
+    const title = getTranslatedLabel(id, titleId);
     return (
       <li className="nav-item dropdown">
         <button
@@ -168,56 +164,59 @@ export default function MainNavbar({
         </button>
 
         <ul className={`dropdown-menu visible dropdown-menu-end ${isOpen ? 'show' : ''}`}>
-          {links.map(link => (
-            <li key={link.id}>
-              {link.type === 'action' ? (
-                <button
-                  type="button"
-                  className="custom-btn-nav dropdown-item d-flex align-items-center justify-content-between"
-                  onClick={(e) => handleLinkClick(link, e)}
-                >
-                  <div>
-                    {link.icon && <i className={`${link.icon} me-2`} aria-hidden="true"></i>}
-                    {link.label}
-                  </div>
-                  {link.isToggle && link.action === 'toggleTheme' && (
-                    <div className="form-check form-switch m-0">
-                      <input
-                        className="form-check-input"
-                        type="checkbox"
-                        checked={currentTheme === 'dark'}
-                        readOnly
-                      />
+          {links.map(link => {
+            const linkLabel = getTranslatedLabel(link.id, link.label);
+            return (
+              <li key={link.id}>
+                {link.type === 'action' ? (
+                  <button
+                    type="button"
+                    className="custom-btn-nav dropdown-item d-flex align-items-center justify-content-between"
+                    onClick={(e) => handleLinkClick(link, e)}
+                  >
+                    <div>
+                      {link.icon && <i className={`${link.icon} me-2`} aria-hidden="true"></i>}
+                      {linkLabel}
                     </div>
-                  )}
-                  {link.options && (
-                    <span className="badge bg-secondary ms-2">{currentLanguage}</span>
-                  )}
-                  {link.isNew && (
-                    <span className="badge bg-danger ms-2" style={{ fontSize: '8px' }}>
-                      {link.badge || 'NEW'}
-                    </span>
-                  )}
-                </button>
-              ) : (
-                <a
-                  className="custom-btn-nav dropdown-item"
-                  href={link.href || '#'}
-                  onClick={(e) => handleLinkClick(link, e)}
-                  target={link.type === 'external' ? '_blank' : undefined}
-                  rel={link.type === 'external' ? 'noopener noreferrer' : undefined}
-                >
-                  <i className={`${link.icon} me-2`} aria-hidden="true"></i>
-                  {link.label}
-                  {link.isNew && (
-                    <span className="badge bg-danger ms-2" style={{ fontSize: '8px' }}>
-                      {link.badge || 'NEW'}
-                    </span>
-                  )}
-                </a>
-              )}
-            </li>
-          ))}
+                    {link.isToggle && link.action === 'toggleTheme' && (
+                      <div className="form-check form-switch m-0">
+                        <input
+                          className="form-check-input"
+                          type="checkbox"
+                          checked={theme === 'dark'}
+                          readOnly
+                        />
+                      </div>
+                    )}
+                    {link.options && (
+                      <span className="badge bg-secondary ms-2">{language.toUpperCase()}</span>
+                    )}
+                    {link.isNew && (
+                      <span className="badge bg-danger ms-2" style={{ fontSize: '8px' }}>
+                        {t.common.new}
+                      </span>
+                    )}
+                  </button>
+                ) : (
+                  <a
+                    className="custom-btn-nav dropdown-item"
+                    href={link.href || '#'}
+                    onClick={(e) => handleLinkClick(link, e)}
+                    target={link.type === 'external' ? '_blank' : undefined}
+                    rel={link.type === 'external' ? 'noopener noreferrer' : undefined}
+                  >
+                    <i className={`${link.icon} me-2`} aria-hidden="true"></i>
+                    {linkLabel}
+                    {link.isNew && (
+                      <span className="badge bg-danger ms-2" style={{ fontSize: '8px' }}>
+                        {t.common.new}
+                      </span>
+                    )}
+                  </a>
+                )}
+              </li>
+            );
+          })}
         </ul>
       </li>
     );
@@ -264,8 +263,7 @@ export default function MainNavbar({
           {/* Desktop Navigation */}
           <div className="collapse navbar-collapse d-none d-lg-block">
             <ul className="navbar-nav ms-auto" role="menubar">
-              
-
+              {getNavbarLinks().map(link => renderNavLink(link))}
               {renderDropdown('preferences', 'Preferences', 'fas fa-cog', preferencesLinks)}
               {renderDropdown('resources', 'Resources', 'fas fa-download', resourcesLinks)}
             </ul>
