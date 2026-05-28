@@ -294,7 +294,7 @@ export default function ProjectCard({
               className="w-100 h-100 project-image-wide"
               onLoad={() => setImageLoaded(true)}
               style={{
-                display: imageLoaded ? 'block' : 'none',
+                opacity: imageLoaded ? 1 : 0,
                 objectFit: 'cover',
                 minHeight: '280px',
                 transition: 'opacity 0.3s ease-in-out'
@@ -375,7 +375,7 @@ export default function ProjectCard({
             className={getImageClasses()}
             onLoad={() => setImageLoaded(true)}
             style={{
-              display: imageLoaded ? 1 : 0,
+              opacity: imageLoaded ? 1 : 0,
               transition: 'opacity 0.3s ease-in-out'
             }}
             loading={enableImageLazyLoading ? 'lazy' : 'eager'}
