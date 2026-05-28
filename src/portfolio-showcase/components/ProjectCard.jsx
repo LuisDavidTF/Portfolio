@@ -275,8 +275,8 @@ export default function ProjectCard({
   if (layout === 'grid' && project.id === 'cacomi') {
     return (
       <div
-        className={`${getCardClasses()} primary-project-card col-12 mb-4`}
-        style={{ animationDelay: `${animationDelay}s` }}
+        className="primary-project-card card shadow-sm col-12 mb-4 animate-fade-in-up"
+        style={{ animationDelay: `${animationDelay}s`, overflow: 'hidden' }}
       >
         <div className="row g-0 h-100">
           {/* Imagen a la izquierda */}
