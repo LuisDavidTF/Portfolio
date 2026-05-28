@@ -418,9 +418,15 @@
 /* Contenedor de imagen horizontal para Cacomi (proyecto destacado) */
 .project-image-container-wide {
   width: 100%;
-  height: 100%;
-  min-height: 380px;
+  height: 220px; /* Altura por defecto en móviles/tablets */
   overflow: hidden;
+}
+
+@media (min-width: 992px) {
+  .project-image-container-wide {
+    height: 100%;
+    min-height: 380px; /* Altura destacada solo en desktop */
+  }
 }
 
 .project-image-wide {
