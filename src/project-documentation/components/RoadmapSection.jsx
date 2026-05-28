@@ -338,14 +338,25 @@ export default function RoadmapSection({ imageURL }) {
               display: "block",
               userSelect: "none",
               touchAction: "none",
+              background: "#ffffff",
+              padding: "16px",
+              borderRadius: "16px",
+              border: "1px solid rgba(0, 0, 0, 0.08)",
+              boxShadow: "0 4px 12px rgba(0, 0, 0, 0.05)"
             }}
           />
         </div>
 
         <div className="btn-group mt-3" role="group" aria-label="Zoom controls">
-          <button type="button" className="btn btn-outline-light" onClick={() => zoomStep(-1)} disabled={scale <= MIN_SCALE}>-</button>
-          <button type="button" className="btn btn-outline-light" onClick={() => zoomStep(1)} disabled={scale >= MAX_SCALE}>+</button>
-          <button type="button" className="btn btn-outline-light" onClick={() => { setScale(MIN_SCALE); centerImage(MIN_SCALE); }}>Reset</button>
+          <button type="button" className="btn btn-outline-primary" onClick={() => zoomStep(-1)} disabled={scale <= MIN_SCALE}>
+            <i className="fas fa-search-minus"></i>
+          </button>
+          <button type="button" className="btn btn-outline-primary" onClick={() => zoomStep(1)} disabled={scale >= MAX_SCALE}>
+            <i className="fas fa-search-plus"></i>
+          </button>
+          <button type="button" className="btn btn-outline-primary" onClick={() => { setScale(MIN_SCALE); centerImage(MIN_SCALE); }}>
+            <i className="fas fa-sync-alt me-1"></i> Reset
+          </button>
         </div>
       </section>
     </>

@@ -36,7 +36,7 @@ export default function DocumentationPage() {
     return <div className="text-center mt-5">⚠️ Documentation not found</div>;
   }
   return (
-    <div className="w-full bg-white dark:bg-slate-950 pb-20">
+    <div className="w-full bg-theme-primary pb-20">
       <HeroSection title={data.title} tagline={data.tagline} image={data.overview.image} />
       <OverviewSection
         description={data.overview.description}
@@ -46,12 +46,12 @@ export default function DocumentationPage() {
         idproject={projectId}
       />
       <FeaturesSection features={data.features}/>
-      <InstallationGuide
-        installation={data.installation}
-      />
-      <DatabaseSchema url={data.database.diagram}/>
-      <ArchitectureSection url={data.architecture.diagram}/>
-      <CreditsSection credits={data.credits}/>
+      <div className="max-w-4xl mx-auto px-4 mt-20 space-y-20">
+        <InstallationGuide installation={data.installation} />
+        <DatabaseSchema url={data.database.diagram} />
+        <ArchitectureSection url={data.architecture.diagram} />
+        <CreditsSection credits={data.credits} />
+      </div>
     </div>
   );
 };

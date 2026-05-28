@@ -169,7 +169,7 @@ export default function TechStackDisplay({
   // Variant proyecto (default) - iconos con etiquetas
   return (
     <div className={getContainerClasses()}>
-      <div className="velonia-skills"> {/* Mantiene compatibilidad con CSS existente */}
+      <div className="velonia-skills justify-content-center"> {/* Mantiene compatibilidad con CSS existente */}
         {skillsToShow.map((skill, index) => (
           <SkillIcon {...getSkillIconProps(skill, index)} />
         ))}

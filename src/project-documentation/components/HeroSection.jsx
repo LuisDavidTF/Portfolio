@@ -7,7 +7,7 @@ export default function HeroSection ({ title, tagline, image }) {
       <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center animate-fade-in">
         {image && (
           <div className="mb-8 w-full max-w-[120px] md:max-w-[200px] animate-slide-down">
-            <img src={image} alt={title} className="w-full h-auto rounded-3xl shadow-xl border border-gray-200 dark:border-gray-800" />
+            <img src={image} alt={title} className="w-full h-auto rounded-3xl shadow-xl border border-theme-light" />
           </div>
         )}
         {tagline && (
@@ -16,7 +16,7 @@ export default function HeroSection ({ title, tagline, image }) {
             {tagline}
           </div>
         )}
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-4 text-gray-900 dark:text-gray-100 !leading-[1.1] animate-slide-down">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-4 text !leading-[1.1] animate-slide-down">
           {title}
         </h1>
       </div>

@@ -17,17 +17,17 @@ export default function CreditsSection({ credits }) {
                     </p>
                 )}
 
-                <div class="cta-buttons">
+                <div className="cta-buttons">
                     {/* Verificar si el repo existe */}
                     {credits.repo && (
-                        <a href={credits.repo} target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary  me-2"><i class="fab fa-github me-1"></i>View on GitHub</a>
+                        <a href={credits.repo} target="_blank" rel="noopener noreferrer" className="btn btn-outline-primary  me-2"><i className="fab fa-github me-1"></i>View on GitHub</a>
                     )}
                     {
                         credits.repoApi && (
-                            <a href={credits.repoApi} target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary me-2"><i class="fab fa-github me-1"></i>API Repository</a>
+                            <a href={credits.repoApi} target="_blank" rel="noopener noreferrer" className="btn btn-outline-primary me-2"><i className="fab fa-github me-1"></i>API Repository</a>
                         )
                     }
-                    <a href="mailto:luisdavidtrejofuentes@gmail.com" class="btn btn-outline-primary"><i class="fas fa-envelope me-1"></i>Get in Touch</a>
+                    <a href="mailto:luisdavidtrejofuentes@gmail.com" className="btn btn-outline-primary"><i className="fas fa-envelope me-1"></i>Get in Touch</a>
                 </div>
             </div>
         </section>

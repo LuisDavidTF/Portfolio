@@ -44,13 +44,13 @@ export default function FeaturesSection({ features }) {
   if (!features || features.length === 0) return null;
 
   return (
-    <section className="py-24 bg-gray-50/50 dark:bg-gray-900/30 relative overflow-hidden border-y border-gray-200 dark:border-gray-800 w-full">
+    <section className="py-24 bg-theme-secondary relative overflow-hidden border-y border-theme-light w-full">
       <div className="container px-4 mx-auto max-w-7xl relative z-10">
         <div className="text-center mb-20 md:mb-32">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight text-gray-900 dark:text-gray-100">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight text">
             Platform Capabilities
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="text-lg text-secondary max-w-2xl mx-auto">
             A deep dive into the engineering and features powering this project.
           </p>
         </div>
@@ -75,11 +75,11 @@ export default function FeaturesSection({ features }) {
                   <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-[#D4A373]/10 text-[#D4A373] font-bold text-xl mb-2">
                     {index + 1}
                   </div>
-                  <h3 className="text-2xl md:text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-100">
+                  <h3 className="text-2xl md:text-4xl font-bold tracking-tight text">
                     {feature.title}
                   </h3>
                   {feature.description && (
-                    <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+                    <p className="text-lg text-secondary leading-relaxed">
                       {feature.description}
                     </p>
                   )}
@@ -95,7 +95,7 @@ export default function FeaturesSection({ features }) {
                       <img
                         src={feature.image}
                         alt={feature.title}
-                        className="rounded-3xl shadow-2xl border border-gray-200 dark:border-gray-800 w-full h-auto object-cover"
+                        className="rounded-3xl shadow-2xl border border-theme-light w-full h-auto object-cover"
                       />
                     </div>
                   </div>

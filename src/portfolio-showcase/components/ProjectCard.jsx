@@ -275,7 +275,7 @@ export default function ProjectCard({
   if (layout === 'grid' && project.id === 'cacomi') {
     return (
       <div
-        className="primary-project-card card shadow-sm col-12 mb-4 animate-fade-in-up"
+        className="primary-project-card card bg-theme-secondary text border-theme shadow-sm col-12 mb-4 animate-fade-in-up"
         style={{ animationDelay: `${animationDelay}s`, overflow: 'hidden' }}
       >
         <div className="row g-0 h-100">
@@ -312,7 +312,7 @@ export default function ProjectCard({
           </div>
 
           {/* Detalles a la derecha */}
-          <div className="col-lg-6 col-xl-5 d-flex flex-column justify-content-center bg-white dark:bg-[#111827]">
+          <div className="col-lg-6 col-xl-5 d-flex flex-column justify-content-center bg-theme-secondary text">
             <div className="card-body p-4 p-xl-5 d-flex flex-column h-100 justify-content-center">
               <div className="project-header mb-3">
                 <h3 className="title fw-extrabold mb-1" style={{ fontSize: '1.8rem', background: 'linear-gradient(135deg, var(--primary-color), var(--secondary-color))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
@@ -342,7 +342,7 @@ export default function ProjectCard({
 
               <div className="mt-auto">
                 {renderProjectStats()}
-                <div className="project-footer mt-4 pt-3 border-top d-flex gap-2">
+                <div className="project-footer mt-4 pt-3 border-top border-theme-light d-flex gap-2">
                   {renderProjectActions()}
                 </div>
               </div>

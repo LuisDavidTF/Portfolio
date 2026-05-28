@@ -77,7 +77,7 @@ export default function PersonalIntro({
       )}
       
       {shouldShowTitle && (
-        <p className={`lead mb-3 ${animateText ? 'animate-slide-up' : ''}`} 
+        <p className={`lead mb-3 text ${animateText ? 'animate-slide-up' : ''}`} 
            style={{animationDelay: animateText ? '0.2s' : '0'}}>
           {getTitleDisplay()}
         </p>
