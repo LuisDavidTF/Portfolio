@@ -226,7 +226,6 @@ export default function ProjectCard({
           >
             <i className="fas fa-book me-1"></i>
             Docs
-            <span className="badge bg-danger ms-1" style={{ fontSize: '8px' }}>NEW</span>
           </a>
         )}
       </div>
@@ -265,6 +264,88 @@ export default function ProjectCard({
                   maxSkills={4}
                 />
               )}
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // Layout destacado específico para Cacomi
+  if (layout === 'grid' && project.id === 'cacomi') {
+    return (
+      <div
+        className={`${getCardClasses()} primary-project-card col-12 mb-4`}
+        style={{ animationDelay: `${animationDelay}s` }}
+      >
+        <div className="row g-0 h-100">
+          {/* Imagen a la izquierda */}
+          <div className="col-lg-6 col-xl-7 position-relative project-image-container-wide">
+            {!imageLoaded && enableImageLazyLoading && (
+              <div className="image-placeholder d-flex align-items-center justify-content-center">
+                <div className="spinner-border text-primary-css" role="status">
+                  <span className="visually-hidden">Loading...</span>
+                </div>
+              </div>
+            )}
+            <img
+              src={project.image}
+              alt={`${project.name} preview`}
+              className="w-100 h-100 project-image-wide"
+              onLoad={() => setImageLoaded(true)}
+              style={{
+                display: imageLoaded ? 'block' : 'none',
+                objectFit: 'cover',
+                minHeight: '280px',
+                transition: 'opacity 0.3s ease-in-out'
+              }}
+              loading={enableImageLazyLoading ? 'lazy' : 'eager'}
+            />
+            {/* Overlay con badges */}
+            <div className="project-overlay position-absolute top-0 start-0 p-3">
+              <span className="badge bg-warning text-dark me-2 shadow-sm" style={{ fontWeight: '700', letterSpacing: '0.5px' }}>
+                <i className="fas fa-crown me-1"></i>
+                PRIMARY PROJECT
+              </span>
+              {renderProjectBadges()}
+            </div>
+          </div>
+
+          {/* Detalles a la derecha */}
+          <div className="col-lg-6 col-xl-5 d-flex flex-column justify-content-center bg-white dark:bg-[#111827]">
+            <div className="card-body p-4 p-xl-5 d-flex flex-column h-100 justify-content-center">
+              <div className="project-header mb-3">
+                <h3 className="title fw-extrabold mb-1" style={{ fontSize: '1.8rem', background: 'linear-gradient(135deg, var(--primary-color), var(--secondary-color))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+                  {project.name}
+                </h3>
+                {project.tagline && (
+                  <p className="project-tagline text-secondary small fw-semibold mb-0">
+                    {project.tagline}
+                  </p>
+                )}
+              </div>
+
+              <p className="text mb-4" style={{ lineHeight: '1.6', fontSize: '0.95rem' }}>
+                {project.description}
+              </p>
+
+              {showTechStack && projectSkills.length > 0 && (
+                <div className="project-tech-stack mb-4">
+                  <TechStackDisplay
+                    skills={projectSkills}
+                    variant="detailed"
+                    size="small"
+                    maxSkills={8}
+                  />
+                </div>
+              )}
+
+              <div className="mt-auto">
+                {renderProjectStats()}
+                <div className="project-footer mt-4 pt-3 border-top d-flex gap-2">
+                  {renderProjectActions()}
+                </div>
+              </div>
             </div>
           </div>
         </div>

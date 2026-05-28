@@ -86,7 +86,7 @@ export const mainNavigationLinks = [
     showInMobile: true,
     description: 'Project documentation',
     shortLabel: 'Docs',
-    isNew: true,
+    isNew: false,
     badge: 'NEW'
   },
 ];
@@ -109,7 +109,7 @@ export const mobileMenuSections = {
         action: 'toggleTheme',
         description: 'Switch theme',
         isToggle: true,
-        isNew: true,
+        isNew: false,
         badge: 'NEW'
       }/*,
       {
@@ -158,7 +158,7 @@ export const mobileMenuSections = {
         icon: 'fab fa-linkedin',
         type: navigationType.EXTERNAL,
         description: 'Connect on LinkedIn',
-        isNew: true,
+        isNew: false,
         badge: 'NEW'
       }
     ]

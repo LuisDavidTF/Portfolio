@@ -153,15 +153,18 @@ export default function ProjectsContainer({
       {/* Grid de proyectos */}
       {projectsToShow.length > 0 ? (
         <div className={getProjectsGridClasses()}>
-          {projectsToShow.map((project, index) => (
-            <ProjectCard
-              key={project.id}
-              project={project}
-              layout={layout}
-              animationDelay={index * 0.1}
-              className={layout === 'grid' ? 'col-lg-6 col-xl-4' : ''}
-            />
-          ))}
+          {projectsToShow.map((project, index) => {
+            const isCacomi = project.id === 'cacomi';
+            return (
+              <ProjectCard
+                key={project.id}
+                project={project}
+                layout={layout}
+                animationDelay={index * 0.1}
+                className={layout === 'grid' ? (isCacomi ? 'col-12 mb-4' : 'col-md-6') : ''}
+              />
+            );
+          })}
         </div>
       ) : (
         <div className="no-projects text-center">

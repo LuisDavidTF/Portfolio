@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import SkillIcon from '../../shared/components/ui/SkillIcon.jsx';
 
 /**
@@ -14,12 +15,13 @@ export default function TechStackDisplay({
   groupByCategory = false,
   className = ''
 }) {
+  const [showAll, setShowAll] = useState(false);
 
   if (!skills.length) return null;
 
   // Limitar skills mostradas
-  const skillsToShow = maxSkills ? skills.slice(0, maxSkills) : skills;
-  const hasHiddenSkills = maxSkills && skills.length > maxSkills;
+  const skillsToShow = maxSkills && !showAll ? skills.slice(0, maxSkills) : skills;
+  const hasHiddenSkills = maxSkills && skills.length > maxSkills && !showAll;
 
   // Agrupar por categoría si está habilitado
   const getGroupedSkills = () => {
@@ -103,8 +105,17 @@ export default function TechStackDisplay({
     const hiddenCount = skills.length - maxSkills;
     
     return (
-      <div className="more-technologies-indicator">
-        <span className="badge bg-light text-dark">
+      <div 
+        className="more-technologies-indicator"
+        onClick={(e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          setShowAll(true);
+        }}
+        style={{ cursor: 'pointer' }}
+        title="Click to reveal all skills"
+      >
+        <span className="badge bg-light text-dark hover:bg-slate-200 transition-colors" style={{ padding: '6px 10px', fontSize: '0.75rem', fontWeight: '600' }}>
           +{hiddenCount} more
         </span>
       </div>

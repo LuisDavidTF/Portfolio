@@ -19,7 +19,8 @@ export const skillsData = {
       experience: '2+ years',
       color: '#f89820',
       textColor: '#fff',
-      featured: true
+      featured: true,
+      docUrl: 'https://dev.java'
     },
     {
       id: 'spring-boot',
@@ -29,7 +30,8 @@ export const skillsData = {
       experience: '2+ years',
       color: '#6DB33F',
       textColor: '#fff',
-      featured: true
+      featured: true,
+      docUrl: 'https://spring.io/projects/spring-boot'
     },
     {
       id: 'nodejs',
@@ -38,7 +40,8 @@ export const skillsData = {
       level: 'advanced',
       experience: '2+ years',
       color: '#339933',
-      textColor: '#fff'
+      textColor: '#fff',
+      docUrl: 'https://nodejs.org'
     },
     {
       id: 'typescript',
@@ -47,7 +50,8 @@ export const skillsData = {
       level: 'advanced',
       experience: '2+ years',
       color: '#007ACC',
-      textColor: '#fff'
+      textColor: '#fff',
+      docUrl: 'https://www.typescriptlang.org'
     },
     {
       id: 'restapi',
@@ -56,7 +60,8 @@ export const skillsData = {
       level: 'advanced',
       experience: '3+ years',
       color: '#00AEEF',
-      textColor: '#fff'
+      textColor: '#fff',
+      docUrl: 'https://developer.mozilla.org/en-US/docs/Glossary/REST'
     },
     {
       id: 'microservices',
@@ -65,7 +70,8 @@ export const skillsData = {
       level: 'intermediate',
       experience: '1+ year',
       color: '#6c757d',
-      textColor: '#fff'
+      textColor: '#fff',
+      docUrl: 'https://microservices.io'
     }
   ],
 
@@ -78,7 +84,8 @@ export const skillsData = {
       experience: '1 year',
       color: '#FF5D01',
       textColor: '#fff',
-      featured: true
+      featured: true,
+      docUrl: 'https://astro.build'
     },
     {
       id: 'react',
@@ -88,7 +95,8 @@ export const skillsData = {
       experience: '2+ years',
       color: '#61DAFB',
       textColor: '#000',
-      featured: true
+      featured: true,
+      docUrl: 'https://react.dev'
     },
     {
       id: 'tailwind',
@@ -98,7 +106,8 @@ export const skillsData = {
       experience: '2+ years',
       color: '#38B2AC',
       textColor: '#fff',
-      featured: true
+      featured: true,
+      docUrl: 'https://tailwindcss.com'
     },
     {
       id: 'zustand',
@@ -108,7 +117,8 @@ export const skillsData = {
       experience: '1 year',
       color: '#433929',
       textColor: '#fff',
-      featured: true
+      featured: true,
+      docUrl: 'https://zustand.docs.pmnd.rs'
     },
     {
       id: 'zod',
@@ -117,7 +127,8 @@ export const skillsData = {
       level: 'advanced',
       experience: '1 year',
       color: '#F43E5C',
-      textColor: '#fff'
+      textColor: '#fff',
+      docUrl: 'https://zod.dev'
     },
     {
       id: 'angular',
@@ -126,7 +137,8 @@ export const skillsData = {
       level: 'intermediate',
       experience: '2+ years',
       color: '#DD0031',
-      textColor: '#fff'
+      textColor: '#fff',
+      docUrl: 'https://angular.dev'
     }
   ],
 
@@ -138,7 +150,8 @@ export const skillsData = {
       level: 'intermediate',
       experience: '1+ year',
       color: '#6DB33F',
-      textColor: '#fff'
+      textColor: '#fff',
+      docUrl: 'https://spring.io/projects/spring-security'
     },
     {
       id: 'jwt',
@@ -147,7 +160,8 @@ export const skillsData = {
       level: 'advanced',
       experience: '1+ year',
       color: '#000',
-      textColor: '#fff'
+      textColor: '#fff',
+      docUrl: 'https://jwt.io'
     },
     {
       id: 'owasp',
@@ -157,7 +171,8 @@ export const skillsData = {
       experience: 'Knowledge',
       color: '#E34F26',
       textColor: '#fff',
-      featured: true
+      featured: true,
+      docUrl: 'https://owasp.org'
     },
     {
       id: 'bff-proxy',
@@ -167,7 +182,8 @@ export const skillsData = {
       experience: '1 year',
       color: '#336791',
       textColor: '#fff',
-      featured: true
+      featured: true,
+      docUrl: 'https://learn.microsoft.com/en-us/azure/architecture/patterns/backends-for-frontends'
     }
   ],
 
@@ -180,7 +196,8 @@ export const skillsData = {
       experience: '2+ years',
       color: '#336791',
       textColor: '#fff',
-      featured: true
+      featured: true,
+      docUrl: 'https://www.postgresql.org'
     },
     {
       id: 'mysql',
@@ -189,7 +206,8 @@ export const skillsData = {
       level: 'advanced',
       experience: '2+ years',
       color: '#4479A1',
-      textColor: '#fff'
+      textColor: '#fff',
+      docUrl: 'https://www.mysql.com'
     },
     {
       id: 'hibernate',
@@ -198,7 +216,8 @@ export const skillsData = {
       level: 'intermediate',
       experience: '1+ year',
       color: '#59666C',
-      textColor: '#fff'
+      textColor: '#fff',
+      docUrl: 'https://hibernate.org'
     },
     {
       id: 'docker',
@@ -207,7 +226,8 @@ export const skillsData = {
       level: 'intermediate',
       experience: '1 year',
       color: '#2496ED',
-      textColor: '#fff'
+      textColor: '#fff',
+      docUrl: 'https://www.docker.com'
     },
     {
       id: 'git',
@@ -216,7 +236,8 @@ export const skillsData = {
       level: 'advanced',
       experience: '3+ years',
       color: '#171515',
-      textColor: '#fff'
+      textColor: '#fff',
+      docUrl: 'https://git-scm.com'
     },
     {
       id: 'github-actions',
@@ -225,7 +246,8 @@ export const skillsData = {
       level: 'intermediate',
       experience: '1 year',
       color: '#2088FF',
-      textColor: '#fff'
+      textColor: '#fff',
+      docUrl: 'https://github.com/features/actions'
     }
   ]
 };

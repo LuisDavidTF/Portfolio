@@ -1,4 +1,5 @@
 import { getTechStyle } from '../../utils/tech-colors.js';
+import { getAllSkillsFlat } from '@/skills-demonstration/data/skills-data.js';
 
 /**
  * Componente reutilizable para mostrar iconos de tecnologías
@@ -24,6 +25,12 @@ const SkillIcon = ({
   // Obtener estilos basados en el nombre de la tecnología
   const techStyle = getTechStyle(name);
   
+  // Buscar el skill en la base de datos para obtener su URL de documentación
+  const allSkills = getAllSkillsFlat();
+  const skill = allSkills.find(
+    s => s.name.toLowerCase() === name.toLowerCase() || s.id.toLowerCase() === name.toLowerCase()
+  );
+
   // Clases CSS basadas en variant y size
   const getVariantClass = () => {
     switch (variant) {
@@ -48,8 +55,15 @@ const SkillIcon = ({
   };
 
   // Manejador de click
-  const handleClick = () => {
-    if (onClick) {
+  const handleClick = (e) => {
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation(); // Evitar propagación a la tarjeta contenedora
+    }
+    
+    if (skill && skill.docUrl) {
+      window.open(skill.docUrl, '_blank', 'noopener,noreferrer');
+    } else if (onClick) {
       onClick(name);
     }
   };
@@ -60,18 +74,20 @@ const SkillIcon = ({
     ...props.style
   };
 
+  const hasClickAction = onClick || (skill && skill.docUrl);
+
   return (
     <div 
       className={`${getVariantClass()} ${getSizeClass()} ${className}`.trim()}
       style={combinedStyle}
-      title={name}
+      title={skill ? `${skill.name} - ${skill.level || 'Used in project'} (Click to view docs)` : name}
       onClick={handleClick}
-      role={onClick ? "button" : undefined}
-      tabIndex={onClick ? 0 : undefined}
-      onKeyDown={onClick ? (e) => {
+      role={hasClickAction ? "button" : undefined}
+      tabIndex={hasClickAction ? 0 : undefined}
+      onKeyDown={hasClickAction ? (e) => {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
-          handleClick();
+          handleClick(e);
         }
       } : undefined}
       {...props}

@@ -25,42 +25,42 @@ const MarkdifyDocs = {
       id: 1,
       title: "Zero-Server Privacy Guarantee",
       description: "Operates 100% client-side. Your confidential corporate drafts and resumes are compiled entirely in your browser's local RAM. Absolutely no data is transmitted to remote servers, ensuring strict GDPR/CCPA compliance.",
-      image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80",
+      image: "/Portfolio/images/projects/markdify/privacy.png",
       size: "square"
     },
     {
       id: 2,
       title: "Real-Time GFM Rendering Engine",
       description: "Features a live-updating split-panel workspace with a high-fidelity Markdown parser based on Marked.js, supporting full GitHub Flavored Markdown (GFM) extensions, interactive checklists, dynamic code highlight, and physical key maps.",
-      image: "https://images.unsplash.com/photo-1618401471353-b98aedd07871?auto=format&fit=crop&w=800&q=80",
+      image: "/Portfolio/images/projects/markdify/gfm-editor.png",
       size: "square"
     },
     {
       id: 3,
       title: "Isolated XSS Sanitization Pipeline",
       description: "Neutralizes security exploits by parsing compiled HTML into an isolated, inert virtual DOM tree. Powered by DOMPurify, it dynamically inspects and sanitizes malicious nodes and inline event triggers before rendering to the page.",
-      image: "https://images.unsplash.com/photo-1601597111158-2fceff270190?auto=format&fit=crop&w=800&q=80",
+      image: "/Portfolio/images/projects/markdify/security-sandbox.png",
       size: "square"
     },
     {
       id: 4,
       title: "Fixed-Scale Vector PDF Compiling",
       description: "Translates HTML5 nodes into clean physical dimensions (A4/Carta) dynamically scaled at 2x pixel density. Fixes structural elements and pagination, supporting custom HTML page breaks without layout distortion.",
-      image: "https://images.unsplash.com/photo-1586075010923-2dd4570fb338?auto=format&fit=crop&w=800&q=80",
+      image: "/Portfolio/images/projects/markdify/pdf-compiler.png",
       size: "square"
     },
     {
       id: 5,
       title: "Debounced Local Autosave Flow",
       description: "Includes an automated local state persistence engine backed by browser Web Storage. Leverages debouncing algorithms to delay write sequences for 800ms during active input, avoiding rendering micro-stuttering.",
-      image: "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&w=800&q=80",
+      image: "/Portfolio/images/projects/markdify/autosave.png",
       size: "square"
     },
     {
       id: 6,
       title: "Offline-First File API Integrations",
       description: "Allows loading of local `.md` or `.txt` drafts instantly using browser File API and FileReader objects. Reads the binary text stream securely in local memory, enabling complete offline functionality.",
-      image: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?auto=format&fit=crop&w=800&q=80",
+      image: "/Portfolio/images/projects/markdify/offline-mode.png",
       size: "square"
     }
   ],
