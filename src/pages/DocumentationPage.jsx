@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import VeloniaDocs from "@/project-documentation/data/velonia-docs";
 import SmartRecipePlannerDocs from "@/project-documentation/data/smart-recipe-planner-docs";
+import MarkdifyDocs from "@/project-documentation/data/markdify-docs";
 import HeroSection from "@/project-documentation/components/HeroSection";
 import OverviewSection from "../project-documentation/components/OverviewSection";
 import { getProjectSkills } from "@/portfolio-showcase/data/projects-data";
@@ -14,7 +15,8 @@ import FeaturesSection from "../project-documentation/components/FeaturesSection
 import CreditsSection from "../project-documentation/components/CreditsSection";
 const docsMap = {
   velonia: VeloniaDocs,
-  'cacomi': SmartRecipePlannerDocs
+  'cacomi': SmartRecipePlannerDocs,
+  markdify: MarkdifyDocs
 };
 
 export default function DocumentationPage() {
@@ -38,8 +40,9 @@ export default function DocumentationPage() {
       <HeroSection title={data.title} tagline={data.tagline} image={data.overview.image} />
       <OverviewSection
         description={data.overview.description}
-        descriptionimage={data.overview.images.map(image => image.description)}
-        icon={data.overview.images.map(image => image.icon)}
+        images={data.overview.images ? data.overview.images.map(image => image.link) : []}
+        descriptionimage={data.overview.images ? data.overview.images.map(image => image.description) : []}
+        icon={data.overview.images ? data.overview.images.map(image => image.icon) : []}
         idproject={projectId}
       />
       <FeaturesSection features={data.features}/>

@@ -126,7 +126,7 @@ export const projectsData = [
     startDate: '2023-08-01',
     completionDate: '2024-01-15',
     featured: true,
-    priority: 2,
+    priority: 3,
     
     keyFeatures: [
       'Full product catalog with variants and categories',
@@ -152,6 +152,72 @@ export const projectsData = [
       linesOfCode: '15000+',
       commits: '150+',
       developmentHours: '300+',
+      features: 8
+    }
+  },
+  {
+    id: 'markdify',
+    name: 'Markdify',
+    tagline: '100% Client-Side Markdown Editor & High-Fidelity PDF Compiler',
+    description: 'Privacy-first Markdown editor and GFM compiler. Generates high-fidelity vector PDFs local in browser RAM via html2pdf, DOMPurify, and debounced localStorage.',
+    longDescription: `
+        Markdify is a premium open-source web utility that delivers real-time GFM previewing integrated with secure, client-side vector-based PDF compilation (ISO 32000 standard).
+        By running entirely inside the browser's sandbox RAM using DOMPurify and html2canvas/jsPDF, Markdify ensures military-grade privacy (zero server uploads) while delivering high-fidelity ATS-ready resumes and technical reports.
+      `,
+    
+    category: projectCategories.WEB_APP,
+    status: projectStatus.COMPLETED,
+    
+    techStack: [
+      'nodejs',
+      'typescript',
+      'react',
+      'tailwind',
+      'owasp',
+      'git',
+      'github-actions'
+    ],
+    
+    liveUrl: 'https://markdify.tech',
+    githubUrl: 'https://github.com/LuisDavidTF/markdify',
+    documentationUrl: '#/docs/markdify',
+    
+    image: '/Portfolio/images/projects/markdify/og-image.png',
+    
+    startDate: '2026-05-15',
+    completionDate: '2026-05-27',
+    featured: true,
+    priority: 2,
+    
+    keyFeatures: [
+      'Zero-Server Architecture ensures absolute GDPR-compliant privacy',
+      'Real-Time GFM (GitHub Flavored Markdown) live rendering engine',
+      'High-Fidelity PDF compiler with fixed Carta/A4 page-break alignments',
+      'Debounced autosave synchronization with LocalStorage',
+      'Rigorous XSS sanitization utilizing isolated DOM tree-based DOMPurify',
+      'HTML5 File API integration for completely offline document imports',
+      'Custom premium dark and light theme adaptivity using HSL variables'
+    ],
+    
+    challenges: [
+      {
+        problem: 'Confidential corporate files are exposed to data leaks when uploaded to remote conversion SaaS platforms',
+        solution: 'Built a 100% serverless, client-side compiler executing entirely in local browser RAM, allowing secure offline operations'
+      },
+      {
+        problem: 'Active HTML scripts embedded in raw Markdown could compromise browser security (Cross-Site Scripting)',
+        solution: 'Implemented DOMPurify to parse the compiled HTML into a virtual DOM tree, sanitizing nodes and attributes prior to UI rendering'
+      },
+      {
+        problem: 'Stuttering or UI freezing during continuous text inputs in real-time autoguardado',
+        solution: 'Developed a debounced LocalStorage save pipeline that waits for an active 800ms idle state before writing to the database'
+      }
+    ],
+    
+    stats: {
+      linesOfCode: '5000+',
+      commits: '40+',
+      developmentHours: '60+',
       features: 8
     }
   }
