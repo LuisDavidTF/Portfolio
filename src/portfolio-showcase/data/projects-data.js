@@ -126,7 +126,7 @@ export const projectsData = [
     startDate: '2023-08-01',
     completionDate: '2024-01-15',
     featured: true,
-    priority: 3,
+    priority: 4,
     
     keyFeatures: [
       'Full product catalog with variants and categories',
@@ -219,6 +219,56 @@ export const projectsData = [
       commits: '40+',
       developmentHours: '60+',
       features: 8
+    }
+  },
+  {
+    id: 'orthos',
+    name: 'Orthos',
+    tagline: 'Zero-Server 2D Room Planner & Interior CAD Simulator',
+    description: 'An interactive 2D interior layout planner with real-world CAD scaling, dynamic wall divisions, and drag-and-drop SVG symbols.',
+    longDescription: `
+        Orthos is a premium, open-source web application designed for high-fidelity 2D room planning and interior design simulation.
+        Operating under a Zero-Server privacy philosophy, the engine processes all polygon vertex math, real-time measurements, and layout generation 100% in local browser RAM.
+        Built with React 19, TypeScript, Vite, and high-definition SVG assets, it delivers automated CAD dimensions and fluid drag-and-drop mechanics.
+      `,
+    category: projectCategories.WEB_APP,
+    status: projectStatus.COMPLETED,
+    techStack: [
+      'react',
+      'typescript',
+      'git'
+    ],
+    liveUrl: 'https://orthos.markdify.tech',
+    githubUrl: 'https://github.com/LuisDavidTF/simulador',
+    documentationUrl: '#/docs/orthos',
+    image: '/Portfolio/images/projects/orthos/hero.png',
+    startDate: '2026-05-28',
+    completionDate: '2026-06-07',
+    featured: true,
+    priority: 3,
+    keyFeatures: [
+      'Polygonal room builder with magnetic corner adjustments',
+      'Dynamic CAD distance guides and real-time oriented labels',
+      'Instant unit conversions between cm, m, inches, and feet',
+      'Premium Custom UI with glassmorphic cards and stacked toasts',
+      'Interactive SVG furniture blocks supporting color/scale tuning',
+      'Multi-format export (JSON blueprints, vector SVG, high-res PNG)'
+    ],
+    challenges: [
+      {
+        problem: 'Dynamic orientation and projection of distance guides on arbitrary polygonal walls',
+        solution: 'Derived geometric projection vectors in SVG space to find orthogonal intercepts and distance labels based on real-world scales'
+      },
+      {
+        problem: 'Handling high-precision drag operations without lag or rendering bottlenecks',
+        solution: 'Optimized react state-updates using debounced event bindings, layout caching, and native SVG transform transformations'
+      }
+    ],
+    stats: {
+      linesOfCode: '3000+',
+      commits: '20+',
+      developmentHours: '40+',
+      features: 6
     }
   }
 ];
